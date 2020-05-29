@@ -1,0 +1,3052 @@
+.row_list_centered {
+    margin: 0 auto;
+    width: 1056px
+}
+
+/* .out_time_modles {
+} */
+
+.customer_msg {
+    color: #393939;
+    margin-bottom: 3px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 12px 4px;
+    border-radius: 4px;
+    width: 100%;
+    padding: 6px 14px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
+@media (max-width: 2100px) and (min-width: 1921px) {
+    .bask_myaccount a, .hellp a {
+        padding: 0px 15px;
+    }
+
+    span.item-separate {
+        content: '';
+        position: relative;
+        top: -9px;
+        padding: 15px 2px;
+        background-color: #00adaf;
+    }
+
+    .bask_myaccount.dis_hidds {
+        margin-top: 8px;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: 273px;
+        top: 45px;
+    }
+}
+
+@media (max-width: 1920px) {
+    .deportments_new_list .items_box {
+        width: 120%;
+    }
+
+    .bask_myaccount a, .hellp a {
+        padding: 0px 16px;
+    }
+
+    span.item-separate {
+        content: '';
+        position: relative;
+        top: -11px;
+        padding: 15px 1px;
+        background-color: #00adaf;
+        font-size: 14px;
+    }
+
+    .bask_myaccount.dis_hidds {
+        margin-top: 8px;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: 240px;
+        top: 45px;
+    }
+}
+
+
+@media (min-width: 1300px ) {
+
+
+}
+
+@media (max-width: 1365px) and (min-width: 1280px) {
+    .bask_location a {
+        padding: 8px !important;
+        margin-right: 0 !important
+    }
+
+    .bask_myaccount a, .hellp a {
+        padding: 0px 15px;
+    }
+
+    span.item-separate {
+        content: '';
+        position: relative;
+        top: -2px;
+        padding: 15px 1px;
+        background-color: #00adaf;
+        font-size: 14px;
+    }
+
+    .bask_myaccount.dis_hidds {
+        margin-top: 8px;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: 175px;
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 1536px) {
+    .deportments_new_list .items_box {
+        width: 118%;
+    }
+
+    .bask_myaccount a, .hellp a {
+        padding: 0px 15px;
+    }
+
+    span.item-separate {
+        font-size: 14px;
+        content: '';
+        position: relative;
+        top: -12px;
+        padding: 11px 1px;
+        background-color: #00adaf;
+    }
+
+    .bask_myaccount.dis_hidds {
+        margin-top: 8px;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: 195px;
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .bounce-footer {
+        display: none;
+
+
+    }
+
+    .customer_msg {
+        color: #393939;
+        margin-bottom: 3px;
+        display: inline-block;
+        font-size: 12px;
+        padding: 3px 12px 4px;
+        border-radius: 4px;
+        width: 100%;
+        padding: 6px 14px;
+        background-color: rgb(247, 247, 247);
+        border-radius: 4px;
+        margin-top: 12px;
+    }
+
+    .department_aisle_title, .department_dept_title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+    }
+
+    .bask_myaccount a, .hellp a {
+        padding: 0px 12px 0 25px;
+    }
+
+    .bask_location a {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        will-change: color;
+        position: relative;
+        padding: 12px 0 9px 0;
+        right: 10px;
+        top: 2px;
+    }
+
+    .items_info {
+        padding: 0 0 0 15px;
+    }
+
+    .order_summary_shopper .frame {
+        height: 78vh
+    }
+
+    #p_popup {
+        top: 12%
+    }
+
+    .dep_list h2 {
+        font-size: 16px
+    }
+
+    .department_dept_title {
+        width: 65%
+    }
+
+    .store_info_popups .modal-lg {
+        width: 1000px
+    }
+
+    .department_aisle_title {
+        width: 100%
+    }
+
+    .row_list .col-md-2 {
+        width: 20%
+    }
+
+    .bask_location a {
+        margin-right: 15px !important;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: 175px;
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .cat_counts .flaticon-shop::before {
+        font-size: 21px;
+    }
+
+    .deportments_new_list .items_box {
+        width: 115%;
+    }
+
+    .order_summary_shopper .frame {
+        min-width: 740px;
+    }
+
+    .cat_counts .btn-danger {
+        padding: 6px 6px;
+        font-size: 13px;
+    }
+
+    .container {
+        width: 100%
+    }
+
+    .bas_left_login_form {
+        width: 440px;
+    }
+
+    /*.cat_counts {*/
+    /*    margin: 14px 25px 0;*/
+    /*}*/
+
+    .dep_list {
+        padding: 90px 15px 15px 15px;
+    }
+
+    .row_list_centered {
+        margin: 0 auto;
+        width: 1056px;
+    }
+
+    .bask_location a {
+        margin-right: 15px !important;
+
+    }
+
+    .bask_location.dis_hidds.head_city_location a.chng_loc_btn {
+        width: 150px;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: 175px;
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .row_list {
+        justify-content: center;
+    }
+
+
+    .bask_location a {
+        padding: 10px;
+    }
+
+    .popover.fade.bottom.in {
+        width: 300px !important;
+    }
+
+    .bask_location a {
+        display: inline-block;
+        font-weight: 400;
+        height: 40px;
+        will-change: color;
+        margin-right: 21px;
+    }
+
+    .availability-link a, .bask_location a, .bask_myaccount a, .brand_name_head p, .scroll-header-stores {
+        font-size: 11px;
+    }
+
+    .brand_name_head p, .scroll-header-stores {
+        font-size: 11px !important;
+    }
+
+    .bask_myaccount .flaticon-angle-arrow-down::before {
+        font-size: 10px
+    }
+
+    .cat_counts .btn-danger {
+        padding: 6px
+    }
+
+    .order_summary_sections .container {
+        width: 100%
+    }
+
+    .row_list .col-md-2 {
+        width: 33.3%
+    }
+
+    .store_info_popups .modal-lg {
+        width: 1000px
+    }
+
+    .store_info_slider, .store_info_slider img {
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle
+    }
+
+    .ref_lis_img img {
+        max-width: 100%
+    }
+
+    .store_info_popups_cart.side_menu_carts .modal-lg {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .row_list_centered {
+        margin: 0 auto;
+        width: 100%
+    }
+
+    .department_new .img-box {
+        float: none;
+        display: inline-block;
+    }
+
+    .department_new {
+        padding: 24px 16px 1px 32px;
+        background-color: rgb(238, 238, 238);
+        width: 100%;
+        margin: 20px auto 0 auto;
+        text-align: center;
+    }
+
+    .department_new .img-box img {
+
+        float: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 1158px) {
+    .hellp {
+        display: none
+    }
+
+    .nav-tabs > li > a {
+        font-size: 11px;
+    }
+
+    .modalclose {
+        right: 10px;
+        top: 0
+    }
+
+    .modalclose .close {
+        color: #000;
+    }
+
+    .availability-link a {
+        margin: 0;
+        font-size: 13px
+    }
+
+    .brand_name_head p, .scroll-header-stores {
+        font-size: 13px
+    }
+}
+
+@media only screen and (max-width: 1076px) {
+    .row_list {
+
+        justify-content: center;
+    }
+
+    .availability-link a {
+        margin: 0;
+        font-size: 11px;
+        padding-right: 15px
+    }
+
+    .logo_section a {
+        padding: 9px 5px 13px
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .bask_location a {
+        margin: 0;
+    }
+
+    .basket-retailer-chooser {
+        top: 125px;
+    }
+
+    .basket_header_outer_help .container, .check_out_info .container, .help__summary .container, .store_info_popups .modal-lg {
+        width: 100%
+    }
+
+    .availability-link a {
+        font-size: 12px;
+        padding: 0;
+        padding-top: 10px;
+    }
+    .logo_section a {
+        padding: 9px 0 13px
+    }
+
+    .bask_myaccount a, .hellp a, .store_location a {
+        padding: 16px 7px
+    }
+
+    .dep_list {
+        min-height: 241px;
+        min-height: 40px;
+        text-align: center;
+        background: transparent;
+    }
+
+    .dep_list ul {
+        display: none;
+    }
+
+    .basket_inner_title .header-location-link a {
+        padding: 20px 9px
+    }
+
+    .hero_sections .hero-title {
+        margin: 8% 0 0
+    }
+
+    .positions-role .role-title {
+        font-size: 15px
+    }
+
+    .positions-role .role-text {
+        font-size: 12px
+    }
+
+    .role-list > ul {
+        padding: 0 17px
+    }
+
+    .order_summary_shopper .background {
+        min-height: 113%
+    }
+
+    .inbl_footer > img {
+        max-width: 102px
+    }
+
+    .deportments_section.common_dep_list h1.main_title {
+        font-size: 25px
+    }
+
+    .cat_counts .flaticon-shop::before {
+        font-size: 19px
+    }
+
+    .cat_counts .btn-danger {
+        font-size: 14px
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 992px) {
+    .navigation-tabs ul li {
+        padding: 1px 3px;
+    }
+
+    .cat_counts {
+        margin: 15px 20px 0;
+    }
+
+    .bask_location a {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    /* .order_summary_shopper .frame {
+        height: 133vh;
+    } */
+
+    .customize_pannel.mt_1o {
+        margin: 0px;
+    }
+
+    .modal.store_info_popups {
+        top: 0px;
+        z-index: 9999;
+        width: 100%;
+    }
+
+    .responsive_popup .select2-search--dropdown {
+        display: none;
+    }
+
+    .check_out_info {
+        margin: 0px;
+    }
+
+    .common_space {
+        height: 0px;
+    }
+
+    .basket_header_fixed, .basket_header_fixed, .department_header_bottom {
+        position: relative;
+        top: 0px;
+    }
+
+    .main_title {
+        margin: 15px 0 32px;
+    }
+
+    h1.main_title {
+        padding: 0px;
+    }
+
+    .uppercase {
+        padding: 14px 0 17px;
+        margin-left: 17px;
+    }
+
+    .common_dep_list_filter {
+        display: inline-block;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .slider_store_info.cart_side_popup .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: #888 transparent transparent;
+
+
+        border-style: solid;
+        border-width: 8px 7px 0;
+    }
+
+    .slider_store_info.cart_side_popup .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+        border-color: transparent transparent #888;
+        border-width: 0 7px 8px;
+    }
+
+    .dept_listing_common .filters_left_bt {
+        margin: 2px 10px 0 0;
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs {
+        overflow-x: auto;
+    }
+
+    .new_ly_add_cla {
+        float: left
+    }
+
+    .basket_header_outer_help .container, .check_out_info .container, .help__summary .container, .store_info_popups .modal-lg {
+        width: 97%;
+        margin: 0px auto;
+    }
+
+    .after_account_left {
+        margin-left: 0px;
+    }
+
+    .new_address_sec.add_aaddress_popup {
+        padding: 11px 32px;
+    }
+
+    .this_id_fun .common_dep_list_filter {
+        width: 100%;
+        padding-left: 0
+    }
+
+    .checkout-bottom-place-order .btn-default {
+        float: inherit
+    }
+
+    .checkout-bottom-place-order {
+        text-align: center
+    }
+
+    .space69 {
+        height: 92px
+    }
+
+    .account_common_list {
+        margin: 0px 0 0
+    }
+
+    .order_summary_shopper .frame {
+        max-width: 100%;
+        min-width: 100%
+    }
+
+    .image {
+        min-height: 114px
+    }
+
+    .space49 {
+        height: 21px
+    }
+
+    .sort_by_price_common ul li a {
+        padding: 0 16px
+    }
+
+    .item-actions {
+        padding-bottom: 20px
+    }
+
+    .responsive_hidde {
+        display: none
+    }
+
+    .icons_home {
+        display: inline-block;
+        width: 100%;
+        height: 28px;
+        /*background: url(../../new_design/images/home_bas.png) center center no-repeat*/
+    }
+
+    .icons_depart {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        /*background: url(../../new_design/images/dep_bas.png) center center no-repeat;*/
+        background-size: 23px;
+        -webkit-background-size: 23px;
+    }
+
+    .icons_depart2 {
+        display: inline-block;
+        width: 100%;
+        height: 28px;
+        /*background: url(../../new_design/images/copuon_bas.png) center center no-repeat*/
+    }
+
+    .icons_depart3 {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        /*background: url(../../new_design/images/get_bas.png) center center no-repeat*/
+    }
+
+    .icons_depart4 {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        background: url(https://cdn.basket.jo/assets/front/basket/new_design/icons/normal/items.png) center center no-repeat
+    }
+
+    .navigation-tabs ul li.active a .icons_depart {
+        color: #00adaf;
+        background: url(https://cdn.basket.jo/assets/front/basket/new_design/icons/active/departments.png) center center no-repeat
+    }
+
+    .navigation-tabs ul li.active a {
+        border-bottom: none !important
+    }
+
+    .dept_listing_sort {
+        margin: 8px 0 0
+    }
+
+    .basket_header_fixed {
+        box-shadow: 0 0 0 rgba(0, 0, 0, .16);
+        -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .16)
+    }
+
+    .common_dep_list_filter_responsive {
+        display: inline-block;
+        width: 92vw;
+        background: #fff;
+        padding: 0 15px 5px;
+    }
+
+    .common_dep_list_inside {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden
+    }
+
+    .res_scroll {
+        width: 80vw;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .common_dep_list_filter_responsive .res_scroll li {
+        float: left;
+        width: auto;
+        margin: 0 5px 7px 0
+    }
+
+    .common_dep_list_filter_responsive .res_scroll ul {
+        float: left;
+        width: auto;
+        padding: 0 !important
+    }
+
+    .common_dep_list_filter_responsive .res_scroll li a {
+        background: #f7f7f7;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        padding: 4px 17px
+    }
+
+    .common_dep_list_filter_responsive .res_scroll li.active a {
+        padding: 3px 17px !important
+    }
+
+    .store_info_slider {
+        padding-top: 30px
+    }
+
+    .store_info_slider img {
+        height: 100%
+    }
+
+    .space100 {
+        height: 16px
+    }
+
+    .left_my_accounts {
+        float: left;
+        margin: 9px 0 0 15px;
+    }
+
+    .left_my_accountsb_kd {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin: 8px 0 0
+    }
+
+    .left_my_accounts_skd {
+        display: inline-block
+    }
+
+    .top_responsive_sections_hed {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .left_my_accounts a i {
+        font-size: 26px;
+        color: #00adaf
+    }
+
+    .left_my_accountsb_kd span {
+        display: block;
+        width: 100%;
+        font-weight: 400;
+        color: #00adaf;
+    }
+
+    .cart_hidd, .dis_hidds {
+        display: none;
+    }
+
+    .left_my_accountsb_kd a {
+        font-weight: bold;
+        color: #00adaf;
+    }
+
+    .left_my_accountsb_kd .flaticon-angle-arrow-down::before {
+        font-size: 11px;
+        position: relative;
+        top: 0px;
+        margin: 0 0 0 3px;
+    }
+
+    .pos_abs_top {
+        position: fixed;
+        right: 0;
+        top: -2px;
+        z-index: 9;
+    }
+
+    .cat_counts .btn-danger {
+        color: #00adaf;
+        color: #00adaf;
+        background: none;
+        border: 1px solid #00adaf;
+    }
+
+    .cat_counts .flaticon-shop::before {
+        color: #00adaf
+    }
+
+    .dis_hiddsdd {
+        display: none !important;
+    }
+
+    .brand_name_head a.dis_hiddsdd {
+        display: block !important;
+    }
+
+    .cart-qty-badge {
+        font-size: 12px
+    }
+
+    .my_account_banner {
+        margin-top: 0;
+        white-space: inherit
+    }
+
+    .filters_left_bt {
+        display: block;
+        float: left
+    }
+
+    .responsive_filters_sections {
+        display: none
+    }
+
+    #fillterid .common_dep_list_filter {
+        background: #fff;
+        padding: 0 15px;
+        display: inline-block;
+        width: 100%
+    }
+
+    .close_buttons_popup {
+        background: #00adaf;
+        color: #fff;
+        display: block;
+        font-size: 20px;
+        margin: 10px 0 0;
+        position: absolute;
+        right: 25px;
+        text-align: center;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .close_buttons_popup a {
+        color: #fff
+    }
+
+    .how_in_deals {
+        padding: 0 15px
+    }
+
+    .pading_15 {
+        padding-left: 15px
+    }
+
+    .basket_right_information {
+        width: 100%
+    }
+
+    .content-inset .btn-primary {
+        margin: 0 0 40px
+    }
+
+    .content-inset p {
+        padding: 0
+    }
+
+    .basket_brand {
+        padding: 15px
+    }
+
+    .store_location {
+        float: right
+    }
+
+    .basket-retailer-chooser {
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        left: 0
+    }
+
+    .retailer-chooser-arrow {
+        right: 0;
+        left: inherit;
+        display: none
+    }
+
+    .basket_inner_filter ul {
+        width: 1000px
+    }
+
+    .from_shop_right, .money_shopping_popu {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .dep_list h2, .dep_list ul li a {
+        font-size: 13px;
+    }
+
+    .main_title {
+        margin: 20px 0 32px;
+        font-size: 20px
+    }
+
+    .popup-inner {
+        top: 44%
+    }
+
+    .basket_login .padding_left0 {
+        padding-left: 15px
+    }
+
+    .basket_inner_filter {
+        overflow-x: auto;
+        padding: 2px 15px 6px;
+        width: 380px;
+        max-width: 600px;
+    }
+
+    .space {
+        height: 17px;
+    }
+
+    .dept_listing_common {
+        padding: 0;
+        margin-left: 0px
+    }
+
+    .add_card_infos {
+        margin: 13px 0 0
+    }
+
+    .account_common_list .padding_left0 {
+        padding-left: 0px
+    }
+
+    .constrain_width {
+        width: 100%;
+        padding: 0 15px
+    }
+
+    .footer_naviv li a {
+        padding: 18px 11px
+    }
+
+    .basket_header_outer_help {
+        min-height: 160px;
+    }
+
+    .help_logo {
+        margin: 5px 0 0;
+    }
+
+    .top_help_icon img {
+        max-width: 100%
+    }
+
+    .help_tabs_sections ul, .right_helps_text {
+        padding: 0
+    }
+
+    .shop_left_info {
+        min-height: 347px
+    }
+
+    .from_shop_right .title {
+        margin-top: 17px
+    }
+
+    .from_shop_right .padding_left0 {
+        padding-left: 15px
+    }
+
+    .problem_table {
+        margin-top: 30px
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .navigation-tabs {
+        display: none;
+    }
+
+    .pos_abs_top {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 9999;
+        width: 200px;
+    }
+
+
+}
+
+/*==============*/
+
+@media only screen and (max-width: 810px) {
+
+    .department_new .img-box:nth-last-child(-n+2) {
+        float: inherit;
+        left: 11px;
+    }
+
+    .store_info_slider img {
+        max-height: 250px;
+        max-width: 250px;
+    }
+
+    .recepit_list_page {
+        overflow-x: auto
+    }
+
+    .recepit_list_page_inside {
+        width: 100%;
+        padding: 0 15px
+    }
+
+    .repot_problemss {
+        padding: 7px 10px !important
+    }
+
+    .iner_right_picked {
+        margin: 0px;
+    }
+
+    .how_it_works .content-inset {
+        text-align: center;
+    }
+
+    .how_it_works .contain-max-basket .btn-primary, .content-inset .btn-primary {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .how_it_works .content-inset .btn-primary {
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .navigation-tabs ul {
+        border-bottom: 1px solid rgba(204, 204, 204, 0.38823529411764707);
+        height: 48px;
+        background: #fff;
+    }
+
+    .fa-shopping-cart {
+        font-size: 35px !important;
+        line-height: normal !important;
+        position: relative;
+        top: -6px;
+        left: 8px;
+    }
+
+    .checkout-selected_address {
+        padding: 10px 20px 10px 8px !important;
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-title {
+        padding: 10px 20px !important;
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions {
+        padding: 0 15px 20px !important;
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm {
+        padding: 0px !important;
+    }
+
+    .right_buttons_commob {
+        margin: 19px 0 0;
+    }
+
+    .row_list .col-md-2 {
+        width: 50%
+    }
+
+    .outlet_available_time .modal-lg {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .fa-heart:before {
+
+        margin-left: -12px;
+    }
+
+    .fa-heart.active:before {
+        margin-left: -12px;
+    }
+
+    .department_new .img-box {
+        width: 31%;
+    }
+
+    .store_info_slider {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .brand_name_head a.dis_hiddsdd {
+        display: none !important;
+    }
+
+    .my_accounts_new .modal-title-new {
+        font-size: 22px;
+    }
+
+    p.user_address_p span {
+        padding: 6px;
+    }
+
+    li.user_address_li label {
+        padding-left: 30px;
+        font-size: 12px !important;
+    }
+
+    .my_accounts_new p {
+        font-size: 13px;
+    }
+
+    .modal.store_info_popups .modal-dialog {
+        width: 100%;
+        margin: 70px 35px;
+        z-index: 9999;
+    }
+
+    .main-search-bar .modal-content {
+        padding: 15px 0px 10px;
+    }
+
+    .direct_view .cart_qty_btw_ud {
+        width: 76%;
+    }
+
+    .hover_view .cart_qty_btw_ud {
+        width: 50%;
+    }
+
+    .QuantityForm {
+        display: inline-block;
+        margin: 3% 0 0 !important;
+        width: 100%;
+    }
+
+    .add_to_cart_btn {
+        margin-top: 1%;
+    }
+
+    .left_right_infos .item-price {
+        margin: 0px 15px 0 0;
+    }
+
+    .product_name {
+        font-size: 15px;
+    }
+
+    .slider_store_info.cart_side_popup h4 {
+        font-size: 22px;
+    }
+
+    .left_right_infos .product_fl_oz_cls {
+        font-size: 15px;
+    }
+
+    .cart_right_info_common, .bottom.p-a-lg.card-warning, .bottom.p-a-lg.card-warning_orders_past {
+        margin-left: 0px;
+    }
+
+    .left_add_address .modal-lg {
+        width: 97%
+    }
+
+    .new_address_sec {
+        padding: 0 15px;
+        min-height: 340px;
+        max-height: 96vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .modalclose {
+        position: absolute;
+        right: 15px;
+        top: 0px;
+        z-index: 9999;
+    }
+
+    .cart_qty_btw_ud {
+        padding: 12px 5px;
+        font-size: 11px;
+        width: 70%;
+    }
+
+    .modalclose .close {
+        font-size: 47px;
+        color: #333;
+        text-shadow: none;
+    }
+
+    .order-summary-header h3 {
+        font-size: 14px
+    }
+
+    .row-fluid .border-right {
+        padding: 18px 0 6px;
+        border: none
+    }
+
+    .service_amount .modal-dialog {
+        width: 100%
+    }
+
+    .promocode_popup .modal-sm {
+        width: 98%
+    }
+
+    .hiddle_respon {
+        display: none
+    }
+
+    .clik_menus {
+        float: right;
+        /*background: url(../images/menu_icons.png) no-repeat;*/
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin: 12px 0 0;
+        top: 54px
+    }
+
+    .responsive_menus_faq {
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        display: none;
+        left: 0;
+        z-index: 2;
+        top: 54px;
+        box-shadow: 0 1px 5px 3px #ccc;
+        -webkit-box-shadow: 0 1px 5px 3px #ccc
+    }
+
+    .responsive_menus_faq nav a {
+        width: 100%;
+        color: #00adaf;
+        line-height: 37px;
+        border-bottom: 1px solid #ccc
+    }
+
+    .privacy_policy_sctions nav {
+        float: left;
+        width: 100%
+    }
+
+    .order_my_list .btn-warning {
+        float: left
+    }
+
+    .orders-product-images, .orders_product_images_common {
+        overflow-x: auto
+    }
+
+    .text_align_center_new {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        display: inline-block
+    }
+
+    .orders-product-images ul {
+        width: 800px
+    }
+
+    #login .country_drop {
+        margin-bottom: 10px;
+        padding-right: 0px !important;
+    }
+
+    #sign_up .country_drop {
+        padding-right: 10px !important;
+    }
+
+    #forgot .country_drop {
+        padding-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .slick-next, .slick-prev {
+        width: 30px !important;
+        height: 30px !important
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab {
+        width: 13.5%;
+        height: 92px;
+        border-radius: 50%;
+        margin-right: 6px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(67, 176, 42);
+        background: rgb(247, 247, 247) !important;
+        cursor: pointer;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab a {
+        font-size: 11px !important;
+    }
+
+    .modal.fade.bs-example-modal-mg.fb_signup_mobile_modal.in {
+        padding-right: 0px !important;
+    }
+
+    #change_mobile .country_drop #code {
+        margin-bottom: 10px;
+    }
+
+    .promo_code_sections {
+        padding: 0px 15px;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+
+    .bas_left_common {
+        padding-top: 9vh;
+    }
+
+    .main-search-bar .col-md-6 .common_text_fellds {
+        width: 100%;
+    }
+
+    .main-search-bar .col-md-6 select#product_sold_type {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .main-search-bar .col-md-7 textarea#notes {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .main-search-bar .col-md-5 .image-missing {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 598px) {
+    /* .order_summary_shopper .frame {
+        height: 141vh;
+    } */
+    .bas_left_common, .bas_left_login_form, .bas_login, .bask_logo h1, .update_city_location .modal-lg {
+        width: 100%
+    }
+
+    .bas_left_common {
+        margin: 0
+    }
+
+    .bask_logo h1 {
+        display: inline-block
+    }
+
+    .bas_login {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        margin: 20px 0 0
+    }
+
+    .bas_login .btn-primary {
+        float: right
+    }
+
+    .footer_naviv li a {
+        padding: 2px 11px
+    }
+
+    .section-heading {
+        font-size: 19px;
+        margin: 11px 0 12px
+    }
+
+    .hero_sections {
+        min-height: 140px
+    }
+
+    .hero_sections .hero-title {
+        font-size: 28px
+    }
+
+    .list-group {
+        margin: 0
+    }
+
+    .bas_left_inner {
+        box-shadow: none
+    }
+
+    .promo_code_sections .icon {
+        width: 100%;
+        text-align: center
+    }
+
+    .account-coupons .coupon-icon {
+        height: 123px
+    }
+
+    .green-title, .green-title p.subtitle {
+        font-size: 18px;
+        line-height: 28px
+    }
+
+    .green-title {
+        margin-bottom: 8px
+    }
+
+    .account-coupons > p {
+        margin-top: 6px
+    }
+
+
+    .basket_middle_search .input-group {
+
+
+        top: 25px;
+    }
+
+    .department_new .img-box {
+        float: none;
+        max-width: inherit;
+        width: 47% !important;
+        min-width: auto;
+        max-height: 139px;
+        min-height: 134px;
+        margin-right: 16px;
+        margin-bottom: 0;
+        background-color: rgb(255, 255, 255);
+        border-radius: 4px;
+        margin: 0 auto 18px;
+
+
+    }
+
+    .row_list {
+
+        width: 90%;
+
+
+        margin: 0 auto;
+    }
+
+
+    .department_new {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 6px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 560px) {
+    .department-all-item-list {
+        width: 98%;
+
+    }
+
+    .department-list-margin {
+        margin-top: 0px;
+    }
+
+    .dept_listing_common .main_title_dept, .offer_text_basket p, .ref_inf_sec p {
+        font-size: 12px
+    }
+
+    span.item-size {
+        font-size: 13px;
+        margin: 0 0 8px 0;
+        width: 100%;
+    }
+
+    .dept_listing_sort {
+        width: 100%;
+        margin: 8px 0 10px;
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel {
+        padding: 11px 9px !important;
+    }
+
+    .top_cart_info_sec .text-muted {
+        margin: 0 !important;
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .checkout-promotion {
+        padding: 3px !important;
+    }
+
+    .display-name {
+        margin: 0 45px 0 0;
+    }
+
+    .cta-shopper-wrap .btn-primary {
+        margin: 14px 0 0
+    }
+
+    .inbl_footer {
+        margin-bottom: 20px
+    }
+
+    .basket_list, .content-inset .btn-primary {
+        margin: 0
+    }
+
+    .basket_top, .footer_bootom {
+        padding: 17px 0 25px
+    }
+
+    .content-inset h2 {
+        line-height: 30px
+    }
+
+    .content-inset p {
+        font-size: 15px
+    }
+
+    .contain-max-basket h2 {
+        font-size: 19px;
+        line-height: 23px
+    }
+
+    .dep_list ul li {
+        display: none;
+    }
+
+    .dep_list h2 {
+        position: inherit;
+        bottom: 0;
+        padding-left: 0;
+    }
+
+    .dep_list {
+        min-height: 126px;
+        min-height: 40px;
+        text-align: center;
+        background: transparent;
+    }
+
+    .basket_inner_title .centered {
+        font-size: 14px;
+        padding: 6px;
+        line-height: 22px;
+        margin-top: 3px;
+    }
+
+    .store_location a {
+        font-size: 12px;
+    }
+
+    p.header-location-link a.chng_loc_btn {
+        padding: 9px 8px 0 0;
+        font-size: 12px;
+    }
+
+    .top_position {
+        width: 130px;
+        height: 130px;
+        left: 7%;
+        top: 0;
+    }
+
+    .dept_listing_common .main_title_dept {
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 19px;
+    }
+
+    .common_dep_list_filter {
+        padding: 0;
+        width: 100%;
+    }
+
+    .modal-title-new {
+        font-size: 16px;
+        margin: 7px;
+    }
+
+    .content-inset h2 {
+        font-size: 18px;
+    }
+
+    .contain-max-basket .btn-primary {
+        margin-top: 15px
+    }
+
+    .onethree h2, .onethree p {
+        font-size: 16px
+    }
+
+    .basket_brand img {
+        max-width: 100%
+    }
+
+    .image img {
+        width: 108px
+    }
+
+    .bask_logo h1 {
+        font-size: 20px
+    }
+
+    .modal.fade.service_amount {
+        top: 4%
+    }
+
+    .modal.fade.promocode_popup.bs-example-modal-sm {
+        top: 13%
+    }
+
+    .sort_by_price {
+        width: 255px;
+    }
+
+    .new_address_sec .btn-primary {
+        padding: 7px 5px
+    }
+
+    .new_address_sec .btn-info {
+        margin: 0 0 0 2px;
+        padding: 7px 11px
+    }
+
+    .navigation-tabs ul li, .slider_store_info .col-md-5, .slider_store_info .col-md-7, .store_info_slider {
+        padding: 0
+    }
+
+    .department_aisle_title, .department_dept_title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .product_name {
+        font-size: 15px
+    }
+
+    .left_right_infos .product_fl_oz_cls {
+        font-size: 15px;
+        margin: 0
+    }
+
+    .navigation-tabs ul li a, .scroll-header-stores {
+        font-size: 11px;
+    }
+
+    .department_dept_title {
+        overflow: visible;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .fad_sliders {
+        display: none
+    }
+
+    .ref_inf_prices > b {
+        font-size: 11px
+    }
+
+    .bas_left_inner_common .bask_form_center .btn-primary {
+        margin: 0
+    }
+
+    .scrolling_responsive.pl-17 {
+        padding: 0px;
+    }
+
+    .order-summary-footer {
+        margin: 5px 0px;
+    }
+
+    a.mnuclose.ion-close-round {
+        float: left;
+        text-align: center;
+        width: 75px;
+        margin: 14px 0px 0px 0;
+        padding: 6px 0px;
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 520px) {
+    /* .order_summary_shopper .frame {
+        height: 150vh;
+    } */
+
+    .cat_counts .btn-danger {
+        width: 65px !important;
+        height: 35px !important;
+    }
+
+    .footer_outer {
+        padding: 0 15px;
+    }
+
+    .apply-section .desc {
+        font-size: 17px;
+    }
+
+    .navigation-tabs ul li a {
+        width: 100%;
+        padding-top: 7px;
+    }
+
+    .items_info h5 {
+        min-height: 25px;
+    }
+
+    .cta-shopper-wrap .btn-primary {
+        width: 100%
+    }
+
+    .hoursList .price {
+        width: 20% !important;
+        text-align: right;
+    }
+
+    .price {
+        width: 14% !important;
+        font-size: 10px !important;
+    }
+
+    .ref_lis_img img {
+        height: 52px;
+        max-width: 50px;
+        border: 1px solid #f1f1f1
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions {
+        padding: 0 14px 20px
+    }
+
+    .iner_right_info, .iner_right_picked {
+        min-height: 345px
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel {
+        font-size: 12px !important
+    }
+
+    .top_cat_update .btn-default {
+        font-size: 14px
+    }
+
+    .text-green {
+        font-size: 11px
+    }
+
+    .service_amount_sce h1 {
+        padding: 9px 14px 15px
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .QuantityForm .new-form-popup .select2-selection--single {
+        margin-right: 0px;
+    }
+
+    .dep_list {
+        min-height: 200px;
+        min-height: 40px;
+        text-align: center;
+        background: transparent;
+    }
+
+    .dep_list {
+        padding: 10px 15px 15px 15px;
+    }
+
+    .navigation-tabs ul li a {
+        padding-top: 5px;
+    }
+
+    .left_my_accountsb_kd span {
+        font-size: 11px;
+    }
+
+    .department_header_bottom, .navigation-tabs ul li.active a {
+        height: 40px;
+    }
+
+    .navigation-tabs ul li {
+        width: 20%;
+    }
+
+    .icModalRow_basket ul li {
+        text-align: left;
+        padding: 3px 0px;
+    }
+
+    #update_city_location hr {
+        margin: 5px 0;
+    }
+
+    .left_add_icon {
+        margin: 0 14px 0 0;
+    }
+
+    .new_address_sec .form-group {
+        margin-bottom: 6px;
+    }
+
+    .after_account_addres .icModalRow_basket ul li:last-child {
+        min-height: 29px;
+    }
+
+    .left_add_icon i {
+        font-size: 17px;
+    }
+
+    .icModalRow_basket a {
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .store_info_slider img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .button_save_ins {
+        width: 118px;
+    }
+
+    .mnuclose {
+        margin: 12px 15px 0 0
+    }
+
+    .slick-list.draggable .col-xs-6 {
+        width: 100%
+    }
+
+    .refunds_orders {
+        overflow-x: auto;
+        width: 100%
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .media-body .subtitle {
+        font-size: 10px !important
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .media-body .title-wrapper .title {
+        font-size: 12px !important
+    }
+
+    .nav-tabs > li > a {
+        font-size: 9px
+    }
+
+    .common_pay_cart ul {
+        text-align: center
+    }
+
+    .top_time_counts h2 {
+        font-size: 14px
+    }
+
+    .top_time_counts {
+        margin: 0 auto;
+        width: 88%;
+        display: inherit
+    }
+
+    .out_time_modles {
+        padding: 12px
+    }
+
+    .retailerModalHeader .logo img {
+        height: 50px;
+        max-width: 50px
+    }
+
+    .outlet_available_time .modal-lg {
+        width: 94%
+    }
+
+    .new_address_sec textarea {
+        text-indent: inherit !important;
+        padding-left: 7px !important
+    }
+
+    .after_account_notfication h2 {
+        font-size: 14px;
+        padding: 7px 0;
+    }
+
+    .after_account_notfication ul li p.sub {
+        font-size: 12px
+    }
+
+    .contain-max-basket .btn-primary, .content-inset .btn-primary {
+        padding: 6px 12px;
+        font-size: 13px
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .media-body .subtitle, .order_my_list .btn-warning {
+        font-size: 11px
+    }
+
+}
+
+@media only screen and (max-width: 422px) {
+ 
+    .store_info_bottome img {
+        height: 123px;
+        width: 37%;
+        top: -110px;
+        right: -17px;
+    }
+
+    section.how_it_works {
+        margin-top: 10px;
+    }
+
+    .customer_msg {
+        margin: 10px auto;
+    }
+
+    .basket_header_outer .department_header_bottom a.availability-link_a {
+        line-height: 25px;
+        font-size: 10px;
+        text-align: left;
+    }
+
+    .mnuclose {
+        margin: 10px 10px 0 5px;
+        padding: 6px;
+        border: none;
+    }
+
+    .common_pay_cart ul li {
+        padding: 20px 15px 20px 0px;
+    }
+
+    .row_list_centered.common_dep_list {
+        margin-top: 0px;
+    }
+
+    .top_position {
+        width: 130px;
+        height: 130px;
+        left: 20%;
+        top: 0;
+    }
+
+    .top_position h2 {
+        margin-top: 25px;
+    }
+
+    .row_list .col-md-3 {
+        padding: 0 5px;
+        margin-bottom: 15px;
+    }
+
+    .dep_list {
+        background: transparent;
+    }
+
+    .department_aisle_title, .department_dept_title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .basket_header_outer .department_header_bottom a.availability-link_a {
+
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .save-text {
+        font-size: 12px
+    }
+
+    .popover {
+        right: 0px !important;
+    }
+
+    .icModalRow_basket a {
+        font-size: 13px;
+        padding-left: 20px;
+    }
+
+    .service_amount .btn-primary {
+        padding: 2px 18px
+    }
+
+    .shown_opt .action {
+        width: 100%
+    }
+
+    .new_address_sec .btn-danger, .new_address_sec .btn-info, .new_address_sec .btn-primary {
+        padding: 4px;
+        font-size: 11px
+    }
+
+    .item-quantity-amount {
+        font-size: 16px
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .media-body .title-wrapper .title, .text-muted {
+        font-size: 13px
+    }
+
+    .common_pay_cart ul li p {
+        font-size: 12px
+    }
+
+    .choose_delivery .checkout-actions-container .checkout-card-title {
+        font-size: 12px !important
+    }
+
+    .basket_landing_page.basket_signup_popup {
+        min-height: 695px
+    }
+
+    .image {
+        min-height: 69px
+    }
+
+    .bas_left_inner {
+        background: #fff;
+        padding: 0 15px;
+        margin-top: 10px;
+    }
+
+    .left_responsive_logo {
+        float: left;
+        display: block
+    }
+
+    .common_dep_list .col-xs-6 {
+        width: 50%;
+        margin-bottom: 0px;
+    }
+
+    .dep_list h2 {
+        font-size: 13px;
+    }
+
+    .icModalRow_basket {
+        width: 100%
+    }
+
+    .popup-inner h1 {
+
+        font-size: 16px
+    }
+
+    .items_info {
+        padding: 0 0 0 10px;
+    }
+
+    .modal.common_border_sections .modal-dialog {
+        width: 94%
+    }
+
+    .bas_left_common, .bask_form_center, .basket_base3 .bask_form_center {
+        width: 100%
+    }
+
+
+    .common_border_sections .btn-info, .common_border_sections .btn-primary {
+        font-size: 12px
+    }
+
+    .ref_inf_sec h5 {
+        font-size: 13px
+    }
+
+    p.no-item {
+        font-size: 10px
+    }
+
+    .form-desc-title {
+        font-size: 16px
+    }
+
+    .from_shop_right .title {
+        font-size: 15px
+    }
+
+    .apply-section .desc, .text-muted {
+        font-size: 14px
+    }
+
+    .right_nav_shop a {
+        font-size: 14px;
+        margin-left: 0
+    }
+
+    .bas_left_common {
+        left: 0;
+        margin: 0;
+        position: absolute
+    }
+
+    .new_address_sec .btn-primary {
+        padding: 7px 5px;
+        font-size: 14px;
+    }
+
+    .checkout-card-title, .find_location_se_common {
+        padding: 10px 20px;
+    }
+
+    .common_pay_cart ul li {
+        padding: 12px 15px 12px 0px;
+    }
+
+    .enjoy-text {
+        line-height: 18px
+    }
+
+    .promocode_popup .modal-sm {
+        width: 94%
+    }
+
+    .left_add_address .modal-lg, .service_amount .modal-dialog {
+        width: 95%;
+        margin: 30px 10px;
+    }
+
+    .text-muted {
+        color: #777
+    }
+
+    .offer_text_basket {
+        width: 80%
+    }
+
+    .store_info_popups .modal-content, .store_info_popups_cart.side_menu_carts .modal-lg {
+        width: 100%;
+    }
+
+    .hero_sections {
+        min-height: 101px
+    }
+
+    .navigation-tabs ul li a {
+        font-size: 9px
+    }
+
+    .navigation-tabs ul li {
+        width: 20%;
+    }
+
+    .enterd img {
+        height: 26px
+    }
+
+    .mnuclose {
+        padding: 6px;
+        font-size: 15px;
+        margin: 10px 0px 0 0;
+        border: none;
+        color: #00adaf !important;
+    }
+ 
+    .customer_msg {
+        margin-bottom: 2px;
+        font-size: 12px;
+        padding: 5px 5px 5px 10px;
+        width: 100%;
+        font-weight: 600;
+    }
+
+    .items_list .btn.btn-inverse {
+        padding: 3px;
+    }
+
+    .order-summary-header .btn-primary {
+        padding: 6px 5px
+    }
+
+    .order-summary-header .canceled-text {
+        font-size: 16px
+    }
+
+    .account__content-common_orders {
+        padding: 9px 0 0
+    }
+
+    .order-info-heading-wrapper h3 {
+        font-size: 12px
+    }
+
+    .left_my_accountsb_kd a {
+        font-size: 11px
+    }
+
+    .ref_inf_prices > b {
+        font-size: 14px;
+        width: 100%
+    }
+
+    .space69 {
+        height: 10px
+    }
+
+    .order-summary-header .btn-primary {
+        font-size: 12px
+    }
+
+    .checkout-card-title, .checkout-card-title .flaticon-add-1::before {
+        font-size: 11px
+    }
+
+    .shown_delivery p, .shown_opt .action {
+        width: 100%
+    }
+
+    .continu_buttons_new {
+        padding-bottom: 0
+    }
+
+    .checkout-card-title {
+        font-size: 17px
+    }
+
+    .popover.fade.bottom.in {
+        width: 300px !important;
+    }
+
+    .cat_counts .popover {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .basket_header_fixed {
+        height: 44px;
+    }
+
+    .top_position img {
+        max-height: 110px;
+    }
+
+    .department_dept_title {
+        font-size: 11px;
+    }
+
+    .items_info h4 {
+        min-height: 28px;
+    }
+
+    .ref_inf_sec h5, .white_box_footer {
+        font-size: 13px
+    }
+
+    .ref_inf_sec {
+        padding: 0 0 0 8px
+    }
+
+    .basket_shoper_header .container_shopper .col-xs-5, .basket_shoper_header .container_shopper .col-xs-7 {
+        padding: 0
+    }
+
+    .availability-link {
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .filters_left_bt {
+        padding: 5px 3px 5px 31px
+    }
+
+    .store_info_bottome img {
+        height: 90px;
+        width: 36%;
+        top: -90px;
+    }
+
+    .top_position img {
+        max-height: 60px;
+        margin: 0 auto;
+        top: 10px;
+    }
+
+    .bas_left_inner {
+        margin-top: 40px;
+    }
+
+    .top_position h2 {
+
+        margin-top: 25px;
+    }
+
+
+    .top_position img {
+        max-height: 60px;
+        margin: 0 auto;
+        top: 10px;
+        left: 2px;
+    }
+
+    .basket_brand {
+        position: relative;
+        bottom: -250px;
+        padding: 5px;
+    }
+
+    .basket_header_outer .department_header_bottom a.availability-link_a {
+        padding: 0px;
+        font-size: 10px !important;
+        line-height: 15px;
+    }
+
+    .basket_header_outer .department_header_bottom a.primary-nav-link.chng_loc_btn {
+        padding: 0;
+        padding-top: 10px !important;
+        font-size: 10px !important;
+    }
+
+    .availability-link {
+        float: none;
+    }
+
+    .dep_list {
+        padding: 10px 15px 15px 15px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .basket_brand {
+        position: relative;
+        bottom: -250px;
+        padding: 5px;
+    }
+
+    .availability-link {
+        float: none;
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 421px) {
+
+    #product_search_inp {
+        font-size: 12px;
+    }
+
+    .department_new .img-box h2 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .cat_counts .btn-danger {
+        width: 50px !important;
+        height: 35px !important;
+        padding: 3px;
+    }
+
+    .availability-link {
+        float: none;
+    }
+
+    .left_my_accountsb_kd {
+        width: 91% !important;
+    }
+
+    .sort_by_price {
+        width: 170px;
+    }
+
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+    .bask_location a {
+        top: 0px;
+        top: 5px !important;
+    }
+
+    .left_add_address {
+        z-index: 9999 !important;
+        top: 90px;
+    }
+
+    .basket_right_information nav.navigation-tabs ul li a .icon.account, .top_responsive_sections_hed .left_my_accounts a .icon.account {
+
+        margin-top: 4px;
+    }
+
+    .cancel_btn {
+        padding: 9px !important;
+        font-size: 12px !important;
+    }
+
+    .left_add_address .modal-dialog {
+        margin: 0px auto;
+        width: 100%;
+    }
+
+    .left_add_address .form-group {
+        margin-bottom: 10px !important;
+    }
+
+    .new_address_sec.add_aaddress_popup {
+        padding: 15px;
+        padding-bottom: 380px;
+    }
+
+    .map_location_after .form-control {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .map_location_after .btn.btn-link {
+        border-radius: 4px;
+    }
+
+    .info_popUp .fixed_ins_popup {
+        width: 32%;
+        margin: 10px 5px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .instruction_heading h1 {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .custom_quantity_inp {
+        height: 49px;
+        border-color: #ccc;
+        box-shadow: none;
+        color: #333;
+    }
+
+    form#update_location {
+        margin-bottom: 400px;
+    }
+
+    span.select2-dropdown.select2-dropdown--below {
+        overflow-y: auto;
+        min-height: 200px;
+        max-height: 25vh;
+    }
+
+    .store_info_popups .info_popUp {
+        top: 0;
+        margin: 25px auto !important;
+    }
+
+    .form-group.new-form-popup {
+        width: 100% !important;
+    }
+
+    button.btn.btn-success.add_to_cart_btn {
+        /*width: 100%!important;*/
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+
+    .item-actions a {
+        color: #00b0b1 !important;
+        float: none;
+        width: 100%;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .item-actions a i {
+        color: #43b02a !important;
+        display: block;
+    }
+
+    .store_info_bottome h3 {
+
+        font-size: 17px;
+    }
+
+    .store_info_bottome a h3 i.fa {
+        font-size: 15px;
+
+        padding-left: 6px;
+    }
+
+    .store_info_bottome h4 {
+        font-size: 16px;
+    }
+
+
+    .fa-heart.active {
+
+        display: block;
+    }
+ 
+    .basket_middle_search .form-control {
+        border: 1px solid #eee;
+        height: 33px;
+        font-size: 13px;
+    }
+
+    span.item-separate {
+        display: none;
+    }
+
+    .basket_middle_search .btn-default {
+        border: 1px solid #eee;
+        height: 33px;
+    }
+
+    .row_list_centered.common_dep_list {
+        margin-top: 0px;
+    }
+
+    .top_position {
+        width: 130px;
+        height: 130px;
+        left: 7%;
+        top: 0;
+        position: initial;
+    }
+
+    .top_position img {
+        max-height: 80px;
+        margin: 0 auto;
+        top: 20px;
+    }
+
+    .top_position h2 {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .dep_list {
+        min-height: 40px;
+        text-align: center;
+        background: transparent;
+        padding-top: 20px;
+
+    }
+
+    .department_aisle_title, .department_dept_title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 0px;
+        margin-top: -10px;
+    }
+
+    .bas_login a.left_responsive_logo {
+        display: none;
+    }
+
+    .how_it_works .container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .cta-shopper-wrap {
+        float: none;
+    }
+
+    ul.slick-dots {
+
+        display: none !important;
+    }
+
+    .department_header_bottom {
+        margin-top: 45px;
+        width: 100%;
+    }
+
+    .basket_header_outer .department_header_bottom a.primary-nav-link.chng_loc_btn {
+        padding: 0;
+        padding-top: 9px;
+        font-size: 11px;
+        height: 40px;
+        vertical-align: middle;
+        margin-right: 0px !important;
+        margin-left: -8px;
+    }
+
+    .basket_header_outer .department_header_bottom a.availability-link_a {
+        padding: 0px;
+        padding-top: 8px;
+        font-size: 11px;
+        line-height: 25px;
+    }
+
+    .top_responsive_sections_hed {
+        position: fixed;
+        background-color: #f7f7f7;
+        border-bottom: 2px solid #eee;
+        z-index: 9;
+    }
+
+    .department_new h3 {
+
+        text-align: center;
+    }
+
+    .left_my_accountsb_kd {
+        margin: 4px 0;
+    }
+
+    p.retailer-option-categories {
+        line-height: 20px;
+        padding: 1px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+    .navigation-tabs ul li a {
+        padding-top: 5px;
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 561px) and (min-width: 481px) {
+    .navigation-tabs ul li {
+        padding: 1px 15px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .department_dept_title {
+        font-size: 13px !important;
+    }
+
+    section.how_it_works {
+        margin-top: 200px;
+    }
+}
+
+@media only screen and (device-width: 768px) {
+    /* For general iPad layouts */
+    .bas_left_common {
+        margin-left: 19.2%;
+    }
+
+    .availability-link {
+        float: right;
+        margin-right: 8px;
+    }
+
+    .store_info_bottome img {
+        height: 115px;
+        width: 26%;
+        top: -110px;
+        left: -40px;
+    }
+
+    .row_list_centered.common_dep_list .row_list .dep_list ul {
+        display: none;
+    }
+
+    .row_list .col-md-3 {
+        margin-bottom: 0px;
+    }
+
+    .top_position {
+        position: inherit;
+        left: 0;
+        top: 0;
+    }
+
+    .row_list_centered.common_dep_list {
+        margin-top: 0px;
+    }
+
+    .head_city_location a.chng_loc_btn {
+        padding: 10px 0px 0;
+    }
+
+    .pos_abs_top {
+        position: inherit;
+        right: 0;
+        top: 0;
+        margin: 10px auto;
+    }
+
+    .department_header_bottom .responsive_hidde, .bask_location.dis_hidds.head_city_location {
+        display: block;
+    }
+
+    .hellp a, .bask_myaccount a {
+        padding: 0px;
+    }
+
+    .hellp {
+        display: block;
+        float: left;
+        padding-top: 8px;
+        padding-left: 15px;
+    }
+
+    span.item-separate {
+        position: absolute;
+        top: 65px;
+        padding: 15px 1px;
+    }
+
+    .bask_myaccount.dis_hidds {
+        display: block;
+        float: left;
+        padding-left: 15px;
+    }
+
+    .basket_right_information nav.navigation-tabs {
+        text-align: center;
+    }
+
+    .row_list.new-store-list .basket_inner_sections {
+        width: 99%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .brand_name_head a {
+        display: block !important;
+        position: absolute;
+        top: 0px;
+    }
+
+    .basket-retailer-chooser {
+        top: 130px;
+        width: 99%;
+        margin: 0 auto;
+        left: 5px;
+    }
+
+    .basket_inner_title .header-location-link a {
+        width: 200px;
+        margin-left: -55px;
+        padding: 20px 0;
+    }
+
+    a.close_sections {
+        left: 0px;
+        top: 0;
+    }
+
+    .basket_inner_filter ul li a {
+        position: initial;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: -378px;
+        top: -5px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* For portrait layouts only */
+    .bas_left_common {
+        margin-left: 19.2%;
+    }
+
+    .row_list_centered.common_dep_list .row_list .dep_list ul {
+        display: none;
+    }
+
+    .row_list .col-md-3 {
+        margin-bottom: 0px;
+    }
+
+    .top_position {
+        position: inherit;
+        left: 0;
+        top: 0;
+    }
+
+    .row_list_centered.common_dep_list {
+        margin-top: 0px;
+    }
+
+
+    .pos_abs_top {
+        position: inherit;
+        right: 0;
+        top: 0;
+        margin: 10px auto;
+    }
+
+    .department_header_bottom .responsive_hidde, .bask_location.dis_hidds.head_city_location {
+        display: block;
+    }
+
+    .hellp a, .bask_myaccount a {
+        padding: 0px;
+    }
+
+    .hellp {
+        display: block;
+        float: left;
+        padding-top: 8px;
+        padding-left: 15px;
+    }
+
+    span.item-separate {
+        position: absolute;
+        top: 65px;
+        padding: 15px 1px;
+    }
+
+    .bask_myaccount.dis_hidds {
+        display: block;
+        float: left;
+
+
+        padding-left: 15px;
+    }
+
+    .basket_right_information nav.navigation-tabs {
+        text-align: center;
+    }
+
+    .availability-link a {
+        padding-top: 10px;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: -378px;
+        top: -5px;
+    }
+
+    .dep_list {
+        padding: 30px 15px 15px 15px;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* For landscape layouts only */
+    .bas_left_common {
+        margin-left: 19.2%;
+    }
+
+    .row_list_centered.common_dep_list .row_list .dep_list ul {
+        display: none;
+    }
+
+    .row_list .col-md-3 {
+        margin-bottom: 0px;
+    }
+
+    .top_position {
+        position: inherit;
+
+        left: 0;
+        top: 0;
+    }
+
+    .row_list_centered.common_dep_list {
+        margin-top: 0px;
+    }
+
+    .head_city_location a.chng_loc_btn {
+        padding: 12px;
+    }
+
+
+    .dep_list {
+        padding: 30px 15px 15px 15px;
+    }
+
+    .pos_abs_top {
+        position: inherit;
+        right: 0;
+        top: 0;
+        margin: 10px auto;
+    }
+
+    .department_header_bottom .responsive_hidde, .bask_location.dis_hidds.head_city_location {
+        display: block;
+    }
+
+    .hellp a, .bask_myaccount a {
+        padding: 0px;
+    }
+
+    .hellp {
+        display: block;
+        float: left;
+        padding-top: 8px;
+        padding-left: 15px;
+    }
+
+    span.item-separate {
+        position: absolute;
+        top: 23px;
+        padding: 15px 1px;
+    }
+
+    .bask_myaccount.dis_hidds {
+        display: block;
+        float: left;
+        padding-left: 15px;
+    }
+
+    .basket_right_information nav.navigation-tabs {
+        text-align: right;
+    }
+
+    .row_list.new-store-list .basket_inner_sections {
+        width: 99%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .brand_name_head a {
+        display: block !important;
+        position: absolute;
+        top: 6px;
+    }
+
+    .basket-retailer-chooser {
+        width: 99%;
+        margin: 0 auto;
+        left: 5px;
+    }
+
+    a.close_sections {
+        left: 0px;
+        top: 0;
+    }
+
+    .basket_inner_filter ul li a {
+        position: initial;
+    }
+
+    .bask_myaccount .after_login_acc {
+        position: absolute;
+        right: 175px;
+        top: 45px;
+    }
+
+    .availability-link a {
+        padding-top: 10px !important;
+    }
+}
+/*new media*/
+@media (max-width: 991px) {
+    .availability_li {
+        display: none;
+    }
+    .department_header_bottom ul li a {
+        font-size: 10px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0;
+        width: 85px;
+        flex-grow: 1;
+        color: #999;
+    }
+    .department_header_bottom {
+        height: 56px;
+        padding: 0 !important;
+        margin-top: 0 !important;
+        display: block;
+    }
+    .department_header_bottom ul {
+        justify-content: space-around !important;
+    }
+    /*ACCOUNT*/
+    .account__content-common {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+}
+@media (max-width: 767px) {
+    .items_info_detail, .items_info_name, .items_info_sold{
+        font-size: 11px;
+    }
+    .account__content {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+@media (max-width: 576px) {
+    .items_img img {
+        width: 75px;
+        height: 75px;
+        margin-left: 0 !important;
+    }
+}
