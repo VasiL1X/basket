@@ -184,5 +184,44 @@
     .footer{
         word-spacing: 15px;
     }
+
+    .list-group {
+        list-style: none;
+        margin: 0 0 30px;
+        padding: 0
+    }
+
+    .list-group li {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: #eee #eee currentcolor;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 1px 1px 0;
+        font-size: 18px;
+        line-height: 36px;
+        list-style: none;
+        color: #727272;
+        overflow: hidden;
+        padding: 20px
+    }
+
+    .list-group li:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid #eee
+    }
+
+    .list-group li:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom: 1px solid #eee
+    }
+
+    .list-group li a {
+        color: #69dada
+    }
 </style>
 

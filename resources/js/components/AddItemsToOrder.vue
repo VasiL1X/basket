@@ -3,15 +3,14 @@
         <div class="new_address_sec new-sear">
             <div class="form-group">
                 <div class="common_text_fellds">
-                    <h4></h4>
                     <div class="search-box">
                         <div class="col-sm-12 col-md-12">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search"
+                                <input type="text" class="form-control-lg col-11 " placeholder="Search"
                                        name="item_search" id="item_search" v-model="searchValue">
-                                <div class="input-group-btn" style="z-index: 1000;">
+                                <div class="input-group-btn col-1 p-0" style="z-index: 1000;">
                                     <button class="btn btn-light" @click="searchProduct()">
-                                        <i class="fa fa-search"></i>
+                                        <i class="fa fa-search text-success p-1"></i>
                                     </button>
                                 </div>
                             </div>

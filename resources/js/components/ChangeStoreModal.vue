@@ -1,57 +1,63 @@
-<template>
-    <div class="modal fade store-change p-0" id="changeStore" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <template>
+    <div class="modal fade pr-1" id="changeStore" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
-        <div class="modal-dialog store-change__wrapper" role="document">
-            <div class="modal-content store-change__inner">
-                <div class="modal-header store-change__header">
-                    <div class="store-change__close-wrapper d-lg-none">
-                            <div class="store-change__close-text">
-                                <span>Choose a store</span>
-                            </div>
-                            <button type="button" class="store-change__close-btn close" data-dismiss="modal" aria-label="Close" @click="closeStoresModal()">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    <div class="container">
-                        <div class="row store-change__header-inner">
-                            <div class="row col-lg-10 store-change__delivery">
-                                <div class="store-change__buttons mr-lg-3">
-                                    <button class="store-change__btn store-change__btn--active">delivery</button>
-                                    <button class="store-change__btn">pickup</button>
-                                </div>
-                                <div class="store-change__address" data-toggle="dropdown">
+        <div class="modal-dialog ml-0" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <div class="container-fluid">
+                        <div class="row form-inline">
+                            <div class="col-md-12 d-inline-block d-lg-none m-auto mb-5 marka-banner">
+                                <div class="col-10 card d-inline-block shadow marka-banner-card" @click="chooseLocation = !chooseLocation">
                                     <span class="text-secondary">TO</span>
-                                    <div class="store-change__address-current">{{ currentCity }}</div>
-                                    <i class="fa fa-pen text-success"></i>
-                                    <div class="dropdown-menu p-3 store-change__locations-list" data-flip="false">
+                                    <span class="store_chooser text-success" >{{ currentCity }} <i class="fa fa-pen text-success stores-options-text"></i></span>
+                                    <div class="chooseLocation" v-show="chooseLocation" v-if="width < 960">
                                         <button
                                             @click="updateUserLocation( item.address_id,item.city_id, item.address, item.location_id)"
-                                            class="dropdown-item" type="button"
-                                            v-for="item in addressList"
-                                            :key="item.id">
-                                            <p class="store-change__locations-address mt-2">
+                                            class="dropdown-item list-of-items" type="button"
+                                            v-for="item in addressList">
+                                            <p class="user_address_p p-store-address mt-2" style="line-height: 18px">
                                                 <i class="fas fa-map-marker-alt text-success mr-1"></i>
-                                                <span>{{item.address}},</span>
-                                                <span v-for="city in cities" :key="city.id">
-                                                    <span v-if="city.id == item.city_id" class="city-zone">{{city.city_name}},</span>
-                                                </span>
-                                                <span v-for="zone in zones" :key="zone.id">
-                                                    <span v-if="zone.id == item.location_id" class="city-zone">{{zone.zone_name}}</span>
-                                                </span>
+                                                <span>{{item.address}}</span>
                                             </p>
                                         </button>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-2 d-lg-inline d-none text-right store-change__category">
-                                <div class="store-change__category-inner">
-                                    <button data-toggle="dropdown" class="pt-0 store-change__category-btn">
-                                        <span>Showing</span>
+
+                            <div class="offset-2 col-sm-6 d-lg-inline d-none input-with" data-toggle="dropdown">
+                                <div class="d-inline-block marka-banner-card">
+                                    <span class="text-secondary">TO</span>
+                                    <span class="store_chooser text-success">{{ currentCity }} <i class="fa fa-pen text-success stores-options-text"></i></span>
+                                    <div class="dropdown-menu input-with p-3" v-if="width > 960"
+                                         style="overflow: hidden!important;min-width: 30rem!important;">
+                                        <button
+                                            @click="updateUserLocation( item.address_id,item.city_id, item.address, item.location_id)"
+                                            class="dropdown-item list-of-items" type="button"
+                                            v-for="item in addressList">
+                                            <p class="user_address_p p-store-address mt-2" style="line-height: 18px">
+                                                <i class="fas fa-map-marker-alt text-success mr-1"></i>
+                                                <span>{{item.address}},</span>
+                                                <span v-for="city in cities">
+                                                       <span v-if="city.id == item.city_id" class="city-zone">{{city.city_name}},</span>
+                                                    </span>
+                                                <span v-for="zone in zones">
+                                                        <span v-if="zone.id == item.location_id" class="city-zone">{{zone.zone_name}}</span>
+                                                    </span>
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4  d-lg-inline d-none text-center">
+                                <div class="btn-group">
+                                    <a data-toggle="dropdown" href="javascript:void(0)" class="pt-0 showing-dropdown">
+                                        <span style="font-size: 18px;padding-left: 25px;">Showing</span>
                                         <i class="fa fa-angle-down"></i>
-                                    </button>
+                                    </a>
                                     <div class="dropdown-menu p-1">
-                                        <button v-for="item in items" :key="item.id" @click="getStoreList(item.qt)" class="dropdown-item" v-bind:class="[itemActive === item.qt? 'bg-light':'' ]" type="button">
+                                        <button v-for="item in items" @click="getStoreList(item.qt)" class="dropdown-item" v-bind:class="[itemActive === item.qt? 'bg-light':'' ]" type="button">
                                             <i class="fa fa-check mr-2 align-middle col-1 text-success" v-bind:class="[item.qt === itemActive  ? 'visible' : 'invisible' ]"></i>
                                             {{ item.title }}
                                         </button>
@@ -59,41 +65,50 @@
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="close-banner col-12 d-lg-none">
+                        <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                 </div>
-                <div class="modal-body store-change__list stores-list__wrapper">
+                <div class="modal-body" style="min-height: 860px;">
                     <div class="container" v-if="!showLoader">
-                        <ul class="stores-list__list row p-0">
-                            <li class="col-xl-3 col-lg-4 col-md-6 text-left text-md-center stores-list__item" v-bind:class="[userData.outlet_id === store.outlet_id ? 'bg-lightC' : '']"
-                                v-if="store.delivery_areas.includes(userData.location_id) &&  sortBy(store.store_type[1]) === itemActive"
-                                @click="updateStore(store.outlet_id)"
-                                v-for="store in storeList"
-                                :key="store.id">
-                                <div class="stores-list__item-inner">
-                                    <div class="stores-list__item-img">
-                                        <img class="" v-bind:src="store.logo_image" v-bind:alt="store.outlet_name">
-                                    </div>
-                                    <div class="stores-list__item-descr">
-                                        <h3 class="stores-list__item-name">
-                                            {{store.outlet_name}}
-                                        </h3>
-                                        <p class="stores-list__item-categories">
-                                            <span class="stores-list__item-category"
-                                                    v-for="type in store.store_type"
-                                                    :key="type.id">
-                                                {{type.name}}
+                        <ul class="stores-ul p-0">
+                            <li class="col-lg-3 col-md-10 store-li" v-bind:class="[userData.outlet_id === store.outlet_id ? 'bg-lightC' : '']"
+                            v-if="store.delivery_areas.includes(userData.location_id) &&  sortBy(store.store_type[1]) === itemActive"
+                            @click="updateStore(store.outlet_id)"
+                                v-for="store in storeList">
+                                <a href="javascript:void(0)" title="">
+                                    <div class="inerr_stores" v-bind:class="[width < 960 ? 'row' : '']">
+                                        <div class="retailer_option_mimg">
+                                            <img v-bind:src="store.logo_image" v-bind:alt="store.outlet_name" class="storeLogo">
+                                        </div>
+                                        <div class="retailer_option_body text-dark"
+                                             v-bind:class="[width < 960 ? 'text-left pl-3' : '']">
+                                            <h3 class="text-left text-lg-center">
+                                                <span>{{store.outlet_name}}</span>
+                                            </h3>
+                                            <p style="display: block;padding: 5px;padding-left: 0"
+                                               v-bind:class="[width < 960 ? 'text-left' : 'text-center']">
+                                                <span class="retailer-option-categories"
+                                                      v-for="type in store.store_type">
+                                                    {{type.name}}
+                                                </span>
+                                            </p>
+                                            <span class="col-12 pt-5 text-center p-0">
+                                               <button class="btn btn-sm btn-outline-secondary uppercase m-auto">delivery</button>
                                             </span>
-                                        </p>
-                                        <button class="stores-list__item-btn m-md-auto">delivery</button>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="container" v-else>
+                    <div class="container-fluid" v-else>
                         <div class="wrapper-loader row">
-                            <div class="wrapper-cell col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                                <!-- it was unused v-for="i in 10" below-->
+                            <div class="wrapper-cell col-lg-4 col-md-6 col-sm-12" v-for="i in 10">
                                 <div class="image-wrapper animated-background">
                                     <div class="image"></div>
                                 </div>
@@ -105,9 +120,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="container store-change__footer py-4 py-md-5">
-                    <p class="text-center store-change__footer-text">
-                        Basket is
+                <div class="container change-store-footer pt-5 pb-2">
+                    <p class="text-center"
+                       style="font-size: 14px; color: rgb(189, 189, 189);">Basket is
                         an independent business that is not necessarily
                         affiliated with, endorsed or sponsored by the retailers
                         mentioned here
@@ -249,9 +264,8 @@
 
                 })
             },
-            closeStoresModal() {
-                bus.$emit('closeStoresModal')
-            },
+
+
             updateUserLocation(addressId, cityId, cityName, locationId) {
                 let _this = this;
                 this.currentCity = cityName;
@@ -306,208 +320,114 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
     /*change Store Modall*/
+    .store-li:hover{
+       border-radius: 7px;
+       background-color: #ffc1072e!important;
+    }
     .bg-lightC{
         border-radius: 7px;
-        background-color: #ffc1072e;
+        background-color: #ffc1072e!important;
     }
-    .store-change {
-        margin-top: 84px;
-        height: calc(100% - 84px);
-        &__wrapper {
-            display: flex;
-            margin: 0;
-            max-width: 100%;
-            min-height: 100%;
-        }
-        &__inner {
-            min-height: 100%;
-            margin: 0;
-            border: none;
-            border-radius: 0;
-        }
-        &__header {
-            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
-            padding: 0;
-            flex-direction: column;
-            &-inner {
-                align-items: center;
-                padding: 0 4rem;
-                height: 49px;
-            }
-        }
-        &__delivery {
-            margin: 0;
-            align-items: center;
-        }
-        &__buttons {
-            display: flex;
-            border: solid 1px #61bf3d;
-            border-radius: 3px;
-            height: 32px;
-        }
-        &__btn {
-            width: 170px;
-            background: #fff;
-            border: none;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-            color: #61bf3d;
-            transition: all .3s;
-            &--active, &:hover {
-                background: #61bf3d;
-                color: #fff;
-            }
-        }
-        &__address {
-            position: relative;
-            max-width: 300px;
-            display: flex;
-            align-items: baseline;
-            cursor: pointer;
-            &-current {
-                font-size: 16px;
-                font-weight: 600;
-                margin: 0 5px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-        }
-        &__category {
-            &-inner {
-                position: relative;
-            }
-            &-btn {
-                color: #757575;
-                font-size: 16px;
-                font-weight: 600;
-                border: none;
-                background: none;
-                i {
-                    color: #61bf3d;
-                }
-            } 
-        }
-        &__footer-text {
-            font-size: 14px;
-            color: #cccccc;
-        }
-        &__close {
-            &-wrapper {
-                height: 76px;
-                text-align: center;
-                padding: 16px 10px 10px;
-                width: 100%;
-                background-color: #ededed;
-            }
-            &-text {
-                font-size: 15px;
-                font-weight: 700;
-                color: #000;
-            }
-            &-btn {
-                position: absolute;
-                right: 10px;
-                top: 15px;
-                padding: 0;
-                margin: 0;
-                font-size: 32px;
-                line-height: 18px;
-                font-weight: 400;
-            }
-        }
-        &__locations {
-            &-list {
-                width: 100%;
-                min-width: 30rem;
-                max-height: 40vh;
-                overflow: auto;
-            }
-            &-address {
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                max-width: 100%;
-                overflow: hidden;
-                line-height: 18px;
-            }
-        }
+    .storeLogo{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
     }
-    .stores-list {
-        &__list {
-            margin: 0;
-            list-style: none;
+    #changeStore > .modal-dialog {
+        width: 100%;
+        margin-top: 65px;
+        height: 800px;
+        max-width: 100%;
+    }
+
+    .change-store-footer {
+        border-top: 1px solid #dee2e6;
+    }
+
+    .showing-dropdown {
+        color: rgb(117, 117, 117);
+    }
+
+    .showing-dropdown > i {
+        color: green;
+    }
+
+    .store_chooser {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font-weight: 600;
+        border: none;
+    }
+
+    .input-with {
+        width: 100%;
+    }
+
+    .stores-ul > li {
+        float: left;
+        display: inline-block;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .stores-ul > li > a {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .retailer_option_body h3 {
+        font-size: 15px;
+    }
+
+    @media only screen and (max-width: 350px) {
+        .retailer_option_body {
+            max-width: 5em;
         }
-        &__item {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            &:hover {
-                border-radius: 7px;
-                background-color: #ffc1072e;
-            }
-            &-inner {
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-            &-img {
-                img {
-                    border-radius: 50%;
-                    height: 100px;
-                    width: 100px;
-                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-                }
-            }
-            &-descr {
-                margin: 16px 6px 6px;
-            }
-            &-name {
-                color: #262c1d;
-                font-size: 18px;
-                font-weight: 600;
-                margin: 0;
-            }
-            &-categories {
-                color: #000;
-                font-size: 14px;
-                margin: 4px 0px 46px;
-            }
-            &-category {
-                display: inline-block;
-            }
-            &-category + &-category {
-                padding-left: 4px;
-                position: relative;
-                &::before {
-                    content: '•';
-                }
-            }
-            &-btn {
-                position: absolute;
-                bottom: 16px;
-                left: 0;
-                right: 0;
-                border-radius: 4px;
-                border: solid 1px #cccccc;
-                background: none;
-                min-width: 96px;
-                font-weight: 600;
-                text-transform: uppercase;
-                color: #757575;
-                transition: background .3s;
-                &:hover {
-                    background: #eaeaea;
-                }
-            }
+
+        .store_chooser {
+            max-width: 8em;
         }
     }
 
-    /* new styles */
-    .dropdown-item {
-        padding: 0;
-        vertical-align: middle;
+    .retailer_option_body p {
+        font-size: 12px;
+    }
+
+    .store-li:hover {
+        background-color: #e5edec75;
+    }
+
+    .modal-content {
+        width: 101%;
+    }
+
+    .marka-banner {
+        text-align: center;
+        max-height: 10vh;
+        min-height: 7vh;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+    }
+
+    .marka-banner-card {
+        position: relative;
+        padding: 11px;
+        padding-top: 7px;
+        border-radius: 0;
+    }
+
+    .close-banner {
+        position: absolute;
+        top: -65px;
+        height: 4.5rem;
+        text-align: center;
+        padding: 10px;
+        left: 0;
+        z-index: 0;
+        background-color: #ededed;
     }
 
     /*      Loader Section    */
@@ -551,6 +471,13 @@
         height: 80%;
         margin: 0 auto;
     }
+    .store_chooser{
+        background-color: rgb(248, 249, 250);
+        max-width: 130px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
     /*Animation*/
 
@@ -573,90 +500,20 @@
         }
     }
 
-    @media (max-width: 991px) {
-        .store-change {
-                margin: 0;
-                height: 100%;
-            &__header {
-                &-inner {
-                    padding: 0;
-                    height: 86px;
-                }
-            }
-            &__delivery {
-                flex-direction: column-reverse;
-            }
-            &__address {
-                max-width: 100%;
-                width: 100%;
-                margin-top: -48px;
-                margin-bottom: 15px;
-                padding: 13px 26px 13px 13px;
-                font-size: 13px;
-                font-weight: 600;
-                border-radius: 2px;
-                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
-                background-color: #ffffff;
-                .fa-pen {
-                    position: absolute;
-                    right: 13px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-            &__buttons {
-                width: 100%;
-            }
-            &__btn {
-                width: 50%;
-            }
-            &__locations-list {
-                min-width: 100%;
-                max-height: 60vh;
-            }
+    @media (min-width: 992px) {
+        .marka-banner-card {
+            padding-left: 90px;
         }
     }
-    @media (max-width: 767px) {
-        
-        .stores-list {
-            &__wrapper {
-                padding: 0;
-            }
-            &__item {
-                border-bottom: 1px solid #f0f0f0;
-                padding: 18px 3px;
-                &-inner {
-                    display: flex;
-                    align-items: center;
-                    margin: 0;
-                }
-                &-img img {
-                    width: 64px;
-                    height: 64px;
-                }
-                &-descr {
-                    margin: 0 16px;
-                }
-                &-name {
-                    font-size: 13px;
-                }
-                &-categories {
-                    font-size: 11px;
-                    margin: 3px 0px 5px;
-                }
-                &-btn {
-                    position: static;
-                    border-radius: 2px;
-                    min-width: 83px;
-                    font-size: 11px;
-                }
-            }
-        }
-        .store-change__footer-text {
-            font-size: 11px;
-        }
-    }
-    @media (max-width: 575px) {
 
+    p.user_address_p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .dropdown-item{
+        padding: 0;
+        vertical-align: middle;
     }
 </style>

@@ -20,23 +20,23 @@
             <div class="container-fluid" style="max-width: 1201px;">
                 <div class="row-fluid">
                     <div class="row">
-                        <div class="col-md-4 col-xs-12 col-sm-4 border-right">
-                            <h3>Problem with an order?</h3>
-                            <div class="light"> Tell us what went wrong with a previous order and request a refund or redelivery.
+                        <div class="col-md-4 col-xs-12 col-sm-4 border-right row-fluid_border_right">
+                            <h3 class="row-fluid_h3">Problem with an order?</h3>
+                            <div class="light row-fluid_light"> Tell us what went wrong with a previous order and request a refund or redelivery.
                             </div>
-                            <a href="javascript:void(0)" class="btn btn-primary" data-toggle="modal"
+                            <a href="javascript:void(0)" class="btn btn-primary row-fluid_btn-primary" data-toggle="modal"
                                data-target=".report_user_popup">Report a problem
                             </a>
                         </div>
                         <div class="col-md-4 col-xs-12 col-sm-4 border-right">
                             <h3>Email us</h3>
                             <div class="light"> We're here to help. Email a Customer Happiness member.</div>
-                            <a class="btn btn-primary" href="mailto:WeCare@basket.jo"> Email us </a>
+                            <a class="btn btn-primary row-fluid_btn-primary" href="mailto:WeCare@basket.jo"> Email us </a>
                         </div>
                         <div class="col-md-4 col-xs-12 col-sm-4 border-none">
                             <h3>Call us</h3>
                             <div class="light">We're available 9:00 AM - 12:00 AM.</div>
-                            <a class="btn btn-primary" href="#">+9622009944</a>
+                            <a class="btn btn-primary row-fluid_btn-primary" href="#">+9622009944</a>
                         </div>
                     </div>
                 </div>
@@ -45,17 +45,17 @@
         <div class="navi_footer">
             <div class="container-fluid">
                 <ul class="footer_naviv">
-                    <li>
-                        <a href=""> Basket.jo </a>
+                    <li class="naviv-item-list-item">
+                        <a href="" class="naviv-item-list-item-link"> Basket.jo </a>
                     </li>
-                    <li>
-                        <a href=""> Careers </a>
+                    <li class="naviv-item-list-item">
+                        <a href="" class="naviv-item-list-item-link"> Careers </a>
                     </li>
-                    <li>
-                        <a href=""> Privacy </a>
+                    <li class="naviv-item-list-item">
+                        <a href="" class="naviv-item-list-item-link"> Privacy </a>
                     </li>
-                    <li>
-                        <a href=""> Terms </a>
+                    <li class="naviv-item-list-item">
+                        <a href="" class="naviv-item-list-item-link"> Terms </a>
                     </li>
                 </ul>
             </div>

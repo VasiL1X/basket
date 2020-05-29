@@ -742,24 +742,24 @@
         <div class="navi_footer">
             <div class="container-fluid">
                 <ul class="footer_naviv">
-                    <li>
-                        <router-link :to="{ name: 'login'}">
+                    <li class="naviv-item-list-item">
+                        <router-link :to="{ name: 'login'}" class="naviv-item-list-item-link">
                             Basket.jo
                         </router-link>
                     </li>
-                    <li>
-                        <router-link :to="{ name: 'terms.conditions'}">
+                    <li class="naviv-item-list-item">
+                        <router-link :to="{ name: 'terms.conditions'}" class="naviv-item-list-item-link">
                             Terms Conditions
                         </router-link>
                     </li>
-                    <li>
-                        <router-link :to="{ name: 'about.us'}">
+                    <li class="naviv-item-list-item">
+                        <router-link :to="{ name: 'about.us'}" class="naviv-item-list-item-link">
                             About Us
                         </router-link>
                     </li>
 
-                    <li>
-                        <router-link :to="{ name: 'privacy.policy'}">
+                    <li class="naviv-item-list-item">
+                        <router-link :to="{ name: 'privacy.policy'}" class="naviv-item-list-item-link">
                             Privacy policy
                         </router-link>
                     </li>

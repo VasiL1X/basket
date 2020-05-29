@@ -1,8 +1,8 @@
 <template>
     <div class="account-notification-setting">
         <form name="notification_setting" id="notification_setting" method="post">
-            <div class="account__content">
-                <div class="account__content-common">
+            <div class="after_account_right">
+                <div class="after_account_common">
                     <div class="after_account_notfication">
                         <h2>When there is an update to your order...</h2>
                         <ul>
@@ -58,7 +58,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="account__content-common">
+                <div class="after_account_common">
                     <div class="after_account_notfication">
                         <h2>Sales &amp; Promotions</h2>
                         <ul>
@@ -176,7 +176,9 @@
         text-decoration: none;
     }
 
-
+    .account-notification-setting{
+        margin-left: -50px;
+    }
 
     @media (max-width: 767px){
         .account-notification-setting{

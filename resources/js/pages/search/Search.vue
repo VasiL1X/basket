@@ -31,24 +31,24 @@
 
                                         <div class="common_dep_list_section1">
                                             <h3 class="dep_inf_title">
-                                                <router-link :to="{ name: 'departments' }">
+                                                <router-link :to="{ name: 'departments' }" class="dep_inf_title_link">
                                                     Back to Departments
                                                 </router-link>
                                             </h3>
                                             <ul>
-                                                <li>
+                                                <li class="common_dep_list_filter-litst-item">
                                                 </li>
                                             </ul>
                                         </div>
                                         <!-- Brands Start Hear -->
-                                        <div class="filter_sections_com" v-if="brands.length> 0">
-                                            <h3>Filter Results</h3>
+                                        <div class="filter_sections_com dep_new_list_filter_sections_com" v-if="brands.length> 0">
+                                            <h3 class="filter_sections_com_h3">Filter Results</h3>
                                         </div>
                                         <div class="common_dep_list_section1 filtersections"
                                              v-if="brands.length > 0">
                                             <h4 class="dep_inf_botom">Brands</h4>
                                             <ul>
-                                                <li class="li_brand_list" v-for="brand in brands"
+                                                <li class="li_brand_list common_dep_list_filter-litst-item" v-for="brand in brands"
                                                     @click="getBradId(brand.id)"
                                                     style="display: block">
                                                     <input :id="'chk'+ brand.id"
@@ -73,7 +73,7 @@
 
                                     <div class="list_of_recommended  featured_product" style="display:none">
                                         <div class="list_of_recommended_sider">
-                                            <h1 class="main_title_dept">Featured Items</h1>
+                                            <h1 class="main_title_dept  dept_listing_common_main_title_dept">Featured Items</h1>
                                             <section class="regular slider slick-initialized slick-slider">
                                                 <div aria-live="polite" class="slick-list draggable">
                                                     <div class="slick-track"
@@ -127,9 +127,7 @@
                                     <img src="https://www.dev-basket.com/imgs/no-results.png"
                                          class="img-responsive m-auto" alt="">
                                     <h1 style="font-weight: 900">Oops</h1>
-                                    <p>We couldn't find results for
-                                        "{{ value }}" at this
-                                        store</p>
+                                    <p v-html="'We could not find results for \''+ value + '\' at this store'"></p>
                                 </div>
                                 <div class="col-md-6 col-sm-12 text-center card m-auto p-2">
                                 <span class="specialRequestLink">
@@ -289,7 +287,7 @@
                     if (response.data.response.httpCode == 200) {
                         if (response.data.response.product_list.length) {
                             this.productList = response.data.response.product_list;
-                            if (!this.selected.length) {
+                            if (!this.filterId) {
                                 let brands = response.data.response.brand_list;
                                 let filtered = [];
                                 brands.forEach(brand => {
@@ -415,4 +413,67 @@
         background-color: #E2F3DF;
         border-color: var(--theme-color);
     }
+
+    .filtersections .radio {
+        display: inline-block;
+        margin: .3em 0;
+        padding-left: 8px;
+        color: #757575;
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 26px;
+        cursor: pointer;
+        font-weight: 400;
+    }
+    /*no*/
+    .filtersections .radio:hover .inner {
+        -webkit-transform: scale(.5);
+        -ms-transform: scale(.5);
+        transform: scale(.5);
+        opacity: .5
+    }
+
+    .filtersections .radio input {
+        width: 1px;
+        height: 1px;
+        opacity: 0
+    }
+
+    .filtersections .radio input:checked + .outer .inner {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+
+    .filtersections .radio input:checked + .outer {
+        border: 3px solid var(--theme-color)
+    }
+
+    .filtersections .radio .outer {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 0 11px 0 0;
+        border: 2px solid #9e9e9e;
+        border-radius: 50%;
+        background-color: #fff
+    }
+
+    .filtersections .radio .inner {
+        -webkit-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        width: 16px;
+        height: 16px;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        display: block;
+        margin: 0;
+        border-radius: 50%;
+        background-color: var(--theme-color);
+        opacity: 0
+    }
+
+
 </style>

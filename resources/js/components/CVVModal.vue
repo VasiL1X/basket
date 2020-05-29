@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="modal fade  promocode_popup cvc-modal bs-example-modal-sm in" role="dialog" id="modalCvc"  style="display: none; padding-right: 15px;">
+        <div class="modal fade  promocode_popup cvc-modal bs-example-modal-sm promocode_popup-modal-sm in" role="dialog" id="modalCvc"  style="display: none; padding-right: 15px;">
             <div class="modal-dialog " role="document" style=" width: 380px !important;">
                 <div class="modal-content">
                     <div style="padding: 10px">
@@ -17,7 +17,7 @@
                     <div class="modal-body">
                         <div class="promo_inner_sec">
                             <div class="form-group">
-                                <input class="form-control"
+                                <input class="form-control form-control_promo_inner_sec"
                                        id="cvc_value" tabindex="0"
                                        v-model="cvv"
                                        placeholder="Enter CVV code"
@@ -25,7 +25,7 @@
 
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-default" @click="addCvv()"  id="add_cvc_code">Add CVV</button>
+                                <button type="button" class="btn btn-default promo_inner_sec_btn" @click="addCvv()"  id="add_cvc_code">Add CVV</button>
                             </div>
                         </div>
                     </div>

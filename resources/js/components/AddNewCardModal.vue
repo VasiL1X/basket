@@ -8,7 +8,7 @@
                         <button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h1 class="modal-title-new">Add Card</h1>
+                        <h1 class="modal-title modal-title-new-add_new_card">Add Card</h1>
                     </div>
                     <div class="new_address_sec">
 
@@ -45,7 +45,7 @@
 
                                 <div class="form-group card-cvc" id="expiration-date">
                                     <div class="form-group">
-                                        <label class="control-label" style="font-weight: bold">Expiration Date</label>
+                                        <label class="control-label expiration-date-control-label" >Expiration Date</label>
                                         <input type="text"
                                                placeholder="Expiration Date"
                                                id="expiry_date_input"
@@ -73,7 +73,7 @@
                             <input type="hidden" name="return_url" id="return_url" v-model="return_url">
                             <br>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default shopper-continue">Continue <i
+                                <button type="submit" class="btn btn-default shopper-continue add_new_cart_shopper-continue">Continue <i
                                     class="glyph-icon flaticon-arrows"></i></button>
                             </div>
                         </form>

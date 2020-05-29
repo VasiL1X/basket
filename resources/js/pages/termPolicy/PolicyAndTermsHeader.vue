@@ -9,15 +9,15 @@
                         </router-link>
                     </div>
                      <nav class="hiddle_respon">
-                         <router-link class="link" :to="{ name: 'apply' }">Careers</router-link>
-                         <router-link class="link" :to="{ name: 'help' }">Help</router-link>
-                         <router-link class="link link-btn" :to="{ name: 'apply' }">Become a Shopper</router-link>
+                         <router-link class="link privacy_policy_sctions_link" :to="{ name: 'apply' }">Careers</router-link>
+                         <router-link class="link privacy_policy_sctions_link" :to="{ name: 'help' }">Help</router-link>
+                         <router-link class="link privacy_policy_sctions_link link-btn" :to="{ name: 'apply' }">Become a Shopper</router-link>
                      </nav>
                     <div class="responsive_menus_faq" id="fillteridnew">
                         <nav>
-                            <router-link class="link" :to="{ name: 'apply' }">Careers</router-link>
-                            <router-link class="link" :to="{ name: 'home' }">Help</router-link>
-                            <router-link class="link link-btn" href="#" :to="{ name: 'apply' }">
+                            <router-link class="link privacy_policy_sctions_link" :to="{ name: 'apply' }">Careers</router-link>
+                            <router-link class="link privacy_policy_sctions_link" :to="{ name: 'home' }">Help</router-link>
+                            <router-link class="link privacy_policy_sctions_link link-btn" href="#" :to="{ name: 'apply' }">
                                 Become a Shopper
                             </router-link>
                         </nav>

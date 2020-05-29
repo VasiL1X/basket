@@ -11,12 +11,13 @@
                                         <a href="#">
                                             <img
                                                 src="/images/icon-normal.png"
-                                                alt="Basket">
+                                                alt="Basket" class="bask-logo-img"
+                                            >
                                         </a>
                                     </div>
                                 </div>
                                 <div class="bask_form_center" v-if="continueStep == false">
-                                    <h1 class="get-your-local-stores">Get your groceries delivered<br/> from local
+                                    <h1 class="bask-logo-text get-your-local-stores">Get your groceries delivered<br/> from local
                                         stores</h1>
                                     <div class="alert alert-danger hide text-center"
                                          v-if="errors.has('zone') || errors.has('city')">
@@ -43,8 +44,8 @@
                                             </div>
                                             <div class="from-group">
                                                 <div class="signup-vs-login">
-                                                    <ul>
-                                                        <li>
+                                                    <ul class="signup-vs-login-list">
+                                                        <li class="signup-vs-login-list-item">
                                                             Already have an account?
                                                             <router-link :to="{ name: 'login'}" class="basket_signup link-color">Log
                                                                 in
@@ -61,7 +62,7 @@
                                 <div class="basket_sign_up">
                                     <div class="bask_logo">
 
-                                        <h1>We're available in <span class="reg_city_zone">Abdali, Amman</span></h1>
+                                        <h1 class="bask-logo-text">We're available in <span class="reg_city_zone">Abdali, Amman</span></h1>
                                         <div
                                             v-if="(errors.has('first_name') ||
                                             errors.has('last_name') || errors.has('code') || errors.has('mobile')
@@ -76,14 +77,14 @@
                                             <p class="mb-0" v-if="errors.has('email')  && submitted">{{ errors.first("email")}}</p>
                                         </div>
                                     </div>
-                                    <div class="bask_form_center width_full">
+                                    <div class="bask_form_center-basket_base3 width_full">
                                         <form @submit.prevent="register()">
 
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-md-6 col-sm-6 col-xs-6 pl-3 pr-3 pr-sm-1 pb-2">
                                                         <input type="text"
-                                                               class="form-control"
+                                                               class="form-control basket-form-inp"
                                                                placeholder="First Name*"
                                                                name="first name"
                                                                v-model="firstName"
@@ -92,7 +93,7 @@
                                                     </div>
                                                     <div class="col-md-6 col-sm-6 col-xs-6 pl-3 pl-sm-1">
                                                         <input type="text"
-                                                               class="form-control"
+                                                               class="form-control basket-form-inp"
                                                                placeholder="Last Name*"
                                                                name="last name"
                                                                v-model="lastName"
@@ -109,7 +110,7 @@
                                                     </div>
                                                     <div class="col-md-6 col-sm-6 col-xs-12 pl-3 pl-sm-1">
                                                         <input type="phone"
-                                                               class="form-control"
+                                                               class="form-control basket-form-inp"
                                                                placeholder="Mobile*"
                                                                name="mobile"
                                                                maxlength="13"
@@ -121,7 +122,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <input type="email"
-                                                       class="form-control"
+                                                       class="form-control basket-form-inp"
                                                        placeholder="Email Address"
                                                        name="email"
                                                        v-model="email"
@@ -130,7 +131,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <input type="password"
-                                                       class="form-control"
+                                                       class="form-control basket-form-inp"
                                                        value=""
                                                        id="exampleInputPassword1"
                                                        name="password"
@@ -187,7 +188,7 @@
                 <div class="bas_login">
                     <a href="#" class="left_responsive_logo" title="">
                         <img src="/images/logo-normal.png"
-                             alt="Basket">
+                             alt="Basket" class="bask-logo-img left_responsive_logo_img">
                     </a>
                     <a href="javascript:void(0);" title="" class="login-link basket_signup btn btn-primary"
                        data-bypass="true"
@@ -214,8 +215,8 @@
                                     <img src="/images/new_store.jpg"
                                          alt="1">
                                 </div>
-                                <h2>Select Your Favorite Store</h2>
-                                <p>Based on your location, <span class="br-desktop"> </span> <br> you can select your
+                                <h2 class="onethree-text">Select Your Favorite Store</h2>
+                                <p class="onethree-paragraph">Based on your location, <span class="br-desktop"> </span> <br> you can select your
                                     favorite
                                     store. </p>
                             </div>
@@ -227,8 +228,8 @@
                                         src="/images/new_banana.jpg"
                                         alt="Same day delivery">
                                 </div>
-                                <h2>Add Items </h2>
-                                <p> Add items to your cart.
+                                <h2 class="onethree-text">Add Items </h2>
+                                <p class="onethree-paragraph"> Add items to your cart.
                                     <span class="br-desktop"></span><br> Just as if you're in the store yourself.
                                 </p>
                             </div>
@@ -240,8 +241,8 @@
                                         src="/images/new_grocery.jpg"
                                         alt="save time and money">
                                 </div>
-                                <h2>Place Order & Enjoy</h2>
-                                <p> Place your order and
+                                <h2 class="onethree-text">Place Order & Enjoy</h2>
+                                <p class="onethree-paragraph"> Place your order and
                                     <br/>
                                     <span class="br-desktop"></span>we will take care of the rest.
                                 </p>

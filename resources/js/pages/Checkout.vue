@@ -2,14 +2,14 @@
     <div class="checkoutPage">
         <div class="check_out_outer">
             <div class="checkout_logo">
-                <router-link :to="{ name: 'home' }" class="col-1">
+                <router-link :to="{ name: 'home' }" class="col-1 checkout_logo_link">
                     <img src="/images/logo-normal.png"
                          alt="Basket" style="width:140px;">
                 </router-link>
             </div>
         </div>
         <section class="check_out_info">
-            <div class="container">
+            <div class="container check_out_info_body">
                 <center>
                     <h2 style="margin:15px 0px 25px 0px;font-size:20px;">
                         <b>Checkout</b>
@@ -19,7 +19,7 @@
                     <div class="col-md-8 col-sm-8 col-xs-12 common_check_out_basket">
                         <div class="cart_left_info">
                             <!--Address block-->
-                            <div class="top_cart_info_sec shown_add  show_elem" v-if="!deliveryAddressSection"
+                            <div class="top_cart_info_sec top_cart_info_sec_common_check_out_basket shown_add  show_elem" v-if="!deliveryAddressSection"
                                  @click="openDeliveryAddress()">
                                 <div class="checkout-selected_address"
                                      style="background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 33%, rgb(255, 255, 255)), url(https://dxa2xwubq89uv.cloudfront.net/v4/instacart.i6hd8pi8/pin-s+43B02A(-77…token=pk.eyJ1IjoiaW5zdGFjYXJ0IiwiYSI6ImZFMGJsVncifQ.a8WhVVE-IBJlcgJtr1QNOA);">
@@ -30,7 +30,7 @@
                                                 <i class="fas fa-map-marker-alt"></i>
                                             </div>
 
-                                            <div class="title">
+                                            <div class="checkout-card-title-subtitle">
                                                 Delivers to
                                             </div>
                                             <div class="inspectlet-sensitive">
@@ -40,7 +40,7 @@
                                         </span>
                                             </div>
                                         </div>
-                                        <div class="action col-sm-2"><a class="change_delivery_address"><i
+                                        <div class="action col-sm-2"><a class="change_delivery_address change_delivery_address_checkout-selected_address"><i
                                             class="fa fa-angle-down" aria-hidden="true"></i></a></div>
                                     </div>
                                 </div>
@@ -49,18 +49,18 @@
                                  v-if="deliveryAddressSection">
                                 <div class="checkout-card-title">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <div class="title">Delivery Address</div>
+                                    <div class="checkout-card-title-subtitle">Delivery Address</div>
                                 </div>
                                 <div class="find_location_se_common">
                                     <div class="find_location_se">
-                                        <ul>
-                                            <li class="cmnAddli address_li15634"
+                                        <ul class="find_location_se_list">
+                                            <li class="cmnAddli address_li15634 find_location_se_list_item"
                                                 v-bind:class="{ active_address: address.address_id == selectedAddressId}"
                                                 v-for="address in addressList" @click="changeAddress(address.address_id)">
                                                 <div class="row">
                                                     <div class="col-md-11 col-sm-11 col-xs-10">
                                                         <span class="city_id15634 hide_elem">  Amman  </span>
-                                                        <p>
+                                                        <p class="paragraph_of_table find_location_se_list_item_paragraph">
                                                             <input type="radio" class="address_chkbox_15634" value=""
                                                                    name="all_address_chkbox"
                                                                    data-radium="true"
@@ -70,7 +70,7 @@
                                                             {{address.address}}
 
                                                         </p>
-                                                        <button v-show="address.address_id === selectedAddressId" class="btn btn-primary btn-block btn-md btn-continue"
+                                                        <button v-if="address.address_id == selectedAddressId" class="btn btn-primary col-12 m-auto"
                                                                 type="button" @click="selectChangedAddress(address)">Choose Address
                                                         </button>
                                                     </div>
@@ -85,7 +85,7 @@
                                                         >
                                                             <div class="left_add_icon_inf"
                                                                  data-department_building="">
-                                                                <i class="fas fa-edit"></i>
+                                                                <i class="fas fa-edit f-edit-icon-click-edit-delete-duk"></i>
                                                             </div>
                                                         </a>
                                                     </div>
@@ -116,15 +116,15 @@
                             <div class="top_cart_info_sec shown_delivery   show_elem" v-if="!deliveryTimesSection"
                                  @click="openDeliveryTimes()">
                                 <div class="common_pay_cart">
-                                    <ul>
-                                        <li>
+                                    <ul class="common_pay_cart-list">
+                                        <li class="common_pay_cart-list-item">
                                             <div class="col-md-12 pl-0">
                                                 <div class="row">
                                                     <div class="col-sm-10 detail">
                                                         <div class="icon">
                                                             <i class="far fa-clock"></i>
                                                         </div>
-                                                        <div class="title">Delivery time</div>
+                                                        <div class="checkout-card-title-subtitle">Delivery time</div>
                                                         <div class="outlet_name_time" v-for="(checkoutDetail, index) in checkoutDetails.cart_list">
                                                             <span class="sh_outlet_name">{{checkoutDetail.outlet_name}}</span>
                                                             <span class="sh_outlet_time">{{dateChange(checkoutDetail.delivery_date)}} {{checkoutDetail.delivery_time}}</span>
@@ -147,7 +147,7 @@
                                 <div class="checkout-actions-container">
                                     <div class="checkout-card-title">
                                         <i class="far fa-clock"></i>
-                                        <div class="title">Choose Delivery Times</div>
+                                        <div class="checkout-card-title-subtitle">Choose Delivery Times</div>
                                     </div>
                                     <div class="checkout-card-actions clearfix">
                                         <div>
@@ -162,7 +162,7 @@
                                                         </div>
                                                         <div class="media-body p-l-sm">
                                                             <div class="title-wrapper clearfix">
-                                                                <span class="title">{{outletDeliverySlot.outlet_name}}</span>
+                                                                <span class="checkout-card-title-subtitle">{{outletDeliverySlot.outlet_name}}</span>
                                                             </div>
                                                             <span class="subtitle inspectlet-sensitive pl-0">
                                                                 <span class="slot_time67" v-for="(checkoutDetail, index) in checkoutDetails.cart_list" v-if="checkoutDetail.outlet_id === outletDeliverySlot.outlet_id">
@@ -279,15 +279,15 @@
                             <div class="top_cart_info_sec shown_payment show_elem" v-if="!paymentSection"
                                  @click="openPayment()">
                                 <div class="common_pay_cart">
-                                    <ul>
-                                        <li>
+                                    <ul class="common_pay_cart-list">
+                                        <li class="common_pay_cart-list-item">
                                             <div class="row">
                                                 <div class="col-sm-10 col-xs-10">
-                                                    <div class="icon">
+                                                    <div class="icon common_pay_cart-icon">
                                                         <i class="far fa-newspaper"></i>
                                                     </div>
-                                                    <div class="title">Payment</div>
-                                                    <p class="payment_method_type"v-if="checkoutDetails.user_selected_payment_method">{{checkoutDetails.user_selected_payment_method.name}}</p>
+                                                    <div class="checkout-card-title-subtitle">Payment</div>
+                                                    <p class="paragraph_of_table payment_method_type common_pay_cart-list-item-paragraph" v-if="checkoutDetails.user_selected_payment_method">{{checkoutDetails.user_selected_payment_method.name}}</p>
                                                 </div>
                                                 <div class="col-sm-2 action payment_change show_elem"
                                                      style="text-align: right; vertical-align: middle; cursor: pointer;">
@@ -304,12 +304,12 @@
                                 <div class="checkout-actions-container" style="overflow: visible; display: block;">
                                     <div class="checkout-card-title">
                                         <i class="far fa-newspaper"></i>
-                                        <div class="title">Payment</div>
+                                        <div class="checkout-card-title-subtitle">Payment</div>
                                     </div>
                                     <div class="checkout-card-actions clearfix checkout-payment-actions">
                                         <div>
                                             <div>
-                                                <div class="ic-btn-group-vertical ic-btn-block">
+                                                <div class="ic-btn-group-vertical ic-btn-block checkout-payment-actions_ic-btn-block">
 
                                                     <div class="ic-btn get-type text-left test_0
                                                       ic-btn-white payment_0 ic-btn-white-selected"
@@ -330,7 +330,7 @@
                                                             </span>
                                                     </div>
                                                     <button style="margin-bottom: 20px;"
-                                                            class="btn btn-primary btn-block btn-md btn-pay choose_payment_last modal-cvc-open"
+                                                            class="btn btn-primary   btn-primary-checkout-button-modelbtn-block btn-md btn-pay choose_payment_last modal-cvc-open"
                                                             @click="updateDeliveryPaymentGateway()"
                                                     >
                                                         Choose Payment
@@ -364,7 +364,7 @@
                                             <span class="error-message" v-if="submitted && errors.has('delivery_instructions')">{{errors.first('delivery_instructions')}}</span>
                                         </div>
                                         <div class="col-lg-3 mt-2">
-                                            <button type="button" class="btn btn-default"
+                                            <button type="button" class="btn btn-default checkout-card-title_btn"
                                                     :disabled="saveDisabled"
                                                     @click="updateDeliveryInstruction()">Save
                                                 Instruction
@@ -382,7 +382,7 @@
                                         <button type="button"
                                                 style="background-color: #ccc;"
                                                 v-if="checkoutDetails.overall_delivery_total == 0 "
-                                                class="btn place_order_btn  btn-default"
+                                                class="btn place_order_btn  btn-default checkout-bottom-place-order_btn-default "
                                         >Place Order
                                         </button>
 
@@ -421,20 +421,20 @@
                                     <span class="currency" data-cur="JD"></span>
                                     <span class="amount" data-amt="5.55"></span>
                                 </span>
-                                <table>
+                                <table class="sub_total_info_table">
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <p>Subtotal</p>
+                                            <p class="paragraph_of_table">Subtotal</p>
                                         </td>
                                         <td>
-                                            <p> JD {{checkoutDetails.overall_subtotal}}</p>
+                                            <p class="paragraph_of_table"> JD {{checkoutDetails.overall_subtotal}}</p>
                                         </td>
                                     </tr>
 
                                     <tr>
                                         <td>
-                                            <p>Delivery Charges</p>
+                                            <p class="paragraph_of_table">Delivery Charges</p>
                                         </td>
 
                                         <td class="currency">
@@ -445,7 +445,7 @@
                                     </tr>
                                     <tr v-if="checkoutDetails.overall_service_fee > 0">
                                         <td>
-                                            <p>Service fee</p>
+                                            <p class="paragraph_of_table">Service fee</p>
                                         </td>
 
                                         <td class="currency">
@@ -457,7 +457,7 @@
                                     <tr class="tr_free_delivery_discount"
                                         v-if="checkoutDetails.overall_free_delivery_discount > 0">
                                         <td>
-                                            <p>Delivery Discount</p>
+                                            <p class="paragraph_of_table">Delivery Discount</p>
                                         </td>
                                         <td>
                                             JD
@@ -467,7 +467,7 @@
                                     <tr class="tr_overall_promo_code_amount"
                                         v-if="checkoutDetails.overall_promo_delivery_discount > 0">
                                         <td>
-                                            <p>Promo Code Discount</p>
+                                            <p class="paragraph_of_table">Promo Code Discount</p>
                                         </td>
                                         <td>
                                             JD
@@ -484,8 +484,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="promo_code_apply" v-if="checkoutDetails.promo_code_details">
-                                <span>PROMO CODE APPLIED</span>
+                            <div class="promo_code_apply top_cart_info_sec_promo_code_apply" v-if="checkoutDetails.promo_code_details">
+                                <span class="promo_code_applied">PROMO CODE APPLIED</span>
                                 <span>
                                     <i class="far fa-trash-alt delete-promo-Icon" @click="deletePromoCod()"></i>
                                 </span>
@@ -505,7 +505,7 @@
                         </div>
                         <div class="bottom p-a-lg card-warning" id="disclaimer-info">
                             <i class="glyph-icon flaticon-business"></i>
-                            <span class="text disclaimer">
+                            <span class="text-card-warning disclaimer">
 
                             <span class="p-r">By placing an order on Basket.jo, you agree to be abide by our
                                 <router-link :to="{ name: 'terms.conditions' }"  data-bypass="true"
@@ -908,6 +908,7 @@
                     return false
                 }
 
+
                 axios.post(apiDev + '/update-delivery-payment-gateway', {
                     user_id: _this.userData.user_id,
                     token: _this.userData.token,
@@ -941,6 +942,7 @@
             },
 
             userCheckout() {
+                let _this = this;
                 axios.post(apiDev + '/my-order', {
                     user_id: this.userData.user_id,
                     token: this.userData.token,
@@ -948,11 +950,11 @@
                     offset: 0,
                     count: 1,
                 }).then(response => {
-                    this.$ga.event('Place an order' , 'place an order' , 'order total' , this.checkoutDetails.overall_delivery_total);
+                    _this.$ga.event('Place an order' , 'place an order' , 'order total' , this.checkoutDetails.overall_total);
                     if (response.data.response.total_order_count){
-                        this.$ga.event('Subsequent Purchases' , 'place an order' , 'order total', this.checkoutDetails.overall_delivery_total);
+                        _this.$ga.event('Subsequent Purchases' , 'place an order' , 'order total', this.checkoutDetails.overall_total);
                     }else {
-                        this.$ga.event('First Purchase' , 'place an order' , 'order total' , this.checkoutDetails.overall_delivery_total);
+                        _this.$ga.event('First Purchase' , 'place an order' , 'order total' , this.checkoutDetails.overall_total);
                     }
                 });
                 if (this.checkoutDetails.user_selected_payment.payment_gateway_id == 18) {

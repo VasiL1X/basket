@@ -72,7 +72,7 @@
             <ul class="ul-department-header" id="ul_department_header">
                 <li class="logo__scroll" style="position: absolute !important;">
 
-                    <img class="hero-middle-logo" v-bind:src="outletInfo.logo_image"
+                    <img class="hero-middle-logo logo_scroll_img" v-bind:src="outletInfo.logo_image"
                          v-bind:alt="outletInfo.outlet_name">
                     <span> {{outletInfo.outlet_name}} </span>
                 </li>
@@ -98,7 +98,7 @@
                         <a class="availability-link_a pt-0" data-toggle="modal" data-target=".outlet_available_time"
                            href="javascript:void(0)">
                             Available
-                            <strong class="availability_time">
+                            <strong class="availability_time" style="position: relative; margin-left: 5px;">
                                 <span class="text-by-next">
                                         No delivery Available
                                     </span>
@@ -136,10 +136,7 @@
         outline: none;
 
     }
-    .availability_time {
-        position: relative;
-        margin-left: 5px;
-    }
+
     @media only screen and (max-width: 1060px) {
       .div-search-blok{
           display: none;

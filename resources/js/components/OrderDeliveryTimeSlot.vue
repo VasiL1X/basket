@@ -224,7 +224,278 @@
 </script>
 
 <style scoped>
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs {
+        margin: 0px 6%;
+        list-style: none;
+        padding: 0;
+        border: none;
+        text-align: center;
+    }
 
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(67, 176, 42);
+        background: rgb(247, 247, 247) !important;
+        cursor: pointer;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab:last-child {
+        margin-right: 0px;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab.active {
+        background: var(--theme-color) !important;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab.active a {
+        color: rgb(255, 255, 255) !important;
+        touch-action: manipulation;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab a {
+        color: var(--theme-color) !important;
+        touch-action: manipulation;
+        text-decoration: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab.active a:hover, .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab a:hover, .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab.active a {
+        border: 1px solid transparent;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm {
+        background-color: white;
+        margin-top: 15px;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical {
+        display: block;
+        width: 100%;
+        position: relative;
+        vertical-align: middle; /* border: 1px solid #eee; */
+        padding: 0 20px;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .ic-btn:first-child:not(:last-child) {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel.disabled {
+        height: 52px;
+        cursor: default !important;
+        pointer-events: none !important;
+        background-color: #FBFAF9;
+        border-color: #E7E6E5;
+        opacity: 0.65;
+        box-shadow: none;
+        border-bottom: none;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel {
+        padding: 15px 30px;
+        font-weight: 400;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        text-align: left;
+        margin-bottom: 0;
+        vertical-align: middle;
+        touch-action: manipulation;
+        background-image: none;
+        /* border: 1px solid transparent; */
+        white-space: nowrap;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 2;
+        border-radius: 1px;
+        user-select: none;
+        margin-top: 0px;
+        margin-left: 0;
+        border: none;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel .ic-btn-white {
+        background-color: #fff;
+        border-color: #E7E6E5;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel .ic-btn-white .display-data {
+        width: 74%;
+        display: inline-block;
+        padding-left: 10px !important;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel.ic-btn-white .display-data .ic-btn-xs {
+        padding: 1px 8px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 4px;
+        text-transform: uppercase;
+        color: #43B02A;
+        background-color: #fff;
+        border-color: #43B02A;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+        float: right !important;
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel .p-a-sm .ic-btn-group-vertical .delivery-option-panel.ic-btn-white .display-data .choose_btn {
+        padding: 1px 8px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 4px;
+        text-transform: uppercase;
+        color: var(--theme-color);
+        background-color: #fff;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid var(--theme-color);
+        white-space: nowrap;
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+        margin-top: 5px;
+    }
+
+    .change_time_slot .media-left {
+        width: 100%;
+        display: block;
+        padding: 20px 0px;
+        background-color: var(--theme-color);
+    }
+
+    .change_time_slot span.title {
+        font-size: 20px;
+    }
+
+    .change_time_slot .media-body.p-l-sm {
+        width: 100%;
+        float: none;
+        display: block;
+        text-align: center;
+        padding: 10px 0px;
+    }
+
+    .change_time_slot .p-y-md.media {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .change_time_slot .modal-dialog.modal-lg {
+        width: 820px;
+    }
+
+    .change_time_slot .time-box {
+        float: left;
+    }
+
+    .change_time_slot .display-name {
+        width: 26%;
+        display: inline-block;
+        text-align: left;
+        float: left;
+        font-weight: 600;
+    }
+
+    .change_time_slot .ic-btn.delivery-option-panel:hover {
+        background-color: #f0efec;
+        cursor: pointer;
+    }
+
+    .change_time_slot img.img-circle.media-object {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .change_time_slot .more-time-box a {
+        cursor: pointer;
+        border: none;
+        background-image: none;
+        display: flex;
+        align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 16px;
+        height: 40px;
+        background-color: transparent;
+        color: var(--theme-color);
+        width: 100%;
+        justify-content: center;
+    }
+
+    .change_time_slot input[type=checkbox], .change_time_slot input[type=radio], .change_time_slot input[type=checkbox], .change_time_slot input[type=radio] {
+        line-height: 1.3em;
+        width: 1.3em;
+        height: 1.3em;
+        margin: 0 0 0 -25px;
+        padding: 10px;
+        -webkit-appearance: none;
+        background-image: url(https://d2guulkeunn7d8.cloudfront.net/assets/check-unfill_2x-6675c05adf356c1f19e3e3d88afd07a3.png);
+        background-size: cover;
+        outline: none;
+    }
+
+    .change_time_slot input[type=checkbox]:checked, .change_time_slot input[type=radio]:checked, .change_time_slot input[type=checkbox]:checked, .change_time_slot input[type=radio]:checked {
+        background-image: url(https://d2guulkeunn7d8.cloudfront.net/assets/check-circle_2x-614c7b4c6f35cc72407e9a4bd615ec85.png);
+    }
+
+    .change_time_slot input[type=checkbox]{
+        margin-right: 5px;
+        background-image: url(https://d2guulkeunn7d8.cloudfront.net/assets/checkbox-inactive-ea0f5105f41865983a2782373eeb0d3c.png);
+    }
+
+    .change_time_slot input[type=checkbox]:hover{
+        background-image: url(https://d2guulkeunn7d8.cloudfront.net/assets/checkbox-inactive-hover-31fad5d08bb6f4790a68a32857d4b440.png);
+    }
+
+    .change_time_slot input[type=checkbox]:checked {
+        background-image: url(https://d2guulkeunn7d8.cloudfront.net/assets/checkbox-active-cb1c2e86b7c021772f3de2cc692999ec.png);
+    }
+
+    .change_time_slot .RetailerServiceOptions .RetailerServiceOptionsBody .ic-panel-tabs .ic-panel-tab a:hover {
+        border: none;
+    }
+
+    .change_time_slot .active_time_slot {
+        color: #000 !important;
+        cursor: pointer !important;
+        border: 1px solid var(--theme-color) !important;
+        background: rgb(242, 251, 255) !important;
+        border-radius: 4px !important;
+    }
     .choose_delivery .checkout-actions-container .checkout-card-actions .RetailerServiceOptions .checkout-promotion {
         margin-top: -10px;
         cursor: pointer;

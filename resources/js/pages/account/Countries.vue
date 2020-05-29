@@ -1,10 +1,10 @@
 <template>
-    <div class="account__content">
-        <div class="account__content-common">
+    <div class="after_account_right">
+        <div class="after_account_common">
             <div class="after_account_addres">
                 <div class="icModalRow_basket">
-                    <ul>
-                        <li :data-target="userData.country_id !== country.id ? '#modal-promo' : ''" data-toggle="modal" @click="getCountryId(country.id)" v-for="country in countries">
+                    <ul class="icModalRow_basket-list">
+                        <li :data-target="userData.country_id !== country.id ? '#modal-promo' : ''" data-toggle="modal" @click="getCountryId(country.id)" v-for="country in countries" class="icModalRow_basket-list-item">
                             <div class="row">
                                 <div class="text-left" style="padding-left: 15px; width: 49%; display: inline-block">
                                     <img :src="'https://www.countryflags.io/'+country.code+'/flat/64.png'" style="width: 28px; height: 28px">
@@ -108,10 +108,12 @@
 </script>
 
 <style scoped>
-
+    .after_account_right{
+        margin-left: -50px;
+    }
 
     @media (max-width: 767px){
-        .account__content{
+        .after_account_right{
             margin-left: 0 !important;
 
         }

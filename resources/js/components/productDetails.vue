@@ -1,5 +1,5 @@
 <template>
-    <div class="BVBVBV">
+    <div>
         <b-modal id="singleProduct" size="xl" hide-header hide-footer>
             <b-button-close @click="$bvModal.hide('singleProduct')"></b-button-close>
             <div class="row">
@@ -25,14 +25,14 @@
                         <h5 class="text-secondary font-weight-bolder" v-show="this.product.our_selling_price !== this.product.original_price"><s>JD {{ product.original_price }}</s></h5>
                     </div>
                     <div class="row" style="color: #61bf3d">
-                        <div class="col-12">
+                        <div class="col-12" >
                             <div class="row mb-2" v-if="product.sold_per === 3">
                                 <img src="https://cdn.basket.jo/assets/front/basket/new_design/icons/weight-icon.png" alt="weight_icon" class="col-1 m-1">
                                 <span class="font-weight-bolder mr-1"> Price Estimate: </span>
                                 <span class="prce_estimate_pricedd">  JD {{ parseFloat(product.our_selling_price*product.approx_weight).toFixed(2)}} ( JD ( {{product.our_selling_price}} / kg × {{ product.approx_weight }} kg )   </span>
                             </div>
-                            <label class="productQuantity">Quantity:</label>
-                            <div class="form-group form-inline col-12 p-0">
+                            <label class="productQuantity"  v-show="!product.hasOwnProperty('item_type')">Quantity:</label>
+                            <div class="form-group form-inline col-12 p-0"  v-show="!product.hasOwnProperty('item_type')">
                                 <div class="p-0" v-bind:class="[product.cart_qty < 1 ? 'p-1 col-12 col-lg-4 col-md-4' : 'col-12 col-md-8 col-lg-12']">
                                     <input  v-bind:class="[product.cart_qty < 1 ? '' : 'bg-success text-white']" class="col-12 countInput form-control-lg text-center font-weight-bolder" type="text" id="workExp"
                                             v-model="product.cart_qty > 0 ? addCount.value + ' in cart': addCount.value" @click="clicked = true" :options="addCount.options"
@@ -90,7 +90,7 @@
                             </p>
 
                             <p class="col-5 text-center" style="line-height: 45px;">
-                                <b-link href="#" @click="editInstruction(product)" class="text-success">
+                                <b-link href="#" @click="editInstruction(product)" class="text-success" v-bind:class="{disabled : !product.hasOwnProperty('item_type')}">
                                     <i class="fas fa-edit"
                                        style="width:25%;position: relative;top:5px;font-size: 25px;"></i><span class="d-lg-inline-block d-none"> Add Instruction</span>
                                 </b-link>
@@ -102,13 +102,17 @@
                 <div class="col-12 productDepartment form-inline text-sm-center">
                     <div class="col-md-6 col-sm-12">
                         <a :href="'/store/'+outletLink+'/departments/'+product.department_id"
+                           v-if="!product.hasOwnProperty('item_type')"
                            class="btn btn-link text-success">
                             <h6>View more</h6>
                             <h4>{{ product.department_name}}<i class="fa fa-angle-right text-secondary ml-3"></i></h4>
                         </a>
+                        <h2>No Department</h2>
                     </div>
+
                     <div class="col-md-6 col-sm-12 text-right">
-                        <img :src="product.department_image" class="depart-img-info">
+                        <img :src="product.department_image" @error="errorSrc"   class="depart-img-info" v-if="!product.hasOwnProperty('item_type')">
+                        <img :src="errorSrc" @error="errorSrc" class="depart-img-info" v-else>
                     </div>
                 </div>
             </div>
@@ -151,22 +155,27 @@
             },
 
             getProductDetail(product) {
-                axios.post(apiDev + '/product-detail', {
-                    language: this.language,
-                    outlet_id: product.outlet_id,
-                    token: this.userData.token,
-                    user_id: this.userData.user_id,
-                    outlet_item_id: product.outlet_item_id,
-                    custom_product_id: product.cart_detail_id,
-                }).then(response => {
-                    this.$ga.event('Product Detail' , 'showed product');
-                    this.product = response.data.response.product_detail;
-                    this.addCount.value = this.product.cart_qty > 0 ? this.product.cart_qty : 1;
+                if(product.item_type != 1){
+                    this.product = product;
                     this.$bvModal.show("singleProduct");
-                    this.outletLink = this.product.outlet_name.trim().toLowerCase().replace(' ', '-').replace(' ', '-');
-                }).catch(error => {
+                }else {
+                    axios.post(apiDev + '/product-detail', {
+                        language: this.language,
+                        outlet_id: product.outlet_id,
+                        token: this.userData.token,
+                        user_id: this.userData.user_id,
+                        outlet_item_id: product.outlet_item_id,
+                        custom_product_id: product.cart_detail_id,
+                    }).then(response => {
+                        this.$ga.event('Product Detail', 'showed product');
+                        this.product = response.data.response.product_detail;
+                        this.addCount.value = this.product.cart_qty > 0 ? this.product.cart_qty : 1;
+                        this.$bvModal.show("singleProduct");
+                        this.outletLink = this.product.outlet_name.trim().toLowerCase().replace(' ', '-').replace(' ', '-');
+                    }).catch(error => {
 
-                })
+                    })
+                }
             },
 
             changeFavorite(status) {
@@ -416,5 +425,43 @@
         margin: 0;
         filter: none;
         -webkit-filter: none;
+    }
+    .list-group {
+        list-style: none;
+        margin: 0 0 30px;
+        padding: 0
+    }
+
+    .list-group li {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: #eee #eee currentcolor;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 1px 1px 0;
+        font-size: 18px;
+        line-height: 36px;
+        list-style: none;
+        color: #727272;
+        overflow: hidden;
+        padding: 20px
+    }
+
+    .list-group li:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid #eee
+    }
+
+    .list-group li:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom: 1px solid #eee
+    }
+
+    .list-group li a {
+        color: #69dada
     }
 </style>

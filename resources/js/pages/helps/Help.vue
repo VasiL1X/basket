@@ -1,34 +1,51 @@
 <template>
-    <div class="help">
+    <div>
         <HelpHeaderHomeComponent></HelpHeaderHomeComponent>
-        <div class="help__summary">
-            <div class="container__middle">
-                <h2 class="help__title">Issue with one of these?</h2>
-            </div>
-            <div class="container__middle help__orders">
+        <div class="order_summary_help">
+            <div class="container help_list">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 mx-auto ">
-                        <router-link :to="{name: 'help.ordering'}">
-                            <div class="basket_block d-flex align-items-center p-2">
-                                <img src="/images/Image.svg" alt="" width="160px" height="160px" class="img-fluid">
-                                <p class="my_order_text text-center">My Order</p>
-                            </div>
-                        </router-link>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="help_list_title">Issue with one of these?</h2>
                     </div>
-                    <div class="col-lg-6 col-md-6 mx-auto ">
-                        <router-link :to="{name: 'help.pricing'}">
-                            <div class="basket_block d-flex align-items-center p-2">
-                                <img src="/images/bag.png" alt="" width="160px" height="160px" class="img-fluid">
-                                <p class="my_order_text text-center">Prime Membership</p>
+                </div>
+            </div>
+            <div class="container-fluid orders">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 mx-auto ">
+                                    <router-link :to="{name: 'help.ordering'}">
+                                        <div class="basket_block d-flex align-items-center p-2">
+                                            <img src="/images/Image.svg" alt="" width="160px" height="160px" class="img-fluid">
+                                            <p class="my_order_text text-center">My Order</p>
+                                        </div>
+                                    </router-link>
+                                </div>
+                                <div class="col-lg-6 col-md-6 mx-auto ">
+                                    <router-link :to="{name: 'help.pricing'}">
+                                        <div class="basket_block d-flex align-items-center p-2">
+                                            <img src="/images/bag.png" alt="" width="160px" height="160px" class="img-fluid">
+                                            <p class="my_order_text text-center">Prime Membership</p>
+                                        </div>
+                                    </router-link>
+                                </div>
                             </div>
-                        </router-link>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container__middle">
-            <h2 class="help__title">Want to learn more?</h2>
+        <div class="container-fluid  learn_more">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="learn_more_text">Want to learn more?</h2>
+                    </div>
+                </div>
+
+            </div>
         </div>
         <div class="container-fluid alerts_block">
             <div class="row">
@@ -118,23 +135,11 @@
     }
 </script>
 
-<style lang="scss" scoped>
-    .help {
-        &__title {
-            font-size: 30px;
-            font-weight: 600;
-            background-color: #ffffff;
-            color: #262c1d;
-            padding: 32px 0;
-            text-align: center;
-        }
-        &__orders {
-            background: #f7f7f7;
-            padding-top: 32px;
-            padding-bottom: 32px;
-        }
-    }
+<style scoped>
     @media screen and (max-width: 992px) {
+        .orders {
+            margin-top: 0 !important;
+        }
 
         .basket_block {
             margin-top: 10px;
@@ -259,6 +264,17 @@
 
     }
 
+    .learn_more_text {
+        margin: 33px 0;
+    }
+
+    .orders {
+        background: #f7f7f7;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-top: -35px;
+    }
+
     .my_order_text {
         font-size: 24px;
         font-weight: bold;
@@ -283,5 +299,11 @@
         border-radius: 100%;
     }
 
+    .learn_more {
+        height: 150px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        margin-top: 0;
+    }
 
 </style>

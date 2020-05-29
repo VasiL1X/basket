@@ -6,7 +6,7 @@
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
-                    <h1 class="modal-title-new">Card Label</h1>
+                    <h1 class="modal-title-new modal-title-new-card-label">Card Label</h1>
                 </div>
                 <div class="new_address_sec">
                     <form  onsubmit="return false" name="update_label_frm" id="update_label_frm">

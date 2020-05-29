@@ -1,13 +1,14 @@
 <template>
-    <div class="account__content">
-        <div class="account__content-common">
+    <div class="after_account_right">
+        <div class="after_account_common">
             <div class="after_account_addres">
                 <div class="icModalRow_basket">
-                    <ul>
+                    <ul class="icModalRow_basket-list">
                         <li v-for="language in languages"
+                            class="change-language icModalRow_basket-list-item"
                             :onclick="(language.id != cookiesLanguageId) ? getLanguageId(language.id) : ''"
                             :data-target="(language.id != cookiesLanguageId) ? '#modal-promo' : ''"
-                            :data-toggle="(language.id != cookiesLanguageId) ? 'modal' : ''" class="change-language">
+                            :data-toggle="(language.id != cookiesLanguageId) ? 'modal' : ''">
                             <div class="row">
                                 <div class="text-left" style="padding-left: 15px; width: 49%; display: inline-block">
                                     <p>{{language.name}}</p>
@@ -81,10 +82,12 @@
 </script>
 
 <style scoped>
-
+    .after_account_right {
+        margin-left: -50px;
+    }
 
     @media (max-width: 767px) {
-        .account__content {
+        .after_account_right {
             margin-left: 0px !important;
 
         }

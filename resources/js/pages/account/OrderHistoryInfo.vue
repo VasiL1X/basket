@@ -25,9 +25,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-9 col-md-8 col-xl-9">
-                                <div class="account__content">
+                                <div class="after_account_right after_account_right_order_summary_sections">
                                     <div class="billing_account_common">
-                                        <div class="account__content-common_orders">
+                                        <div class="after_account_common_orders">
                                             <div class="order-summary-header common_orders_secc">
                                                 <div class="col-lg-6 col-xs-12 order-summary-header-text">
                                                     <h3 class="canceled-text">{{orderHistory.order_outlet_detail.order_status_name}}</h3>
@@ -110,9 +110,9 @@
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-xl-9">
-                    <div class="account__content">
-                        <div class="account__content-common">
-                            <div class="account__content-common_orders">
+                    <div class="after_account_right after_account_right_order_summary_sections">
+                        <div class="after_account_common">
+                            <div class="after_account_common_orders">
                                 <div class="order-summary-footer common_orders_secc">
                                     <div class="col-md-12 did_list_bsk">
                                         <span>Order Summary</span>

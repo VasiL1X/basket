@@ -29,17 +29,17 @@
                         <div class="col-md-10">
                             <div class="dept_listing_common">
                                 <div class="dept_listing_common">
-                                    <h1 class="col-sm-3 main_title_dept new animated-background text-left"></h1>
+                                    <h1 class="col-sm-3 main_title_dept  dept_listing_common_main_title_dept  dept_listing_common_main_title_dept  dept_listing_common_main_title_dept new animated-background text-left"></h1>
                                     <div class="list_of_products list_parent_div mt-4"  v-for="i in 10">
                                         <div class="row">
                                             <div v-for="i in 6" class="col-md-2 col-lg-2 col-sm-4 col-xs-6 padding0">
-                                                <div class="items_box">
-                                                    <div class="div-box animated-background"></div>
+                                                <div class="items_box  deportments_new_list_items_box">
+                                                    <div class="div-box deportments_new_list_deiv-box animated-background"></div>
                                                     <div class="items_info_box">
-                                                        <ul>
-                                                            <li class="animated-background"></li>
-                                                            <li class="animated-background"></li>
-                                                            <li class="animated-background"></li>
+                                                        <ul class="items_info_box_list">
+                                                            <li class="animated-background items_info_box_list_item"></li>
+                                                            <li class="animated-background items_info_box_list_item"></li>
+                                                            <li class="animated-background items_info_box_list_item"></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -66,7 +66,7 @@
                                     <div class="common_dep_list_filter_responsive">
                                         <div class="common_dep_list_section1">
                                             <h3 class="dep_inf_title">
-                                                <router-link :to="{ name: 'departments' }">
+                                                <router-link :to="{ name: 'departments' }" class="dep_inf_title_link">
                                                     Back to Departments
                                                 </router-link>
                                             </h3>
@@ -99,7 +99,7 @@
                             <div :class="[width > 992 ? 'col-md-10' : 'col-12']">
                                 <div class="dept_listing_common">
                                     <div class="dept_listing_common top_title_slider_section">
-                                        <h1 class="main_title_dept text-left">{{aisleList.department_detail.name}}</h1>
+                                        <h1 class="main_title_dept  dept_listing_common_main_title_dept  dept_listing_common_main_title_dept  dept_listing_common_main_title_dept text-left">{{aisleList.department_detail.name}}</h1>
                                         <div class="delivery_promotional_banner web-banner-image">
                                             <div v-if="aisleList.department_detail.web_banner_image" :style="'background-image:url(' + aisleList.department_detail.web_banner_image+')'"></div>
                                         </div>
@@ -107,7 +107,7 @@
                                             <div class="list_of_recommended featured_product department-all-item-list" v-for="department in aisleList.aisle_list" v-if="department.product_list.length > 0">
                                                 <div class="list_of_recommended_sider">
                                                     <div class="new_ins_title">
-                                                        <h1 class="main_title_dept">{{department.aisle_name}}</h1>
+                                                        <h1 class="main_title_dept  dept_listing_common_main_title_dept new_ins_title_main_title_dept  dept_listing_common_main_title_dept">{{department.aisle_name}}</h1>
                                                         <router-link
                                                             :to="{ path: '/store/'+outletName +'/departments/'+departmentId+'/aisles/'+department.aisle_id}"
                                                             data-bypass="false" class="right_text_content"
@@ -188,25 +188,25 @@
                     breakpoints: {
                         1800: { // 1800px ~
                             itemsToShow: 6,
-                            itemsToSlide: 1
+                            itemsToSlide: 6
 
                         },
                         1460: { // 1460px ~ 1800px
                             itemsToShow: 5,
-                            itemsToSlide: 1
+                            itemsToSlide: 5
 
                         },
                         1170: { // 1170px ~ 1460px
                             itemsToShow: 4,
-                            itemsToSlide: 1
+                            itemsToSlide: 4
                         },
                         860: { // 860px ~ 1100px
                             itemsToShow: 3,
-                            itemsToSlide:1
+                            itemsToSlide:3
                         },
                         585: { // 585px ~ 820px
                             itemsToShow: 2,
-                            itemsToSlide:1
+                            itemsToSlide:2
                         },
                         0: { // 0px ~ 370px
                             itemsToShow: 1,
@@ -361,6 +361,10 @@
         color: #6c6c6c;
     }
 
+    .item-per-new-style {
+        font-size: 13px !important;
+    }
+
     @media only screen and (max-width: 600px) {
         .regular_slider_common {
             height: 275px;
@@ -384,7 +388,7 @@
     .deportments_new_list {
         margin-top: 110px;
     }
-    .main_title_dept.text-left{
+    .main_title_dept  dept_listing_common_main_title_dept.text-left{
         font-size: 44px;
     }
     .delivery_promotional_banner{
@@ -405,7 +409,7 @@
         margin-top: 5px;
         width: 100%;
     }
-    .deportments_new_list h1.main_title_dept.new{
+    .deportments_new_list h1.main_title_dept  dept_listing_common_main_title_dept.new{
         height: 50px;
         display: block;
         margin: 0;

@@ -47,14 +47,13 @@ $theme-colors: map-merge(
         (
             'primary': $primary,
             'secondary': $secondary,
-            'success': $green,
+            'success': $success,
             'info': $info,
             'warning': $warning,
             'danger': $danger,
             'light': $light,
             'dark': $dark,
-            'white': $white,
-            'black': $black
+            'white': $white
         ),
         $theme-colors
 );

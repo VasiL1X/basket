@@ -1,15 +1,16 @@
 <template>
     <div>
-        <hooper class="hooper-wrapper" :settings="hooperSettings">
+        <hooper style="height: 320px" :settings="hooperSettings">
             <slide v-bind:key="product.product_id" v-for="product in products" class="text-center">
                 <div aria-live="polite">
-                    <div class="slick-track">
-                        <div class="item_list-wrapper">
+                    <div class="slick-track" style="opacity: 1; width: 2720px; transform: translate3d(0px, 0px, 0px);">
+                        <div class="col-md-2 col-lg-2 col-sm-4 col-xs-6 padding0"
+                             style="width: 272px;">
                             <div class="items_list">
-                                <div class="items_img">
+                                <div class="items_img items385488 ">
                                     <div>
                                         <a href="javascript:void(0)" title="" tabindex="0" @click="singleProduct(product)">
-                                            <img class="prod_img_tag m-auto"
+                                            <img class="prod_img_tag m-0 m-auto"
                                                  v-bind:src="product.product_image"
                                                  alt="" height="110" width="110"
                                                  @error="errorSrc">
@@ -45,7 +46,7 @@
                                         </span>
                                     </div>
                                     <div class="inner_add_carts hide-plus-circle innerAddCarts"
-                                         v-bind:class="[open === product.outlet_item_id ? '' : 'addItem']"
+                                         v-bind:class="[open === product.outlet_item_id ? 'addItem' : '']"
                                          v-bind:id="product.item_product_id"
                                          @mouseleave="updateCount(product , product.cart_qty)"
                                     >
@@ -77,36 +78,37 @@
                                     <a href="javascript:void(0)" title="" tabindex="0">
                                         <h3 v-if="product.status_available === 0">OUT OF STOCK</h3>
                                         <div v-else>
-                                            <div class="col-12 p-0 price__wrapper">
-                                                <h3 class="d-inline-block price__sale-current" v-bind:class="{'text-danger': product.promo_item}">
+                                            <div class="col-12 d-inline p-0">
+                                                <h3 class="d-inline-block" v-bind:class="{'text-danger': product.promo_item}">
                                                     JD
                                                     {{product.approx_weight > 0 ? parseFloat(product.our_selling_price*product.approx_weight).toFixed(2) : product.our_selling_price}}
                                                     <span v-if="product.sold_per === 3 || product.sold_per === 4">each</span>
                                                     <span v-if="product.sold_per === 2"> / kg</span>
                                                 </h3>
-                                                <p class="d-inline-block col-12 col-lg-6 col-md-6 text-secondary p-0 mb-0 price__sale-size" v-if="product.promo_item == 1">
+                                                <p class="d-inline-block col-12 col-lg-6 col-md-6 text-secondary p-0 mb-0" v-if="product.promo_item == 1">
                                                     <s>JD {{product.original_price}}</s>
                                                 </p>
                                             </div>
+                                            <br>
                                             <div class="badge badge--sale"
                                                  v-if="product.promo_item == 1">
                                                 {{product.display_saving_per_unit}}
                                             </div>
                                         </div>
                                     </a>
-                                    <div class="items_info_detail">
+                                    <h5 class="">
                                         <a href="javascript:void(0)" title="" tabindex="0"></a>
                                         <a class="pro-name" href="javascript:void(0)" title=""
                                            tabindex="0">
-                                            <h4 class="items_info_name">{{product.product_name}}</h4>
-                                            <h4 class="items_info_sold" v-if="product.sold_per === 3">JD {{product.our_selling_price}} /  {{product.unit}}</h4>
+                                            <h4>{{product.product_name}}</h4>
+                                            <h4 v-if="product.sold_per === 3">JD {{product.our_selling_price}} /  {{product.unit}}</h4>
                                         </a>
                                         <span>
                                             <span>
                                                  <span class="item-per-new-style" v-if="product.label_value>0">{{product.label_value}} {{product.unit}}</span>
                                             </span>
                                         </span>
-                                    </div>
+                                    </h5>
                                 </div>
                             </div>
                         </div>
@@ -261,19 +263,22 @@
 
     }
     .item-quantity-small{
-        right: 10%;
-        top: 10%;
+        height: 25px;
+        width: 25px;
+        padding: 4px 5px;
     }
     .badge.badge--sale {
-        display: block;
+        height: 20px;
+        margin: 0 auto;
         text-align: center;
         font-weight: 600;
         font-size: 14px;
-        margin: 0 0 10px;
-        text-transform: lowercase;
+        margin-left: 1px;
         background-color: #E8104A;
         color: #fff;
         max-width: 90px;
+        margin-top: 4px;
+        margin-bottom: 3px;
         border-radius: 12px;
     }
 
@@ -288,80 +293,22 @@
 
     .button-plus-new {
         background-color: white;
-        color: #61bf3d;
-        border: 1px solid #61bf3d;
+        color: rgb(46, 137, 19);
+        border: 1px solid rgb(46, 137, 19);
     }
 
     .items-info-new-style {
         color: #6c6c6c;
     }
 
+    .item-per-new-style {
+        font-size: 13px !important;
+    }
+
     .div-new-style {
         height: 350px;
     }
-    
-    /*new styles*/
-    .hooper-wrapper {
-        position: relative;
-        height: 320px;
-    }
-    .hooper-wrapper::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: inherit;
-        width: 104px;
-        opacity: 0.6;
-        background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.21));
-    }
-    .hooper-navigation {
-        display: none;
-    }
-    .hooper:hover .hooper-navigation {
-        display: block;
-    }
-    .price__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    .price__sale-current {
-        margin-right: 10px;
-    }
-    @media (max-width: 767px) {
-         .items_info h3, .items_info p {
-            font-size: 13px;
-        }
-        .hooper-wrapper {
-            height: 250px;
-            padding-bottom: 10px;
-        }
-        .hooper-wrapper::after {
-            display: none;
-        }
-        .item-quantity-small, .button-plus-new {
-            top: 0;
-        }
-        .badge.badge--sale {
-            font-size: 11px;
-            max-width: 72px;
-            margin-bottom: 5px;
-        }
-        .price__wrapper {
-            margin-bottom: 5px;
-        }
-    }
-    @media (max-width: 567px) {
-        .hooper-wrapper {
-            min-height: 200px;
-            height: auto;
-        }
-    }
-    
-    /*end new styles*/
+
     @media only screen and (max-width: 600px) {
         .div-new-style {
             height: 255px;
@@ -376,24 +323,14 @@
         .web-banner-image {
             display: none;
         }
-        /*new*/
-        
     }
 
-    .hide-plus-circle {
-        display: inline-block !important;
-    }
+    /*.hide-plus-circle {*/
+    /*    display: inline-block !important;*/
+    /*}*/
 
     .items_list .items_img .inner_add_carts {
         left: 0px;
-    }
-
-    .cart_item_incr {
-        display: inline-block;
-    }
-
-    .addItem {
-        display: none !important;
     }
     .cart_product_incr{
         display: inline-block;
@@ -402,5 +339,50 @@
         padding: 7px;
         font-size: 17px;
     }
+    .items_list .btn-warning {
+        background: 0 0;
+        border: none;
+        float: left;
+        color: #e8104a;
+        padding: 0;
+        display: none;
+    }
 
+    .items_list .btn.btn-inverse {
+        font-weight: 700;
+        letter-spacing: .1em;
+        line-height: 20px;
+        padding: 6px 10px;
+        text-decoration: none;
+
+        text-transform: uppercase;
+        background-color: var(--theme-color);
+        border-color: var(--theme-color);
+        color: #fff;
+        float: right;
+        margin-bottom: 15px;
+    }
+
+    .items_info h3 {
+        display: inline-block;
+        margin-bottom: 3px;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .items_info h4 {
+        padding: 3px 0 2px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.2em;
+        color: #5a5a5a;
+        max-width: 165px;
+    }
+
+    .items_info h5 {
+        font-size: 12px;
+        color: #999;
+        font-weight: 400;
+    }
 </style>

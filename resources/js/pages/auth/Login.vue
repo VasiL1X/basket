@@ -29,10 +29,10 @@
                                             <a href="javascript:void(0)">
                                                 <img
                                                     src="/images/icon-normal.png"
-                                                    alt="Basket">
+                                                    alt="Basket" class="bask-logo-img">
                                             </a>
                                         </div>
-                                        <h1>Login to your account!</h1>
+                                        <h1 class="bask-logo-text">Login to your account!</h1>
                                     </div>
                                     <div class="bask_form_center">
                                         <div class="basket_forgout_pass">
@@ -67,18 +67,18 @@
                                                         <div class="col-md-6 col-12 pl-0 pr-0">
                                                             <input type="phone"
                                                                    id="login_mobile"
-                                                                   class="form-control"
+                                                                   class="form-control basket-form-inp"
                                                                    placeholder="Mobile"
                                                                    name="mobile"
                                                                    v-model="mobile"
-                                                                   maxlength="14"
+                                                                   maxlength="13"
                                                                    v-validate="'required'">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="password"
-                                                           class="form-control"
+                                                           class="form-control basket-form-inp"
                                                            placeholder="Enter password"
                                                            v-validate="'required'"
                                                            maxlength="32"
@@ -100,18 +100,18 @@
                                                     </label>
                                                 </div>
                                                 <div class="form-group">
-                                                    <button type="submit" class="btn btn-primary">Login</button>
+                                                    <button type="submit" class="btn btn-primary btn-primary-bask">Login</button>
                                                 </div>
                                             </form>
                                             <div class="signup-vs-login">
-                                                <ul>
-                                                    <li>
+                                                <ul class="signup-vs-login-list">
+                                                    <li class="signup-vs-login-list-item">
                                                         Don't have an account?
                                                         <router-link :to="{ name: 'register' }" class="basket_signup link-color">
                                                             Sign up
                                                         </router-link>
                                                     </li>
-                                                    <li>
+                                                    <li class="signup-vs-login-list-item">
                                                         Forgot your password?
                                                         <router-link :to="{ name: 'forgot.password' }"
                                                                      class="basket_signup link-color">Reset it
@@ -129,9 +129,9 @@
                 <div class="bas_login">
                     <a href="javascript:void(0)" class="left_responsive_logo" title="">
                         <img src="/images/logo-normal.png"
-                             alt="Basket">
+                             alt="Basket" class="left_responsive_logo_img">
                     </a>
-                    <a href="javascript:void(0);" title="" class="login-link basket_signup btn btn-primary"
+                    <a href="javascript:void(0);" title="" class="login-link basket_signup btn btn-primary btn-primary-bask"
                        data-bypass="true"
                        title="Login">Sign up</a>
                 </div>
@@ -157,10 +157,10 @@
                             <div class="onethree">
                                 <div class="image">
                                     <img src="/images/new_store.jpg"
-                                         alt="1">
+                                         alt="1" class="onethree-image">
                                 </div>
-                                <h2>Select Your Favorite Store</h2>
-                                <p>Based on your location, <span class="br-desktop"> </span> <br> you can select your
+                                <h2 class="onethree-text">Select Your Favorite Store</h2>
+                                <p class=class="onethree-paragraph">Based on your location, <span class="br-desktop"> </span> <br> you can select your
                                     favorite
                                     store. </p>
                             </div>
@@ -170,10 +170,10 @@
                                 <div class="image">
                                     <img
                                         src="/images/new_banana.jpg"
-                                        alt="Same day delivery">
+                                        alt="Same day delivery" class="onethree-image">
                                 </div>
                                 <h2>Add Items </h2>
-                                <p> Add items to your cart.
+                                <p class=class="onethree-paragraph"> Add items to your cart.
                                     <span class="br-desktop"></span><br> Just as if you're in the store yourself.
                                 </p>
                             </div>
@@ -183,10 +183,10 @@
                                 <div class="image">
                                     <img
                                         src="/images/new_grocery.jpg"
-                                        alt="save time and money">
+                                        alt="save time and money" class="onethree-image">
                                 </div>
-                                <h2>Place Order & Enjoy</h2>
-                                <p> Place your order and
+                                <h2 class="onethree-text">Place Order & Enjoy</h2>
+                                <p class=class="onethree-paragraph"> Place your order and
                                     <br/>
                                     <span class="br-desktop"></span>we will take care of the rest.
                                 </p>

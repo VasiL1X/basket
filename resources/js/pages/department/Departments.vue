@@ -11,8 +11,8 @@
                              class="col-lg-1 col-md-3 col-sm-4 m-1 p-0 departament bg-white">
                             <div class="top_position">
                                 <router-link :to="{ path: '/store/'+outletName +'/departments/'+department.id }"
-                                             :title="department.name">
-                                    <img :src="department.image" @error="errorSrc">
+                                             :title="department.name" class="text-dark">
+                                    <img :src="department.image" @error="errorSrc" class="top_position-image-vert_go_class-get">
                                 </router-link>
                             </div>
                             <div class="aisle_list">

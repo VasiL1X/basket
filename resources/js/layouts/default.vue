@@ -33,8 +33,7 @@ export default {
 
 <style scoped>
     .main-layout{
-        background: #f2f2f2;
-        min-height: 100%;
+        background: #f7f7f7;
     }
 
 </style>

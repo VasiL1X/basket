@@ -1,16 +1,16 @@
 <template>
     <div>
         <HelpHeaderComponent></HelpHeaderComponent>
-        <div class="help__summary">
+        <div class="order_summary_help">
             <div class="container">
                 <div class="row">
                     <div class="help_tabs_sections">
                         <div class="row">
 
                             <div class="col-md-4 right_border">
-                                <ul>
-                                    <li class="section">
-                                        <a href="javascript:void(0)">
+                                <ul class="help_tabs_sections_list">
+                                    <li class="section help_tabs_sections_list_item">
+                                        <a href="javascript:void(0)" class="help_tabs_sections_list_item_link">
                                             How Basket Works
                                         </a>
                                     </li>
@@ -33,7 +33,7 @@
                                     <br>
                                     <div class="inner_text_info show_help" v-if="detail.id == selectedQuestionId"
                                          v-for="detail in helpDetails">
-                                        <div class="text">
+                                        <div class="help_tabs_sections_text">
                                             <img class="helps_imgs" src="/images/how_basket_works-05.png" alt="">{{detail.question}}
                                         </div>
                                         <div class="answer" v-html="detail.answer"></div>

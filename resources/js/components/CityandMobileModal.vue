@@ -30,14 +30,14 @@
                     <div class="form-group text-center">
                         <div class="form-group">
                             <div class="select_city_sect">
-                                <b-form-select v-model="city" :options="cities" name="city" v-validate="'required'" @change="getZones(city)"></b-form-select>
+                                <b-form-select v-model="city" class="select-city-dropdown" :options="cities" name="city" v-validate="'required'" @change="getZones(city)"></b-form-select>
                             </div>
                             <span v-show="errors.has('city')"
                                   class="error text-danger p-1">{{ errors.first('city') }}</span>
                         </div>
                         <div class="form-group text-center">
                             <div class="select_city_sect">
-                                <b-form-select v-model="zone" :options="zones" name="zone" v-validate="'required'"></b-form-select>
+                                <b-form-select v-model="zone" class="select-city-dropdown" :options="zones" name="zone" v-validate="'required'"></b-form-select>
                                 <span v-show="errors.has('zone')"
                                       class="error text-danger p-1">{{ errors.first('zone') }}</span>
                             </div>

@@ -26,11 +26,11 @@
                                 <span style="margin:5px 0;display:block">Or</span>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" name="pcode_value" id="pcode_value" tabindex="0"
+                                <input class="form-control form-control_promo_inner_sec" name="pcode_value" id="pcode_value" tabindex="0"
                                        placeholder="Enter promo code" type="text" v-model="promoCode">
                             </div>
                             <div class="form-group">
-                                <button type="button" @click="addPromoCode" class="btn btn-default" >Redeem</button>
+                                <button type="button" @click="addPromoCode" class="btn btn-default promo_inner_sec_btn">Redeem</button>
                             </div>
                         </div>
                     </div>

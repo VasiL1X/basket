@@ -54,8 +54,8 @@
 </html>
 <style>
     * {
-        font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;;
-        /*font-family: "OpenSans-Bold";*/
+        /*font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;;*/
+        font-family: "OpenSans-Bold";
     }
 
     html{
@@ -64,11 +64,11 @@
 
     body{
         height: 100%;
-        /*font-family: "OpenSans-Bold";*/
+        font-family: "OpenSans-Bold";
         /*font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;*/
         font-size: 14px;
         line-height: 1.42857143;
-        color: #000;
+        color: #333;
     }
 
     #app{

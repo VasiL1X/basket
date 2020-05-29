@@ -12,7 +12,7 @@
                     <div class="promo_inner_sec">
                         <form>
                             <div class="form-group">
-                                <input class="form-control"
+                                <input class="form-control form-control_promo_inner_sec"
                                        name="user_pcode_value"
                                        id="user_pcode_value" tabindex="0"
                                        placeholder="Enter promo code" type="text"
@@ -20,7 +20,7 @@
                                 >
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-default" @click="addPromoCode()">Add Promo Code</button>
+                                <button type="button" class="btn btn-default promo_inner_sec_btn" @click="addPromoCode()">Add Promo Code</button>
                             </div>
                         </form>
                     </div>

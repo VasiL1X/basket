@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="dept_listing_common">
-                        <h1 class="main_title_dept text-left p-3">
+                        <h1 class="main_title_dept  dept_listing_common_main_title_dept text-left p-3">
                             {{ currentPage.title }}
                         </h1>
                         <div class="list_of_products list_parent_div" v-show="!showLoader">
@@ -52,7 +52,7 @@
                 currentPage: {},
                 products: {},
                 pages: {
-                    my_items: {title: "My Items", src: "/user-ordered-items"},
+                    myItems: {title: "My Items", src: "/user-ordered-items"},
                     my_favorite: {title: "My Favorite", src: "/favorite-items-list"},
                     discounts: {title: "Discount", src: "/sale-items-list"},
                     ramadan: {title: "Ramadan", src: "/ramadan-items-list"},
@@ -70,7 +70,7 @@
                     outlet_id: _this.userData.outlet_id ? _this.userData.outlet_id : 67,
                 }).then(response => {
                     if (response.data.response.httpCode == 200) {
-                        if (this.$route.params.name === 'my_items') {
+                        if (this.$route.params.name === 'myItems') {
                             _this.products = response.data.response.ordered_items;
                         } else {
                             _this.products = response.data.response.product_list;

@@ -1,8 +1,8 @@
 <template>
-    <div class="account__content order_history_com ">
+    <div class="after_account_right order_history_com ">
         <template v-for="order of myOrders">
             <template v-for="outlet of order.order_list">
-                <div class="account__content-common order_success">
+                <div class="after_account_common order_success">
                     <div class="my_list">
                         <div class="row">
                             <div class="col-md-3 col-sm-4">
@@ -44,7 +44,7 @@
                                 <label>- {{ outlet.order_status_name }} </label>
                                 <div class="orders_product_images_common">
                                     <div class="orders-product-images">
-                                        <ul>
+                                        <ul class="unstyled form-inline">
                                             <template v-for="product of outlet.product_list">
                                                  <span :class="'details'+order.order_id" style="display: none;"
                                                        :data-outlet_id="outlet.outlet_id"
@@ -57,6 +57,7 @@
                                                  </span>
                                                 <li>
                                                     <a href="javascript:void(0)"
+                                                       class="text-success float-right"
                                                        :title="product.product_name">
                                                         <img width="50"
                                                              :src="product.product_image"
@@ -223,9 +224,12 @@
         font-weight: 700;
     }
 
+    .after_account_right {
+        margin-left: -50px;
+    }
 
     @media (max-width: 767px) {
-        .account__content {
+        .after_account_right {
             margin-left: 0px !important;
 
         }

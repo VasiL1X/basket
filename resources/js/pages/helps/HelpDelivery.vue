@@ -1,15 +1,15 @@
 <template>
     <div>
         <HelpHeaderComponent></HelpHeaderComponent>
-        <div class="help__summary">
+        <div class="order_summary_help">
             <div class="container">
                 <div class="row">
                     <div class="help_tabs_sections">
                         <div class="row">
                             <div class="col-md-4 right_border">
-                                <ul>
-                                    <li class="section">
-                                        <a href="javascript:void(0)">
+                                <ul class="help_tabs_sections_list">
+                                    <li class="section help_tabs_sections_list_item">
+                                        <a href="javascript:void(0)" class="help_tabs_sections_list_item_link">
                                             Delivery
                                         </a>
                                     </li>

@@ -2,7 +2,7 @@
     <!--Modall change location-->
     <div class="modal fade update_city_location update-location bs-example-modal-lg" id="update-location"  role="dialog"
          aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-lg mt-5" role="document">
             <div class="modal-content">
                 <div class="col-12">
                     <button class="close mt-2" type="button" data-dismiss="modal" aria-label="Close">
@@ -16,7 +16,7 @@
                             <div class="select_city_sect">
                                 <select v-model="city"
                                         @change="getZones()"
-                                        class="js-example-disabled-results SelectCitybox"
+                                        class="select-city-dropdown js-example-disabled-results SelectCitybox"
                                         name="city"
                                         data-val=""
                                         v-validate="'required'"
@@ -31,7 +31,7 @@
                         <div class="form-group">
                             <div class="select_city_sect">
                                 <select v-model="zone"
-                                        class="js-example-disabled-results SelectZonebox"
+                                        class="select-city-dropdown js-example-disabled-results SelectZonebox"
                                         name="location"
                                         data-val=""
                                         v-validate="'required'"
@@ -52,9 +52,9 @@
                     </form>
                     <hr/>
                     <div class="icModalRow_basket">
-                        <ul>
-                            <li  @click="updateUserLocation( item.address_id,item.city_id,item.location_id)" class="user_address_li" v-for="item in addressList">
-                                <p class="user_address_p" data-address_id="" style="line-height: 18px;">
+                        <ul class="icModalRow_basket-list">
+                            <li  @click="updateUserLocation( item.address_id,item.city_id,item.location_id)" class="user_address_li icModalRow_basket-list-item" v-for="item in addressList">
+                                <p class="user_address_p icModalRow_basket-list-item-paragraph" data-address_id="" style="line-height: 18px;">
                                         <span class="">
                                                 <i class="glyph-icon flaticon-home-interface"></i>
                                             <i class="glyph-icon flaticon-apartment"></i>

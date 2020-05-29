@@ -12,7 +12,7 @@
                    </div>
                    <div class="new_address_sec add_aaddress_popup">
 
-                       <div class="form-group">
+                       <div class="form-group new_address_sec_form">
                            <div class="select_city_sect">
                                <multiselect
                                     v-model="addressType"
@@ -27,7 +27,7 @@
                                <span class="error-message" v-if="submitted && errors.has('address type')">{{errors.first('address type')}}</span>
                            </div>
                        </div>
-                       <div class="form-group">
+                       <div class="form-group new_address_sec_form">
                            <div class="select_city_sect">
                                <multiselect
                                    v-model="city"
@@ -43,7 +43,7 @@
                                <span class="error-message" v-if="submitted && errors.has('city name')">{{errors.first('city name')}}</span>
                            </div>
                        </div>
-                       <div class="form-group">
+                       <div class="form-group new_address_sec_form">
                            <div class="select_city_sect">
                                <multiselect
                                    v-model="zone"
@@ -58,17 +58,17 @@
                                <span class="error-message" v-if="submitted && errors.has('zone name')">{{errors.first('zone name')}}</span>
                            </div>
                        </div>
-                       <div class="form-group">
+                       <div class="form-group new_address_sec_form">
                            <div class="map_location_after">
                                <div class="row">
                                    <div class="col-md-8 pr-0">
                                        <input type="text"  v-validate="'required'" id="found_address1" :value="address"  readonly name="street address" placeholder="Street Address"
-                                              class="form-control street-input  inspectletIgnore street_inp">
+                                              class="form-coltrol new_address_sec_form_input street-input  inspectletIgnore street_inp">
                                        <span class="error-message" v-if="submitted && errors.has('street address')">{{errors.first('street address')}}</span>
                                    </div>
                                    <div class="col-md-4 pl-0">
                                        <a href="javascript:void(0)"
-                                          class="btn btn-link"
+                                          class="btn btn-link openGogleMapBtn"
                                           data-toggle="modal"
                                           data-target="#add_popupaddress"
                                           @click="openGoogleMap()"
@@ -77,18 +77,18 @@
                                </div>
                            </div>
                        </div>
-                       <div class="form-group">
-                           <input class="form-control department_building_inp"
+                       <div class="form-group new_address_sec_form">
+                           <input class="form-coltrol new_address_sec_form_input department_building_inp"
                                   placeholder="Apt # / Suit / Building  (optional)"
                                   aria-label="Apt # / Suit / Building  (optional)" v-model="appartment" value="" type="text" name="appartment">
                        </div>
-                       <div class="form-group">
-                         <textarea name="note" v-model="note" class="form-control additional_info"
+                       <div class="form-group new_address_sec_form">
+                         <textarea name="note" v-model="note" class="form-coltrol new_address_sec_form_input additional_info"
                                    placeholder="Instructions for delivery (e.g. your door code) (optional)"
                                    type="text"></textarea>
                        </div>
-                       <div class="form-group">
-                           <button type="button" onclick="" class="btn btn-primary save_btn" @click="saveAddress">Save Address</button>
+                       <div class="form-group new_address_sec_form">
+                           <button type="button" onclick="" class="btn btn-primary  save_btn" @click="saveAddress">Save Address</button>
                            <button type="button" class="btn btn-info cancel_btn close close close_add_address_model" data-dismiss="modal" aria-label="Close">Cancel</button>
                        </div>
                    </div>
@@ -131,6 +131,7 @@
             openGoogleMap(){
                 bus.$emit('setLocation' , this.locationCoordinates)
                 this.googleMap = true
+                $(".left_add_address").modal('hide');
             },
 
             getAddressTyps() {
@@ -211,6 +212,7 @@
         created(){
             bus.$on('closeGoogleMap', (data) => {
                 if(data){
+                    $(".left_add_address").modal("show")
                     this.googleMap = false
                 }
             });

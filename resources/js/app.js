@@ -77,9 +77,8 @@ new Vue({
     ...App
 });
 Vue.use(BootstrapVue);
-/*downloading bootstrap one more time time*/
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 window.$ = require('jquery');
 window.moment = require('moment');
 

@@ -5,11 +5,11 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="help_logo">
-                            <router-link :to="{ name: 'home' }" title="Basket">
+                            <router-link :to="{ name: 'home' }" title="Basket" class="basket_header_outer_help-link">
                                 <img src="/images/logo-white.png" alt="" style="width:140px;">
                             </router-link>
                         <router-link :to="{ name: 'help' }" title="Basket">
-                            <span> Help Center</span>
+                            <span class="height_elps_span"> Help Center</span>
                         </router-link>
                         </div>
                     </div>
@@ -17,7 +17,7 @@
                         <div class="search_help">
                             <div class="input-group">
                                 <div class="input-group-btn">
-                                    <button class="btn search-button">
+                                    <button class="btn btn-success search-button">
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </div>
@@ -47,10 +47,10 @@
     }
     .search-button{
         color: #ccc;
-        background: #fff;
-        border: none;
-        height: 48px;
-        margin-right: -1px;
+        background-color: white;
+        vertical-align: middle;
+        border-color: white;
+        height: 46px !important;
         border-bottom-right-radius: 0px;
         border-top-right-radius: 0px;
     }

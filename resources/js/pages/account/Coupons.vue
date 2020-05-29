@@ -1,13 +1,13 @@
 <template>
-    <div class="account__content">
+    <div class="after_account_right">
         <div class="promo_code_sections">
             <div class="account-coupons" data-reactroot="">
-                <div class="icon">
+                <div class="icon-promo_code_sections">
                     <div class="coupon-icon"></div>
                 </div>
                 <div class="green-title">
                     Promo Codes
-                    <p class="subtitle">Apply discounts to your Account</p>
+                    <p class="account-coupons-subtitle">Apply discounts to your Account</p>
                 </div>
                 <a href="javascript:void(0)" data-bypass="true">
                     <button class="btn btn-danger" data-toggle="modal" data-target=".user_promocode_popup">
@@ -17,7 +17,7 @@
                 </a>
                 <p>
                     <small>
-                        <router-link :to="{ name: 'terms.conditions' }" target="_blank">Terms &amp; Conditions apply</router-link>
+                        <router-link class="account-coupons-subtitle-link" :to="{ name: 'terms.conditions' }" target="_blank">Terms &amp; Conditions apply</router-link>
                     </small>
                 </p>
             </div>

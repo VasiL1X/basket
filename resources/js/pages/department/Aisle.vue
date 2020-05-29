@@ -10,7 +10,7 @@
                         <div class="col-md-2">
                             <div class="common_dep_list_filter">
                                 <div class="common_dep_list_section1 section11">
-                                    <h3 class="dep_inf_title animated-background"><a href="#"></a></h3>
+                                    <h3 class="dep_inf_title section11_dep_inf_title animated-background"><a href="#" class="dep_inf_title_link"></a></h3>
                                     <ul>
                                         <li class="animated-background"></li>
                                         <ul style="padding-left: 5%;">
@@ -24,17 +24,17 @@
                         <div class="col-md-10">
                             <div class="dept_listing_common">
                                 <div class="dept_listing_common">
-                                    <h1 class="col-sm-3 main_title_dept new animated-background text-left"></h1>
+                                    <h1 class="col-sm-3 main_title_dept  dept_listing_common_main_title_dept new animated-background text-left"></h1>
                                     <div class="list_of_products list_parent_div mt-4" v-for="i in 10">
                                         <div class="row">
                                             <div v-for="i in 6" class="col-md-2 col-lg-2 col-sm-4 col-xs-6 padding0">
-                                                <div class="items_box">
-                                                    <div class="div-box animated-background"></div>
+                                                <div class="items_box deportments_new_list_items_box">
+                                                    <div class="div-box deportments_new_list_deiv-box animated-background"></div>
                                                     <div class="items_info_box">
-                                                        <ul>
-                                                            <li class="animated-background"></li>
-                                                            <li class="animated-background"></li>
-                                                            <li class="animated-background"></li>
+                                                        <ul class="items_info_box_list">
+                                                            <li class="animated-background items_info_box_list_item"></li>
+                                                            <li class="animated-background items_info_box_list_item"></li>
+                                                            <li class="animated-background items_info_box_list_item"></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -77,25 +77,26 @@
                                             </div>
                                             <div class="common_dep_list_section1">
                                                 <h3 class="dep_inf_title">
-                                                    <router-link :to="{ name: 'departments' }">
+                                                    <router-link :to="{ name: 'departments' }" class="dep_inf_title_link">
                                                         Back to Departments
                                                     </router-link>
                                                 </h3>
-                                                <ul class="res_scroll">
-                                                    <li class="d-inline">
+                                                <ul class="res_scroll common_dep_list_section1_list">
+                                                    <li class="d-inline common_dep_list_section1_list_item">
                                                         <router-link
-                                                            class="text-success font-weight-light"
+                                                            class="text-success font-weight-light common_dep_list_section1_list_item_link"
                                                             :to="{ path: '/store/'+outletName +'/departments/'+departmentId}"
                                                             :title="aisleList.department_detail.name">
                                                             {{aisleList.department_detail.name}}
                                                         </router-link>
                                                     </li>
-                                                    <ul class="aisleLIst" style="padding-left: 5%;">
+                                                    <ul class="aisleLIst common_dep_list_section1_list" style="padding-left: 5%;">
                                                         <li v-for="(aisle, index) in aisleList.aisle_list"
+                                                            class="common_dep_list_section1_list_item"
                                                             v-if="aisle.product_list.length > 0"
                                                             v-bind:class="{ active: aisle.aisle_id == aisleId }">
                                                             <a href="javascript:void(0)"
-                                                               class="text-success aisleLink"
+                                                               class="text-success aisleLink common_dep_list_section1_list_item_link"
                                                                @click="refreshUrl(aisle.aisle_id)"
                                                                :title="aisle.aisle_name">
                                                                 {{aisle.aisle_name}}
@@ -105,9 +106,9 @@
                                                 </ul>
                                             </div>
                                             <!-- Brands Start Hear -->
-                                            <div class="filter_sections_com pt-2"
+                                            <div class="filter_sections_com dep_new_list_filter_sections_com pt-2"
                                                  v-if="brands !== undefined && brands.length> 0">
-                                                <h3>Filter Results</h3>
+                                                <h3 class="filter_sections_com_h3">Filter Results</h3>
                                             </div>
                                             <div class="common_dep_list_section1 filtersections"
                                                  v-if="brands !== undefined && brands.length> 0">
@@ -119,7 +120,7 @@
                                                         <input :id="'chk'+ brand.brand_id"
                                                                v-bind:class="{ checked: selected.includes(brand.brand_id) }"
                                                                type="radio" :name="'brand_name'+ brand.brand_id"
-                                                               value="" class="brand_class">
+                                                               value="" class="brand_class filtersections_brand_class">
                                                         <i class="fa fa-check text-white"
                                                            v-if="selected.includes(brand.brand_id)"></i>
                                                         <label class="radio">
@@ -136,13 +137,13 @@
                                 <div :class="[width > 992 ? 'col-md-10' : 'col-12']">
                                     <div class="dept_listing_common">
                                         <div class="dept_listing_common pt-5">
-                                            <h1 class="main_title_dept text-left p-1">
+                                            <h1 class="main_title_dept  dept_listing_common_main_title_dept text-left p-1">
                                                 {{products.aisle_detail.aisle_name}}
                                             </h1>
                                             <div class="dept_listing_sort">
 
                                                 <b-dropdown :text="filtered" variant="btn-outline-secondary bg-white text-dark"
-                                                            class="rounded-0 m-2">
+                                                            class="rounded-0 m-2" style="width: 172px">
                                                     <b-dropdown-item href="#" @click="filter(1, 'Sort by Brand')">Group
                                                         by Brand
                                                     </b-dropdown-item>
@@ -158,7 +159,7 @@
                                             </div>
                                             <div class="list_of_recommended  featured_product" style="display:none">
                                                 <div class="list_of_recommended_sider">
-                                                    <h1 class="main_title_dept">Featured Items</h1>
+                                                    <h1 class="main_title_dept  dept_listing_common_main_title_dept">Featured Items</h1>
                                                     <section class="regular slider slick-initialized slick-slider">
                                                         <div aria-live="polite" class="slick-list draggable">
                                                             <div class="slick-track"
@@ -456,17 +457,11 @@
         padding: -1px !important;
     }
 
-    .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover,
-    .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open > .dropdown-toggle.btn-primary.focus,
-    .open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover {
-        background-color: var(--theme-color);
-    }
-
     .deportments_new_list {
         margin-top: 110px;
     }
 
-    .main_title_dept.text-left {
+    .main_title_dept  dept_listing_common_main_title_dept.text-left {
         font-size: 44px;
         display: inline;
     }
@@ -490,7 +485,7 @@
         width: 100%;
     }
 
-    .deportments_new_list h1.main_title_dept.new {
+    .deportments_new_list h1.main_title_dept  dept_listing_common_main_title_dept.new {
         height: 50px;
         display: block;
         margin: 0;
@@ -506,11 +501,6 @@
         outline: none;
         vertical-align: middle;
         border: solid gray 2px;
-        background-image: none;
-    }
-
-    .brand_class.checked {
-        background-color: #4a9641;
         background-image: none;
     }
 
@@ -533,4 +523,36 @@
         white-space: nowrap;
         padding: 0;
     }
+
+    .filtersections .radio {
+        display: inline-block;
+        margin: .3em 0;
+        padding-left: 8px;
+        color: #757575;
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 26px;
+        cursor: pointer;
+        font-weight: 400;
+    }
+
+    .filtersections .radio input {
+        width: 1px;
+        height: 1px;
+        opacity: 0
+    }
+
+    .filtersections .radio input:checked + .outer .inner {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+
+    .filtersections .radio input:checked + .outer {
+        border: 3px solid var(--theme-color)
+    }
+
+
+
 </style>

@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-9 col-md-9">
-                                <div class="card account__content">
+                                <div class="card after_account_right">
                                     <div class="card-body order-summary-header common_orders_secc p-1">
                                         <div class="row  mt-2" v-for="order in orderDetails.order_list">
                                             <div class="col-lg-4 col-xs-12 order-summary-header-text">
@@ -46,8 +46,10 @@
                                             </div>
                                             <div class="col-12">
                                                 <h3 class="left_text_new">{{ order.outlet_name }}</h3>
-                                                <h4 class="left_text_new" v-if="!changedDate">{{ dateChange(order.delivery_date) }} {{ order.delivery_slot }}</h4>
-                                                <h4 class="left_text_new" v-else>{{ dateChange(delivery_new_date) }} {{delivery_new_time }}</h4>
+                                                <h4 class="left_text_new" v-if="!changedDate">{{
+                                                    dateChange(order.delivery_date) }} {{ order.delivery_slot }}</h4>
+                                                <h4 class="left_text_new" v-else>{{ dateChange(delivery_new_date) }}
+                                                    {{delivery_new_time }}</h4>
                                             </div>
                                             <div class="col-12 refunds_orders new_refunds_list">
                                                 <div class="col-md-12">
@@ -96,7 +98,7 @@
                                                         <div class="col-md-2 col-xs-2 col-sm-2"
                                                              style="margin-top:30px;">
                                                             <div class="cart_listing_hed">
-                                                                <table>
+                                                                <table class="cart_listing_hed-table-cart-table">
                                                                     <tbody>
                                                                     <tr class="cat_item4594 cart_item_row">
                                                                         <td class="count_cart">
@@ -104,23 +106,22 @@
                                                                                   style="display: block;">
                                                                                 <div class="cart_qty_btw_ud">
                                                                                     <span>{{ product.cart_qty }}</span>
-                                                                                    <span v-if="product.sold_per === 2 || product.sold_per === 3 && product.unit !== 'Unit'">kg</span></div>
+                                                                                    <span
+                                                                                        v-if="product.sold_per === 2 || product.sold_per === 3 && product.unit !== 'Unit'">kg</span></div>
                                                                             </span>
-
-
                                                                             <span class="hover_view"
                                                                                   style="display: none;">
-										<a class="change-qty-qty-inc up-down_down-btn decrease_cart_button"
-                                           href="javascript:void(0)" role="button"
-                                           onclick="decrease_item_in_order(45094, 209212, 'page', 1, 1, 'ml')"><i
-                                            class="glyphicon glyphicon-trash"></i></a>
-										<div class="cart_qty_btw_ud" style="border: none;"> 1 </div>
-										<a class="qty-disabled up-down_up-btn increase_cart" href="javascript:void(0)"
-                                           role="button" onclick="add_to_order(45094, 209212, 'page', 1, 1, 'ml')"><i
-                                            class="fa fa-plus"></i></a>
-									</span></td>
+                                                                                <a class="change-qty-qty-inc up-down_down-btn decrease_cart_button"
+                                                                                   href="javascript:void(0)" role="button"
+                                                                                   onclick="decrease_item_in_order(45094, 209212, 'page', 1, 1, 'ml')"><i
+                                                                                    class="glyphicon glyphicon-trash"></i></a>
+                                                                                <div class="cart_qty_btw_ud" style="border: none;"> 1 </div>
+                                                                                <a class="qty-disabled up-down_up-btn increase_cart" href="javascript:void(0)"
+                                                                                   role="button" onclick="add_to_order(45094, 209212, 'page', 1, 1, 'ml')"><i
+                                                                                    class="fa fa-plus"></i></a>
+                                                                            </span>
+                                                                        </td>
                                                                     </tr>
-
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -133,8 +134,10 @@
                                                         <div class="col-md-2 col-xs-2 col-sm-2"
                                                              style="margin-top:38px;">
                                                             <div class="ref_inf_prices">
-                                                                <b v-if="product.sold_per === 3">JD {{ parseFloat((product.our_selling_price*product.approx_weight)*product.cart_qty).toFixed(2)}} </b>
-                                                                <b v-else>JD {{ parseFloat(product.our_selling_price*product.cart_qty).toFixed(2)}} </b>
+                                                                <b v-if="product.sold_per === 3">JD {{
+                                                                    parseFloat((product.our_selling_price*product.approx_weight)*product.cart_qty).toFixed(2)}} </b>
+                                                                <b v-else>JD {{
+                                                                    parseFloat(product.our_selling_price*product.cart_qty).toFixed(2)}} </b>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -189,15 +192,15 @@
 
                             <div class="col-6 col-lg-9 col-md-9 mt-1">
 
-                                <div class="account__content">
-                                    <div class="account__content-common">
-                                        <div class="account__content-common_orders">
+                                <div class="after_account_right">
+                                    <div class="after_account_common">
+                                        <div class="after_account_common_orders">
                                             <div class="order-summary-footer common_orders_secc">
                                                 <div class="col-md-12 did_list_bsk"><span>Order Summary</span></div>
                                             </div>
                                             <div class="refunds_orders">
                                                 <div class="scrolling_responsive pl-17">
-                                                    <ul>
+                                                    <ul class="order-info_total_list">
                                                         <li>
                                                             <p class="pl-5">Item Subtotal <span
                                                                 class="float-right mr-5">JD {{ orderDetails.overall_subtotal }}</span>
@@ -251,7 +254,8 @@
         </section>
         <green-loader v-show="showOrderLoader"></green-loader>
         <OrderDeliveryTimeSlot :orderDeliverySlots="orderDeliverySlots" :order="order"></OrderDeliveryTimeSlot>
-        <AddItemsToOrder :outlet_order_id="outlet_order_id" :outlet_item_id="outlet_item_id" :order_list="orderDetails"></AddItemsToOrder>
+        <AddItemsToOrder :outlet_order_id="outlet_order_id" :outlet_item_id="outlet_item_id"
+                         :order_list="orderDetails"></AddItemsToOrder>
     </div>
 </template>
 
@@ -273,7 +277,7 @@
                 order_id: '',
                 orderData: {},
                 userData: {},
-                outlet_item_id:0,
+                outlet_item_id: 0,
                 orderDetails: {},
                 showOrderLoader: false,
                 language: Cookies.get('languageId'),
@@ -309,7 +313,7 @@
                 })
                     .then(value => {
                         if (value) {
-                            this.$ga.event('cancel order' , this.order_id);
+                            this.$ga.event('Cancel Order' , 'canceled' , 'canceled', this.orderDetails.overall_total);
                             this.cancelOrder();
                         }
                     })
@@ -376,7 +380,7 @@
                                 bus.$emit('showTo', product);
                                 bus.$emit('addToCart', response.data.response.cart_count);
                                 bus.$emit('add-item-to-cart', true);
-                                this.$ga.event('Add To Cart' , 'added' , 'added to cart' , product.our_selling_price);
+                                this.$ga.event('Add To Cart', 'added', 'added to cart', product.our_selling_price);
                             }
                             if (productCount === index + 1) {
                                 _this.$bvToast.toast(response.data.response.Message, {
@@ -404,7 +408,7 @@
                         token: this.userData.token,
                     }).then(response => {
                         if (response.data.response.httpCode === 200 && orders_outlets_id.length === index + 1) {
-                            this.$ga.event('Order' , 'canceled' , 'order total' , this.order.overall_total);
+                            this.$ga.event('Cancel Order', 'canceled', 'canceled', this.order.overall_total);
                             this.$router.push({name: 'home'});
                         }
                     }).catch(error => {
@@ -434,7 +438,7 @@
 
             },
 
-            addItemtoOrder(outlet){
+            addItemtoOrder(outlet) {
                 this.outlet_item_id = outlet;
                 this.$bvModal.show('addItem');
             },
@@ -449,7 +453,7 @@
         },
 
         mounted() {
-            this.$ga.event('pageview' , 'order/'+this.order_id);
+            this.$ga.event('pageview', 'order/' + this.order_id);
             this.$root.$on('bv::modal::hide', () => {
                 this.getOrder();
             });
@@ -471,9 +475,11 @@
         right: 0;
         bottom: 0;
     }
-    .account_common_list{
+
+    .account_common_list {
         margin: 50px 0;
     }
+
     .menu-buttons {
         margin: 5px;
         height: 40px;
@@ -501,13 +507,8 @@
         font-size: 14px;
     }
 
-    .ref_inf_prices{
+    .ref_inf_prices {
         font-weight: 700;
 
-    }
-    .cart_listing_hed table {
-        width: 100%;
-        margin: 0;
-        background-color: #fff;
     }
 </style>

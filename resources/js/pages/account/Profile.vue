@@ -1,108 +1,96 @@
 <template>
-    <div class="account__content">
-        <div class="account__content-common">
-            <h4 class="account__content-header">Account Information</h4>
-            <div class="account__content-row row">
-                <div class="account__content-field col-md-4 col-sm-4">
-                    <p>Email</p>
-                </div>
-                <div class="account__content-field col-md-5 col-sm-7">
-                    <p>{{userData.email}}</p>
-                </div>
-                <div class="account__content-field col-md-3 col-sm-2">
-                    <a href="javascript:void(0)">
-                        Change
-                    </a>
-                </div>
-            </div>
-            <div class="account__content-row row">
-                <div class="account__content-field col-md-4 col-sm-4">
-                    <p>Password</p>
-                </div>
-                <div class="account__content-field col-md-5 col-sm-7">
-                    <p>●●●●●●</p>
-                </div>
-                <div class="account__content-field col-md-3 col-sm-2">
-                    <a href="javascript:void(0)" data-toggle="modal" data-target=".change-password-modal">
-                        Change
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="account__content-common">
-            <h4 class="account__content-header">Personal Information</h4>
-            <div class="account__content-row row">
-                <div class="account__content-field col-md-4 col-sm-4">
-                    <p>First Name</p>
-                </div>
-                <div class="account__content-field col-md-8 col-sm-7">
-                    <p>{{userData.first_name}}</p>
-                </div>
-            </div>
-            <div class="account__content-row row">
-                <div class="account__content-field col-md-4 col-sm-4">
-                    <p>Last Name</p>
-                </div>
-                <div class="account__content-field col-md-8 col-sm-7">
-                    <p>{{userData.last_name}}</p>
-                </div>
-            </div>
-            <div class="account__content-row row">
-                <div class="account__content-field col-md-4 col-sm-4">
-                    <p>Phone</p>
-                </div>
-                <div class="account__content-field col-md-8 col-sm-7">
-                    <p>{{userData.mobile}}</p>
-                </div>
-            </div>
-            <div class="account__content-row row">
-                <div class="account__content-field active_time_slotcol-md-4 col-sm-4">
-                    <p>User Id</p>
-                </div>
-                <div class="account__content-field active_time_slotcol-md-8 col-sm-7">
-                    <p>{{userData.user_id}}</p>
-                </div>
-            </div>
-            <div class="account__content-row row">
-                <div class="account__content-field active_time_slotcol-md-12 col-sm-4">
-                    <p>
-                        <a href="javascript:void(0)" class="editDetails" data-toggle="modal" data-target=".editAccountInformation">
+    <div class="after_account_right">
+        <div class="after_account_common">
+            <h4 class="uppercase">Account Information</h4>
+            <div class="my_list">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p><strong>Phone</strong></p>
+                    </div>
+                    <div class="col-md-3 col-sm-7">
+                        <p>{{userData.mobile}}</p>
+                    </div>
+                    <div class="col-md-3 col-sm-2">
+                        <a href="javascript:void(0)">
                             Change
                         </a>
-                    </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-2" style="display: none;">
+                    <a href="javascript:void(0)" @click="changePassword">Change</a>
+                </div>
+            </div>
+            <div class="my_list">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p><strong>Password</strong></p>
+                    </div>
+                    <div class="col-md-3 col-sm-7">
+                        <p>●●●●●●</p>
+                    </div>
+                    <div class="col-md-3 col-sm-2">
+                        <a href="javascript:void(0)" data-toggle="modal" data-target=".change-password-modal">
+                            Change
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="account__content-common">
-            <h4 class="account__content-header">Accessibility</h4>
-            <div class="account__content-row row">
-                <div class="account__content-field col-sm-10 col-lg-11">
-                    <p>Enamble High Contrast Colors</p>
-                </div>
-                <div class="account__content-field col-sm-2 col-lg-1">
-                    <label class="switch switch-left-right">
-                        <input class="switch-input" type="checkbox"
-                            name="contrast_colors">
-                        <span class="switch-label"></span>
-                        <span class="switch-handle"></span>
-                    </label>
+        <div class="after_account_common">
+            <h4 class="uppercase">Personal Information</h4>
+            <div class="my_list">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p><strong>First Name</strong></p>
+                    </div>
+                    <div class="col-md-9 col-sm-7">
+                        <p>{{userData.first_name}}</p>
+                    </div>
                 </div>
             </div>
-            <div class="account__content-row row">
-                <div class="account__content-field col-sm-10 col-lg-11">
-                    <p>Enamble Increased Toast Duration</p>
+            <div class="my_list">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p><strong>Last Name</strong></p>
+                    </div>
+                    <div class="col-md-9 col-sm-7">
+                        <p>{{userData.last_name}}</p>
+                    </div>
                 </div>
-                <div class="account__content-field col-sm-2 col-lg-1">
-                    <label class="switch switch-left-right">
-                        <input class="switch-input" type="checkbox"
-                            name="toast_duration">
-                        <span class="switch-label"></span>
-                        <span class="switch-handle"></span>
-                    </label>
+            </div>
+            <div class="my_list">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p><strong>Email</strong></p>
+                    </div>
+                    <div class="col-md-9 col-sm-7">
+                        <p>{{userData.email}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="my_list">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <p><strong>User Id</strong></p>
+                    </div>
+                    <div class="col-md-9 col-sm-7">
+                        <p>{{userData.user_id}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="my_list">
+                <div class="row">
+                    <div class="col-md-12 col-sm-4">
+                        <p>
+                            <a href="javascript:void(0)" class="editDetails" data-toggle="modal" data-target=".editAccountInformation">
+                                Change
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <change-password-modal>
+        <change-password-modal >
         </change-password-modal>
         <EditAccountInformationModal >
         </EditAccountInformationModal>
@@ -128,6 +116,12 @@
             };
         },
 
+        methods:{
+            changePassword(){
+
+            }
+        },
+
         created(){
             this.userData = JSON.parse(Cookies.get('userData')).userData
 
@@ -138,58 +132,32 @@
             });
             bus.$emit('changePage' , this.$route.name);
 
+        },
+
+        mounted(){
+
         }
     }
 </script>
 
-<style lang="scss" scoped>
-    .account__content {
-        &-header {
-            padding: 0;
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: 600;
-            color: #262c1d;
-        }
-        &-row {
-            margin-bottom: 14px;
-            p {
-                font-size: 14px;
-                margin: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            a {
-                color: var(--green-color);
-                font-weight: 600;
-            }
-        }
+<style scoped>
+    .after_account_right{
+        margin-left: -50px;
+    }
+
+    .custom-switch .custom-control-label:before{
+        background: gray;
+        border: #E7E6E5;
+    }
+    .custom-switch .custom-control-label:after{
+        background: white;
     }
 
 
-    @media (max-width: 991px){
-        .account__content {
-            &-header {
-                margin-bottom: 14px;
-                font-size: 20px;
-            }
-            &-row {
-                p {
-                    font-size: 12px;
-                }
-                a {
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-    @media (max-width: 575px){
-        .account__content-header {
-            font-size: 18px;
-        }
-        .account__content-field {
-            margin-bottom: 4px;
+    @media (max-width: 767px){
+        .after_account_right{
+            margin-left: 0 !important;
+
         }
     }
 </style>

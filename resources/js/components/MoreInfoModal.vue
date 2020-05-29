@@ -294,7 +294,7 @@
                 })
             },
             closeModal() {
-                $("body").css("overflow", "");
+                $("body").css("overflow", "auto");
                 bus.$emit('moreInfo', true)
             },
 

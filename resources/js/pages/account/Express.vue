@@ -1,5 +1,5 @@
 <template>
-    <div class="account__content">
+    <div class="after_account_right">
         <div class="express_pay">
             <div class="express">
                 <div class="rmq-b3159f97" data-radium="true"
@@ -210,7 +210,7 @@
         margin-bottom: 50px;
     }
 
-    .account__content {
+    .after_account_right {
         padding-bottom: 60px;
     }
 

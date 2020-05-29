@@ -15,13 +15,13 @@
                             <span>Are you sure you want change {{ text }}?</span>
                         </div>
                         <div class="form-group">
-                            <a  @click="change" class="btn btn-default confirm-language-change">OK</a>
+                            <a  @click="change" class="btn btn-default confirm-language-change promo_inner_sec_btn">OK</a>
                         </div>
                         <div class="form-group">
-                            <button type="button" class="btn btn-default btn-cancel" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-default btn-cancel promo_inner_sec_btn" data-dismiss="modal">Cancel</button>
                         </div>
 
-                        <input class="form-control" id="paymentType" value="1" type="hidden">
+                        <input class="form-control form-control_promo_inner_sec" id="paymentType" value="1" type="hidden">
                     </div>
                 </div>
             </div>

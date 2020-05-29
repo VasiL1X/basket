@@ -2,7 +2,7 @@
     <div class="row">
         <div v-bind:class="[type === 'addItemToOrder' ? 'col-lg-4' : 'col-lg-3']" class="col-md-6 col-sm-6 col-xs-12"  v-for="(item, index) in products">
             <div class="items_list">
-                <div class="items_img">
+                <div class="items_img items385488">
                     <div>
                         <a href="javascript:void(0)" title="" tabindex="0" @click="singleProduct(item)">
                             <img class="prod_img_tag"
@@ -11,7 +11,7 @@
                                 @error="errorSrc"
                             >
                         </a>
-                        <div class="item-quantity" data-radium="true">
+                        <div class="item-quantity-itemLIst" data-radium="true">
                             <span class="item-quantity-amount" data-radium="true">
                                 <span class="item-qty" data-radium="true"> 0</span>
                             </span>
@@ -56,7 +56,7 @@
 
 
                     <div class="inner_add_carts hide-plus-circle innerAddCarts"
-                         v-bind:class="[open === item.outlet_item_id ? '' : 'addItem']"
+                         v-bind:class="[open === item.outlet_item_id ? 'addItem' : '']"
                          v-bind:id="item.outlet_item_id"
                          @mouseleave="updateCount(item , item.cart_qty)"
                     >
@@ -106,20 +106,20 @@
                             </div>
                         </div>
                     </a>
-                    <div class="items_info_detail">
+                    <h5 class="">
                         <a href="javascript:void(0)" title=""
                            tabindex="0"></a>
                         <a class="pro-name" href="javascript:void(0)"
                            title="" tabindex="0">
-                            <h4 class="items_info_name">{{item.product_name}}</h4>
-                            <h4 class="items_info_sold" v-if="item.sold_per === 3">JD {{item.our_selling_price}} /  {{item.unit}}</h4>
+                            <h4>{{item.product_name}}</h4>
+                            <h4 v-if="item.sold_per === 3">JD {{item.our_selling_price}} /  {{item.unit}}</h4>
                         </a>
                         <span>
                             <span>
                                  <span class="item-per-new-style" v-if="item.label_value>0">{{item.label_value}} {{item.unit}}</span>
                             </span>
                         </span>
-                    </div>
+                    </h5>
                 </div>
             </div>
         </div>
@@ -323,6 +323,11 @@
         color: #757575 !important;
 
     }
+    .item-quantity-small{
+        height: 25px;
+        width: 25px;
+        padding: 4px 5px;
+    }
     .badge.badge--sale {
         height: 20px;
         margin: 0 auto;
@@ -358,16 +363,14 @@
         color: #6c6c6c;
     }
 
+    .item-per-new-style {
+        font-size: 13px !important;
+    }
+
     .div-new-style {
         height: 350px;
     }
-    @media (max-width: 767px) {
-        .badge.badge--sale {
-            font-size: 11px;
-            max-width: 72px;
-            margin-bottom: 5px;
-        }
-    }
+
     @media only screen and (max-width: 600px) {
         .div-new-style {
             height: 255px;
@@ -384,21 +387,14 @@
         }
     }
 
-    .hide-plus-circle {
-        display: inline-block !important;
-    }
+    /*.hide-plus-circle {*/
+    /*    display: inline-block !important;*/
+    /*}*/
 
     .items_list .items_img .inner_add_carts {
         left: 0px;
     }
 
-    .cart_item_incr {
-        display: inline-block;
-    }
-
-    .addItem {
-        display: none !important;
-    }
 
 
     @media (min-width: 1456px){
@@ -417,6 +413,51 @@
         }
     }
 
+    .items_list .btn-warning {
+        background: 0 0;
+        border: none;
+        float: left;
+        color: #e8104a;
+        padding: 0;
+        display: none;
+    }
 
+    .items_list .btn.btn-inverse {
+        font-weight: 700;
+        letter-spacing: .1em;
+        line-height: 20px;
+        padding: 6px 10px;
+        text-decoration: none;
+
+        text-transform: uppercase;
+        background-color: var(--theme-color);
+        border-color: var(--theme-color);
+        color: #fff;
+        float: right;
+        margin-bottom: 15px;
+    }
+
+    .items_info h3 {
+        display: inline-block;
+        margin-bottom: 3px;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .items_info h4 {
+        padding: 3px 0 2px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.2em;
+        color: #5a5a5a;
+        max-width: 165px;
+    }
+
+    .items_info h5 {
+        font-size: 12px;
+        color: #999;
+        font-weight: 400;
+    }
 
 </style>

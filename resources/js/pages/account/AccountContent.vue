@@ -4,71 +4,78 @@
             <home-header></home-header>
         </div>
 
-        <div class="container">
-            <!-- it was a page title -->
-            <!-- <div class="col-12 col-lg-9 col-md-9 offset-lg-3 offset-md-3 text-center">
+        <div class="container marginTop accountInformation">
+            <div class="col-12 col-lg-9 col-md-9 offset-lg-3 offset-md-3 text-center mt-5 mt-lg-3 mt-md-3">
                 <h3 class="font-weight-bolder">{{ page.title }}</h3>
-            </div> -->
-            <div class="row px-3 account__inner">
-                <div class="col-lg-3 col-md-4 col-xl-3 account__list-wrapper">
-                    <ul class="account__list">
-                        <li class="account__list-item py-3" v-for="item in menulist.first_menu" :key="item.id">
-                            <router-link class="account__list-link" v-bind:class="[page.link == item.link ? 'text-success' : 'text-black']" :to="{ name: item.link }" :title="item.title">
-                                <span class="account__list-text"><img :src="'/images/'+item.icon" class="mr-3">{{ item.title }}</span>
-                            </router-link>
-                        </li>
-                    </ul>
-                    <ul class="account__list">
-                        <li class="account__list-item py-3" v-for="item in menulist.second_menu" :key="item.id">
-                            <router-link class="account__list-link" v-bind:class="[page.link == item.link ? 'text-success' : 'text-black']" :to="{ name: item.link }" :title="item.title">
-                                <span class="account__list-text"><img :src="'/images/'+item.icon" class="mr-3"> {{ item.title }}</span>
-                            </router-link>
-                        </li>
-                        <li class="account__list-item py-3">
-                            <a class="account__list-link" @click="logout" title="Logout">
-                                <span class="account__list-text">
-                                    <img src="/images/Logout.svg" class="mr-3">
-                                    Logout
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="account__list-footer py-3">
-                            <router-link :to="{ name: 'press' }"
-                                            target="_blank"
-                                            aria-label="Press"
-                                            class="text-secondary"
-                            >
-                                <span>Press </span>
-                            </router-link>
-                            <span class="mx-1"> &bullet;</span>
-                            <router-link :to="{ name: 'apply' }"
-                                            target="_blank"
-                                            aria-label="Job"
-                                            class="text-secondary">
-                                <span>Job </span>
-                            </router-link>
-                            <span class="mx-1"> &bullet;</span>
-                            <router-link
-                                :to="{ name: 'terms.conditions' }"
-                                target="_blank"
-                                aria-label="Terms"
-                                class="text-secondary"
-                            >
-                                <span>Terms </span>
-                            </router-link>
-                            <span class="mx-1"> &bullet;</span>
-                            <router-link
-                                :to="{ name: 'privacy.policy' }"
-                                target="_blank"
-                                aria-label="Privacy"
-                                class="text-secondary"
-                            >
-                                <span>Privacy</span>
-                            </router-link>
+            </div>
+            <div class="row p-3 mt-5">
+                <div class="col-lg-3 col-md-4 col-xl-3">
+                    <div class="after_account_left">
+                        <ul class="after_account_left-list">
+                            <li class="" v-for="item in menulist.first_menu">
+                                <router-link class="menu-item p-2" v-bind:class="[page.link == item.link ? 'text-success' : 'text-dark']" :to="{ name: item.link }" :title="item.title">
+                                    <span id="linkText1" class="form-inline ml-3"><img :src="'/images/'+item.icon" class="mr-2">{{ item.title }}</span>
+                                </router-link>
+                            </li>
+
+                        </ul>
+                        <hr>
+                        <ul class="after_account_left-list">
+                            <li class="" v-for="item in menulist.second_menu">
+                                <router-link class="menu-item  p-2" v-bind:class="[page.link == item.link ? 'text-success' : 'text-dark']" :to="{ name: item.link }" :title="item.title">
+                                    <span id="linkText2" class="form-inline ml-3"><img :src="'/images/'+item.icon" class="mr-2"> {{ item.title }}</span>
+                                </router-link>
+                            </li>
+                            <li class="">
+                                <a class="menu-item text-dark after_account_left-link-href-click" @click="logout" title="Logout">
+                                   <span class="form-inline ml-3" style="font-size: 1em;">
+                                        <img src="/images/Logout.svg" class="mr-2">
+                                        Logout
+                                   </span>
+                                </a>
+                            </li>
+                            <ul class="small-list-inline border-top border-secondary p-3">
+                                <router-link :to="{ name: 'press' }"
+                                             target="_blank"
+                                             aria-label="Press"
+                                             class="text-secondary"
+                                >
+                                    <span>Press </span>
+                                </router-link>
+                                <span class="ml-2 mr-2"> &bullet;</span>
+                                <router-link :to="{ name: 'apply' }"
+                                             target="_blank"
+                                             aria-label="Job"
+                                             class="text-secondary">
+                                    <span>Job </span>
+                                </router-link>
+                                <span class="ml-2 mr-2"> &bullet;</span>
+                                <router-link
+                                    :to="{ name: 'terms.conditions' }"
+                                    target="_blank"
+                                    aria-label="Terms"
+                                    class="text-secondary"
+                                >
+                                    <span>Terms </span>
+                                </router-link>
+                                <span class="ml-2 mr-2"> &bullet;</span>
+
+                                <router-link
+                                    :to="{ name: 'privacy.policy' }"
+                                    target="_blank"
+                                    aria-label="Privacy"
+                                    class="text-secondary"
+                                >
+                                    <span>Privacy</span>
+                                </router-link>
+                            </ul>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="col-12 pt-2  marginTop">
+
+                    </div>
                     <router-view></router-view>
                 </div>
             </div>
@@ -96,16 +103,16 @@
                     first_menu: [
                         {link: 'orders.history', title: 'Your orders', icon: 'Orders.svg'},
                         {link: 'express', title: 'Basket prime', icon: 'Prime.svg'},
-                        {link: '#', title: 'Invite friends', icon: 'Invite.svg'},
+                        // {link: '#', title: 'Invite friend', icon: 'Invite.svg'},
                         {link: 'coupons', title: 'Credits & promo codes', icon: 'Promo.svg'},
                         {link: 'help', title: 'Help', icon: 'Help.svg'},
                     ],
                     second_menu: [
-                        {link: 'profile', title: 'Your account settings', icon: 'Settings.svg'},
+                        {link: 'profile', title: 'Your Account settings', icon: 'Settings.svg'},
                         {link: 'addresses', title: 'Addresses', icon: 'Addresses.svg'},
                         {link: 'payment', title: 'Payment methods', icon: 'Payments.svg'},
                         {link: 'notifications', title: 'Notifications', icon: 'Notifications.svg'},
-                        {link: '#', title: 'Loyalty cards', icon: 'Loyalty.svg'},
+                        // {link: '#', title: 'Loyalty cards', icon: 'Loyalty.svg'},
                     ]
                 },
             }
@@ -135,88 +142,51 @@
                 this.page.title =   first !== undefined ? first.title : second.title;
                 this.page.link =   first !== undefined ? first.link : second.link;
             });
+        },
+
+        mounted() {
+
         }
     }
 </script>
 
-<style lang="scss" scoped>
-    .account {
-        &-container {
-            padding-top: 136px;
-        }
-        &__inner {
-            padding-top: 56px;
-        }
-        &__list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            border-bottom: 1px solid #ccc;
-            &-wrapper {
-                padding-left: 0;
-                padding-right: 20px;
-            }
-            &-item {
-                &:hover .account__list-link {
-                    color: var(--green-color) !important;
-                }
-            }
-            &-link {
-                font-size: 18px;
-                line-height: 1.3;
-                cursor: pointer;
-            }
-            &-text {
-                display: flex;
-                align-items: center;
-            }
-            &-footer {
-                font-size: 12px;
-                margin-bottom: 4px;
-            }
-        }
-
-        
+<style>
+    .accountInformation >*{
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: normal;
+        color: #262c1d;
     }
     .noScroll {
         overflow-y: hidden;
         max-height: 100vh;
     }
-    @media (max-width: 991px) {
-        .account-container {
-            padding-top: 120px;
-        }
-        .account__list {
-            &-wrapper {
-                padding-right: 10px;
-            }
-            &-link {
-                font-size: 15px;
-                img {
-                    width: 19px;
-                    height: 19px;
-                }
-            }
-            &-footer {
-                font-size: 6px;
-            }
-        }
+    .menu-item{
+        font-size: 20px;
     }
+    #linkText1,#linkText2{
+        font-size: 1.2em;
+    }
+
+    .after_account_left, .after_account_left ul li {
+        background: transparent;
+        border: unset;
+    }
+
+
+    .marginTop {
+        padding-top: 200px;
+    }
+
     @media (max-width: 767px) {
-      .account-container {
-          padding-top: 106px;
-      }
-      .account__inner {
-          padding-top: 0;
-      }
-      .account__list {
-            &-wrapper {
-                padding: 0;
-            }
-            &-footer {
-                text-align: center;
-            }
+        .marginTop {
+            padding-top: 120px;
         }
     }
 
+    .account-container {
+        background: #f2f2f2;;
+    }
 </style>

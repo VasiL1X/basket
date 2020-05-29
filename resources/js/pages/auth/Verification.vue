@@ -3,15 +3,15 @@
         <div class="basket_landing_page" id="top_scrolling">
             <div class="container">
                 <div class="bas_left_common resend-otp-box">
-                    <div class="bas_left_login_form">
+                    <div class="bas_left_login_form resend-otp-box_bas_left_login_form">
                         <div class="bas_left_inner">
                             <div class="basket_base1">
                                 <div class="common_forgout_pass">
                                     <div class="bask_logo">
                                         <img
                                             src="/images/logo-normal.png"
-                                            alt="Basket">
-                                        <h1>Welcome !</h1>
+                                            alt="Basket" class="bask-logo-img">
+                                        <h1 class="bask-logo-text">Welcome !</h1>
                                     </div>
                                     <div class="bask_form_center">
                                         <div class="basket_forgout_pass">
@@ -35,8 +35,8 @@
                                                                              selected value="962" name="code" v-validate="'required'"   id="login_code"/>
                                                                 </div>
                                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                                    <div class="col-md-12">
-                                                                        <input class="form-control" name="mobile number"
+                                                                    <div class="col-md-12 form-mobile-number-input-write-enter pl-1 pr-1">
+                                                                        <input class="form-control basket-form-inp" name="mobile number"
                                                                                v-model="mobile"
                                                                                id="new_mobile" placeholder="Mobile*"
                                                                                v-validate="'required'">
@@ -47,7 +47,7 @@
                                                                 <div class="col-md-3 col-sm-3 col-xs-12 pl-0 pr-0 text-center">
                                                                     <button type="submit"
                                                                             id="save_new_number"
-                                                                            class="btn btn-primary login_btn otp_btn">
+                                                                            class="btn btn-primary login_btn otp_btn btn-primary-bask">
                                                                         Save
                                                                         and Send Code
                                                                     </button>
@@ -56,9 +56,9 @@
                                                         </form>
                                                     </div>
                                                     <div class="otp-box" id="otp_box" v-else>
-                                                        <h5>Thank you for creating an account with Basket. Your account
+                                                        <h5 class="bask-logo-text-sm otp_box_bask-logo-text-sm">Thank you for creating an account with Basket. Your account
                                                             was successfully created.</h5>
-                                                        <p>Please enter the One-time Password received on registered
+                                                        <p class="otp_box_paragraph">Please enter the One-time Password received on registered
                                                             Mobile number to verify your account:</p>
                                                         <form @submit.prevent="verify()">
                                                             <div class="row">
@@ -67,7 +67,7 @@
                                                                     <div class="col-md-12">
                                                                         <input v-validate="'required|integer'"
                                                                                v-model="otp" type="phone" id="otp"
-                                                                               class="form-control"
+                                                                               class="form-control basket-form-inp"
                                                                                placeholder="One-time Password"
                                                                                name="otp" maxlength="13" value="">
 
@@ -79,7 +79,7 @@
                                                                 <div class="col-md-6 col-sm-6 col-xs-12 pl-3 pl-sm-0">
                                                                     <div class="col-md-12">
                                                                         <button type="submit"
-                                                                                class="btn btn-primary login_btn">Verify
+                                                                                class="btn btn-primary login_btn btn-primary-bask">Verify
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -108,8 +108,8 @@
                 <div class="bas_login">
                     <a href="javascript:void(0)" class="left_responsive_logo" title="">
                         <img src="/images/icon-normal.png"
-                             alt="Basket"></a>
-                    <a href="<?php echo URL::to('/logout'); ?>" title="" class="btn btn-primary" data-bypass="true"
+                             alt="Basket" class="left_responsive_logo_img"></a>
+                    <a href="<?php echo URL::to('/logout'); ?>" title="" class="btn btn-primary btn-primary-bask" data-bypass="true"
                        title="Login">Logout</a>
                 </div>
             </div>

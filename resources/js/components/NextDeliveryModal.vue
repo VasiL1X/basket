@@ -2,7 +2,7 @@
     <!--modall Next Delivery-->
     <div class="modal fade outlet_available_time bs-example-modal-lg in" tabindex="-1" role="dialog"
          aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-lg outlet_available_time-modal-lg" role="document">
             <div class="modal-content">
                 <div class="out_time_modles">
                     <button type="button" class="close text-white p-2" data-dismiss="modal" aria-label="Close">
@@ -10,25 +10,25 @@
                     </button>
                     <div class="icModalHeader retailerModalHeader">
                         <div class="logo">
-                            <img class="hero-middle-logo market-logo-general" v-bind:src="outletDeliverySlot.vendor_logo"  v-bind:alt="outletDeliverySlot.outlet_name">
+                            <img class="hero-middle-logo retailerModalHeader-market-logo-general" v-bind:src="outletDeliverySlot.vendor_logo"  v-bind:alt="outletDeliverySlot.outlet_name">
                         </div>
                     </div>
                 </div>
                 <div class="new_address_sec_new">
                     <div class="top_time_counts">
-                        <h2 style="margin-bottom: 0px;">Next Delivery Times</h2>
+                        <h2 class="top_time_counts-h2">Next Delivery Times</h2>
                         <small>Prices listed are for orders above JD 0 per store.
                             <span><a href="">Learn more about pricing.</a></span>
                         </small>
-                        <h3 style="font-size: 18px; margin-top: 20px">Today</h3>
+                        <h3 class="top_time_counts-h3">Today</h3>
                     </div>
                     <div class="inner_time_listing_list">
                         <ul class="unstyled clearfix hoursList today_time_list">
-                            <li class="deliveryOption  "  v-for="item in today.time">
-                                <span class="window pull-left" v-if="item.label" >{{item.label}}  </span>
-                                <span class="window pull-left" v-else>{{item.delivery_time}} </span>
+                            <li class="deliveryOption  hoursList-item"  v-for="item in today.time">
+                                <span class="deliveryOption-window pull-left" v-if="item.label" >{{item.label}}  </span>
+                                <span class="deliveryOption-window pull-left" v-else>{{item.delivery_time}} </span>
 
-                                <span class="price pull-right">
+                                <span class="price pull-right deliveryOption-price">
                                     <span v-if="item.available == 1"> {{item.delivery_charge}} JD</span>
                                     <span v-else>Unavailable</span>
                                 </span>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="inner_time_listing_list">
                         <ul class="unstyled clearfix hoursList today_time_list">
-                            <li class="deliveryOption "  v-for="item in tomorrow.time">
+                            <li class="deliveryOption hoursList-item"  v-for="item in tomorrow.time">
                                 <span class="window pull-left" v-if="item.label">{{item.label}} </span>
                                 <span class="window pull-left" v-else>{{item.delivery_time}} </span>
 
@@ -58,7 +58,7 @@
                            </div>
                            <div class="inner_time_listing_list">
                                <ul class="unstyled clearfix hoursList today_time_list">
-                                   <li class="deliveryOption "  v-for="dayTimes in item.time">
+                                   <li class="deliveryOption hoursList-item"  v-for="dayTimes in item.time">
                                        <span class="window pull-left" v-if="dayTimes.label">{{dayTimes.label}} </span>
                                        <span class="window pull-left" v-else>{{dayTimes.delivery_time}} </span>
 
@@ -167,17 +167,6 @@
     .pull-left{
         float: left;
     }
-    .available{
-        color: black !important;
-    }
-    .see_all_btn  {
-        background-color: #fff;
-        border-color: #e5edec;
-        color: #69dada;
-        font-size: 14px;
-        font-weight: 600;
-        width: 100%;
-    }
     .inner-time-listin{
         font-size: 20px;
         margin: 0 0 11px;
@@ -185,4 +174,17 @@
         text-align: center;
         font-weight: 100;
     }
+
+    .modal .new_address_sec  .shopper-continue:nth-of-type(1) {
+        float: right;
+    }
+
+    .modal .new_address_sec  .shopper-continue:nth-of-type(2) {
+        float: right;
+    }
+
+    .modal .new_address_sec .form-group {
+        display: flow-root;
+    }
+
 </style>
