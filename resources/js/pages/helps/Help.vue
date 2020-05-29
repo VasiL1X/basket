@@ -15,7 +15,7 @@
                             </div>
                         </router-link>
                     </div>
-                    <div class="col-lg-6 col-md-6 mx-auto ">
+                    <div class="col-lg-6 col-md-6 mx-auto">
                         <router-link :to="{name: 'help.pricing'}">
                             <div class="basket_block d-flex align-items-center p-2">
                                 <img src="/images/bag.png" alt="" width="160px" height="160px" class="img-fluid">
